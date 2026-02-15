@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dim">
+<head>
+	<meta name="generator" content="Hugo 0.155.3"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<title>Tornade Audio Player</title>
+
+
+<link rel="canonical" href="http://localhost:1313/es/" />
+
+
+
+<meta name="description" content="Tornade es un reproductor de audio nativo de alto rendimiento para macOS, Windows, Linux y Terminal. FLAC, OGG, MP3, WAV, AIFF. Motor Rust, huella de memoria reducida." />
+
+
+<meta name="robots" content="index, follow" />
+
+
+
+<link rel="alternate" hreflang="en" href="http://localhost:1313/" />
+<link rel="alternate" hreflang="x-default" href="http://localhost:1313/" />
+
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/" />
+
+
+<link rel="alternate" hreflang="es" href="http://localhost:1313/es/" />
+
+
+
+
+
+
+
+
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="Tornade Audio Player — Reproductor de audio nativo de alto rendimiento" />
+<meta property="og:description" content="Reproductor de audio nativo para macOS, Windows, Linux y CLI. FLAC, OGG, MP3, WAV, AIFF. Core Rust, 60MB RAM. Cola en tiempo real, escaneo local y en red." />
+<meta property="og:url"         content="http://localhost:1313/es/" />
+<meta property="og:site_name"   content="Tornade Audio Player" />
+<meta property="og:locale"      content="es_ES" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="fr_FR" />
+
+<meta property="og:image" content="http://localhost:1313/images/og-image.png" />
+
+
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="Tornade Audio Player — Reproductor de audio nativo de alto rendimiento" />
+<meta name="twitter:description" content="Reproductor de audio nativo para macOS, Windows, Linux y CLI. FLAC, OGG, MP3, WAV, AIFF. Core Rust, 60MB RAM. Cola en tiempo real, escaneo local y en red." />
+<meta name="twitter:image" content="http://localhost:1313/images/og-image.png" />
+<meta name="twitter:site" content="@tornade_app" />
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"MultimediaApplication","name":"Tornade","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"macOS, Windows, Linux","url":"http://localhost:1313/"}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="min-h-screen flex flex-col bg-base-100">
+  <div class="navbar bg-base-200 border-b border-base-300 px-6">
+  <div class="flex-1 gap-3">
+    <a href="http://localhost:1313/es/" class="flex items-center gap-3">
+      <span class="font-semibold tracking-wide">Tornade</span>
+    </a>
+  </div>
+  <div class="flex-none gap-2">
+    
+    <a href="#download" class="btn btn-ghost btn-sm hidden md:inline-flex">Descarga</a>
+    
+    <a href="#features" class="btn btn-ghost btn-sm hidden md:inline-flex">Características</a>
+    
+    <a href="#about" class="btn btn-ghost btn-sm hidden md:inline-flex">Acerca de</a>
+    
+    <a href="#contact" class="btn btn-ghost btn-sm hidden md:inline-flex">Contacto</a>
+    
+
+    
+    
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-sm gap-1">
+        Español
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-36 p-2 shadow">
+        
+        <li>
+          <a href="http://localhost:1313/" >
+            English
+          </a>
+        </li>
+        
+        <li>
+          <a href="http://localhost:1313/fr/" >
+            Français
+          </a>
+        </li>
+        
+        <li>
+          <a href="http://localhost:1313/es/" class="active">
+            Español
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+  <main class="flex-1">
+    
+<div class="container mx-auto px-6 py-16">
+
+  
+  <section id="download">
+    <div class="hero">
+      <div class="hero-content text-center flex-col">
+
+        <img src="http://localhost:1313/images/tornade.png" class="w-44 mb-6" alt="Tornade logo" />
+
+        <h1 class="text-4xl font-semibold">Tornade Audio Player</h1>
+
+        <p class="max-w-xl opacity-80 mt-4">Aplicación de audio nativa de alto rendimiento disponible en macOS, Windows, Linux y directamente desde el Terminal.</p>
+
+        
+        <div class="flex flex-wrap justify-center gap-2 mt-6">
+          <div class="badge badge-primary">macOS</div>
+          <div class="badge badge-neutral">Windows</div>
+          <div class="badge badge-neutral">Linux</div>
+          <div class="badge badge-neutral">Terminal / CLI</div>
+        </div>
+
+        
+        <div class="mt-8 flex gap-4">
+          <button class="btn btn-primary">Descargar</button>
+          <button class="btn btn-ghost">Documentación</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="features" class="mt-16">
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <path d="M2 10v4M6 7v10M10 4v16M14 8v8M18 7v10M22 10v4"/></svg>
+
+          </div>
+          <h2 class="card-title">Formatos de Audio Profesionales</h2>
+          <p>Reproducción nativa de FLAC, OGG, MP3, WAV, AIFF y formatos de alta fidelidad sin conversión intermedia.</p>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z"/>
+    <circle cx="12" cy="12" r="3"/></svg>
+
+          </div>
+          <h2 class="card-title">Motor en Rust</h2>
+          <p>Motor de audio completamente escrito en Rust, garantizando seguridad de memoria, máxima estabilidad y rendimiento constante.</p>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <path d="M3 5h18M3 11h18M3 17h14"/>
+    <path d="M19 13l4 4-4 4"/></svg>
+
+          </div>
+          <h2 class="card-title">Cola en Tiempo Real</h2>
+          <p>Creación dinámica de listas de reproducción que permite agregar o programar pistas sin interrumpir la reproducción.</p>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <path d="M13 2L3 14h9l-1 8L21 10h-9z"/></svg>
+
+          </div>
+          <h2 class="card-title">Rendimiento Nativo</h2>
+          <p>Arquitectura compilada para cada sistema operativo ofreciendo latencia mínima e integración profunda con las API del sistema.</p>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <rect x="7" y="7" width="10" height="10" rx="1"/>
+    <path d="M9 3v4M12 3v4M15 3v4M9 17v4M12 17v4M15 17v4M3 9h4M3 12h4M3 15h4M17 9h4M17 12h4M17 15h4"/></svg>
+
+          </div>
+          <h2 class="card-title">Huella de Memoria Reducida</h2>
+          <p>Aproximadamente 60MB de RAM en macOS manteniendo rendimiento de audio de alta resolución.</p>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <rect x="2" y="3" width="20" height="14" rx="2"/>
+    <path d="M8 21h8M12 17v4"/></svg>
+
+          </div>
+          <h2 class="card-title">Diseñado para Desktop</h2>
+          <p>Aprovecha arrastrar y soltar, menús contextuales e interacciones avanzadas del sistema en sistemas operativos modernos.</p>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <circle cx="12" cy="12" r="2"/>
+    <circle cx="12" cy="12" r="6"/>
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 12l6-4"/></svg>
+
+          </div>
+          <h2 class="card-title">Escaneo Local y en Red</h2>
+          <p>Escaneo automático de bibliotecas locales o NAS, almacenamiento en red y servidores remotos.</p>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+    <circle cx="7" cy="7" r="1.5"/></svg>
+
+          </div>
+          <h2 class="card-title">Extracción de Metadatos</h2>
+          <p>Recuperación automática de portadas de álbumes e información de artistas.</p>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <path d="M3 6h18M3 12h18M3 18h11"/>
+    <path d="M17 15.5l5.5 3.5-5.5 3.5v-7z" fill="currentColor" stroke="none"/></svg>
+
+          </div>
+          <h2 class="card-title">Listas de Reproducción Instantáneas</h2>
+          <p>Crear y modificar listas de reproducción al vuelo sin recargar el motor de audio.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+</div>
+
+  </main>
+  <footer class="footer footer-center p-6 bg-base-200 text-base-content">
+  <aside>
+    <p>© 2026 – Tornade Audio Player</p>
+  </aside>
+</footer>
+
+</body>
+</html>

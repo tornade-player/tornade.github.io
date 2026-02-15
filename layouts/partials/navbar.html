@@ -1,0 +1,33 @@
+<div class="navbar bg-base-200 border-b border-base-300 px-6">
+  <div class="flex-1 gap-3">
+    <a href="{{ site.Home.Permalink }}" class="flex items-center gap-3">
+      <span class="font-semibold tracking-wide">Tornade</span>
+    </a>
+  </div>
+  <div class="flex-none gap-2">
+    {{ range site.Menus.main }}
+    <a href="{{ .URL }}" class="btn btn-ghost btn-sm hidden md:inline-flex">{{ .Name }}</a>
+    {{ end }}
+
+    {{/* Language switcher */}}
+    {{ if .IsTranslated }}
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-sm gap-1">
+        {{ .Language.LanguageName }}
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-36 p-2 shadow">
+        {{ range .AllTranslations }}
+        <li>
+          <a href="{{ .Permalink }}" {{ if eq .Language.Lang $.Language.Lang }}class="active"{{ end }}>
+            {{ .Language.LanguageName }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</div>

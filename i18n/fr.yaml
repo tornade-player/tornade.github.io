@@ -1,0 +1,42 @@
+hero_subtitle:
+  other: "Application audio native haute performance disponible sur macOS, Windows, Linux et utilisable directement depuis le Terminal."
+cta_download:
+  other: "Télécharger"
+cta_docs:
+  other: "Documentation"
+feat_formats_title:
+  other: "Formats Audio Professionnels"
+feat_formats_desc:
+  other: "Lecture native FLAC, OGG, MP3, WAV, AIFF et formats haute fidélité sans conversion intermédiaire."
+feat_rust_title:
+  other: "Core Développé en Rust"
+feat_rust_desc:
+  other: "Moteur audio entièrement écrit en Rust garantissant sécurité mémoire, stabilité maximale et performances constantes."
+feat_queue_title:
+  other: "Queue Temps Réel"
+feat_queue_desc:
+  other: "Création dynamique de file de lecture permettant d'ajouter ou prévoir des morceaux sans interrompre la lecture."
+feat_performance_title:
+  other: "Performance Native"
+feat_performance_desc:
+  other: "Architecture compilée pour chaque OS offrant latence minimale et intégration profonde avec les API systèmes."
+feat_memory_title:
+  other: "Empreinte Mémoire Réduite"
+feat_memory_desc:
+  other: "Environ 60MB de RAM sur macOS tout en conservant des performances audio haute résolution."
+feat_desktop_title:
+  other: "Pensé Pour Desktop"
+feat_desktop_desc:
+  other: "Exploite drag & drop, menus contextuels et interactions système avancées des OS modernes."
+feat_scan_title:
+  other: "Scan Local & Réseau"
+feat_scan_desc:
+  other: "Analyse automatique de bibliothèques locales ou NAS, stockages réseau et serveurs distants."
+feat_metadata_title:
+  other: "Scrapping Métadonnées"
+feat_metadata_desc:
+  other: "Récupération automatique des pochettes d'albums et informations artistes."
+feat_playlists_title:
+  other: "Playlists Instantanées"
+feat_playlists_desc:
+  other: "Création et modification de playlists à la volée sans rechargement du moteur audio."

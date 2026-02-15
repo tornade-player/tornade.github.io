@@ -1,3 +1,107 @@
 baseURL = 'https://tornade.tf/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+defaultContentLanguage        = 'en'
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds    = ['taxonomy', 'term']
+
+[params]
+  author        = "Tornade"
+  twitterHandle = "@tornade_app"
+  ogImage       = "/images/og-image.png"
+
+  [params.jsonld]
+    type                = "SoftwareApplication"
+    name                = "Tornade"
+    operatingSystem     = "macOS, Windows, Linux"
+    applicationCategory = "MultimediaApplication"
+    offers_price        = "0"
+    offers_currency     = "EUR"
+
+[sitemap]
+  changefreq = 'monthly'
+  priority   = 1.0
+  filename   = 'sitemap.xml'
+
+# ── English (default — served at /) ──────────────────────────────────────────
+[languages.en]
+  languageCode = 'en'
+  languageName = 'English'
+  title        = 'Tornade Audio Player'
+  weight       = 1
+
+  [languages.en.params]
+    description = "Tornade — High-performance native audio player for macOS, Windows, Linux and Terminal. FLAC, OGG, MP3, WAV, AIFF. Built in Rust."
+    locale      = "en_US"
+
+  [[languages.en.menus.main]]
+    name = 'Download'
+    url  = '#download'
+    weight = 10
+  [[languages.en.menus.main]]
+    name = 'Features'
+    url  = '#features'
+    weight = 20
+  [[languages.en.menus.main]]
+    name = 'About'
+    url  = '#about'
+    weight = 30
+  [[languages.en.menus.main]]
+    name = 'Contact'
+    url  = '#contact'
+    weight = 40
+
+# ── Français (served at /fr/) ─────────────────────────────────────────────────
+[languages.fr]
+  languageCode = 'fr'
+  languageName = 'Français'
+  title        = 'Tornade Audio Player'
+  weight       = 2
+
+  [languages.fr.params]
+    description = "Tornade — Lecteur audio natif haute performance pour macOS, Windows, Linux et Terminal. FLAC, OGG, MP3, WAV, AIFF. Développé en Rust."
+    locale      = "fr_FR"
+
+  [[languages.fr.menus.main]]
+    name = 'Téléchargement'
+    url  = '#download'
+    weight = 10
+  [[languages.fr.menus.main]]
+    name = 'Fonctionnalités'
+    url  = '#features'
+    weight = 20
+  [[languages.fr.menus.main]]
+    name = 'À propos'
+    url  = '#about'
+    weight = 30
+  [[languages.fr.menus.main]]
+    name = 'Contact'
+    url  = '#contact'
+    weight = 40
+
+# ── Español (served at /es/) ──────────────────────────────────────────────────
+[languages.es]
+  languageCode = 'es'
+  languageName = 'Español'
+  title        = 'Tornade Audio Player'
+  weight       = 3
+
+  [languages.es.params]
+    description = "Tornade — Reproductor de audio nativo de alto rendimiento para macOS, Windows, Linux y Terminal. FLAC, OGG, MP3, WAV, AIFF. Desarrollado en Rust."
+    locale      = "es_ES"
+
+  [[languages.es.menus.main]]
+    name = 'Descarga'
+    url  = '#download'
+    weight = 10
+  [[languages.es.menus.main]]
+    name = 'Características'
+    url  = '#features'
+    weight = 20
+  [[languages.es.menus.main]]
+    name = 'Acerca de'
+    url  = '#about'
+    weight = 30
+  [[languages.es.menus.main]]
+    name = 'Contacto'
+    url  = '#contact'
+    weight = 40

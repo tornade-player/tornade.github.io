@@ -1,0 +1,42 @@
+hero_subtitle:
+  other: "Aplicación de audio nativa de alto rendimiento disponible en macOS, Windows, Linux y directamente desde el Terminal."
+cta_download:
+  other: "Descargar"
+cta_docs:
+  other: "Documentación"
+feat_formats_title:
+  other: "Formatos de Audio Profesionales"
+feat_formats_desc:
+  other: "Reproducción nativa de FLAC, OGG, MP3, WAV, AIFF y formatos de alta fidelidad sin conversión intermedia."
+feat_rust_title:
+  other: "Motor en Rust"
+feat_rust_desc:
+  other: "Motor de audio completamente escrito en Rust, garantizando seguridad de memoria, máxima estabilidad y rendimiento constante."
+feat_queue_title:
+  other: "Cola en Tiempo Real"
+feat_queue_desc:
+  other: "Creación dinámica de listas de reproducción que permite agregar o programar pistas sin interrumpir la reproducción."
+feat_performance_title:
+  other: "Rendimiento Nativo"
+feat_performance_desc:
+  other: "Arquitectura compilada para cada sistema operativo ofreciendo latencia mínima e integración profunda con las API del sistema."
+feat_memory_title:
+  other: "Huella de Memoria Reducida"
+feat_memory_desc:
+  other: "Aproximadamente 60MB de RAM en macOS manteniendo rendimiento de audio de alta resolución."
+feat_desktop_title:
+  other: "Diseñado para Desktop"
+feat_desktop_desc:
+  other: "Aprovecha arrastrar y soltar, menús contextuales e interacciones avanzadas del sistema en sistemas operativos modernos."
+feat_scan_title:
+  other: "Escaneo Local y en Red"
+feat_scan_desc:
+  other: "Escaneo automático de bibliotecas locales o NAS, almacenamiento en red y servidores remotos."
+feat_metadata_title:
+  other: "Extracción de Metadatos"
+feat_metadata_desc:
+  other: "Recuperación automática de portadas de álbumes e información de artistas."
+feat_playlists_title:
+  other: "Listas de Reproducción Instantáneas"
+feat_playlists_desc:
+  other: "Crear y modificar listas de reproducción al vuelo sin recargar el motor de audio."

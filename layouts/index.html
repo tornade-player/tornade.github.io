@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="container mx-auto px-6 py-16">
+
+  <!-- HERO -->
+  <section id="download">
+    <div class="hero">
+      <div class="hero-content text-center flex-col">
+
+        <img src="{{ absURL "images/tornade.png" }}" class="w-44 mb-6" alt="Tornade logo" />
+
+        <h1 class="text-4xl font-semibold">Tornade Audio Player</h1>
+
+        <p class="max-w-xl opacity-80 mt-4">{{ i18n "hero_subtitle" }}</p>
+
+        <!-- PLATFORM BADGES -->
+        <div class="flex flex-wrap justify-center gap-2 mt-6">
+          <div class="badge badge-primary">macOS</div>
+          <div class="badge badge-neutral">Windows</div>
+          <div class="badge badge-neutral">Linux</div>
+          <div class="badge badge-neutral">Terminal / CLI</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-8 flex gap-4">
+          <button class="btn btn-primary">{{ i18n "cta_download" }}</button>
+          <button class="btn btn-ghost">{{ i18n "cta_docs" }}</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES GRID -->
+  <section id="features" class="mt-16">
+    {{ $features := slice
+      (dict "t" "feat_formats_title"     "d" "feat_formats_desc"     "i" "formats")
+      (dict "t" "feat_rust_title"        "d" "feat_rust_desc"        "i" "rust")
+      (dict "t" "feat_queue_title"       "d" "feat_queue_desc"       "i" "queue")
+      (dict "t" "feat_performance_title" "d" "feat_performance_desc" "i" "performance")
+      (dict "t" "feat_memory_title"      "d" "feat_memory_desc"      "i" "memory")
+      (dict "t" "feat_desktop_title"     "d" "feat_desktop_desc"     "i" "desktop")
+      (dict "t" "feat_scan_title"        "d" "feat_scan_desc"        "i" "scan")
+      (dict "t" "feat_metadata_title"    "d" "feat_metadata_desc"    "i" "metadata")
+      (dict "t" "feat_playlists_title"   "d" "feat_playlists_desc"   "i" "playlists")
+    }}
+    <div class="grid md:grid-cols-3 gap-6">
+      {{ range $features }}
+      <div class="card bg-base-200 shadow-sm">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
+            {{ partial "icon.html" .i }}
+          </div>
+          <h2 class="card-title">{{ i18n .t }}</h2>
+          <p>{{ i18n .d }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+</div>
+{{ end }}

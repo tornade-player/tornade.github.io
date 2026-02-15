@@ -1,0 +1,63 @@
+{{/*
+  icon.html — appelé avec le nom de l'icône en contexte
+  Exemple : {{ partial "icon.html" "formats" }}
+  Toutes les icônes : stroke="currentColor", fill="none", 24×24
+*/}}
+<svg class="w-6 h-6"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+
+  {{- if eq . "formats" -}}
+    {{/* Equalizer / waveform — 6 barres verticales centrées en y=12 */}}
+    <path d="M2 10v4M6 7v10M10 4v16M14 8v8M18 7v10M22 10v4"/>
+
+  {{- else if eq . "rust" -}}
+    {{/* Hexagone + cercle central — Rust / moteur */}}
+    <path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z"/>
+    <circle cx="12" cy="12" r="3"/>
+
+  {{- else if eq . "queue" -}}
+    {{/* Liste 3 lignes + chevron droit — file d'attente */}}
+    <path d="M3 5h18M3 11h18M3 17h14"/>
+    <path d="M19 13l4 4-4 4"/>
+
+  {{- else if eq . "performance" -}}
+    {{/* Éclair / foudre — performance native */}}
+    <path d="M13 2L3 14h9l-1 8L21 10h-9z"/>
+
+  {{- else if eq . "memory" -}}
+    {{/* Puce CPU — empreinte mémoire */}}
+    <rect x="7" y="7" width="10" height="10" rx="1"/>
+    <path d="M9 3v4M12 3v4M15 3v4M9 17v4M12 17v4M15 17v4M3 9h4M3 12h4M3 15h4M17 9h4M17 12h4M17 15h4"/>
+
+  {{- else if eq . "desktop" -}}
+    {{/* Écran + pied — application desktop */}}
+    <rect x="2" y="3" width="20" height="14" rx="2"/>
+    <path d="M8 21h8M12 17v4"/>
+
+  {{- else if eq . "scan" -}}
+    {{/* Radar — scan local & réseau */}}
+    <circle cx="12" cy="12" r="2"/>
+    <circle cx="12" cy="12" r="6"/>
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 12l6-4"/>
+
+  {{- else if eq . "metadata" -}}
+    {{/* Étiquette prix — scrapping métadonnées */}}
+    <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
+    <circle cx="7" cy="7" r="1.5"/>
+
+  {{- else if eq . "playlists" -}}
+    {{/* Liste + triangle lecture — playlists */}}
+    <path d="M3 6h18M3 12h18M3 18h11"/>
+    <path d="M17 15.5l5.5 3.5-5.5 3.5v-7z" fill="currentColor" stroke="none"/>
+
+  {{- end -}}
+
+</svg>
