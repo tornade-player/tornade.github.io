@@ -1,0 +1,48 @@
+platforms:
+  - id: macos
+    slug: macos
+    name_en: "macOS"
+    name_fr: "macOS"
+    name_es: "macOS"
+    status: "stable"
+    icon: "apple"
+    color: "#000000"
+    description_en: "Native GUI with SwiftUI"
+    description_fr: "GUI native avec SwiftUI"
+    description_es: "GUI nativa con SwiftUI"
+
+  - id: windows
+    slug: windows
+    name_en: "Windows"
+    name_fr: "Windows"
+    name_es: "Windows"
+    status: "in_development"
+    icon: "windows"
+    color: "#0078D4"
+    description_en: "Native GUI with Slint (in development)"
+    description_fr: "GUI native avec Slint (en développement)"
+    description_es: "GUI nativa con Slint (en desarrollo)"
+
+  - id: linux
+    slug: linux
+    name_en: "Linux"
+    name_fr: "Linux"
+    name_es: "Linux"
+    status: "in_development"
+    icon: "linux"
+    color: "#FCC624"
+    description_en: "Native GUI with Slint (in development)"
+    description_fr: "GUI native avec Slint (en développement)"
+    description_es: "GUI nativa con Slint (en desarrollo)"
+
+  - id: tui
+    slug: tui
+    name_en: "Terminal UI"
+    name_fr: "Interface Terminal"
+    name_es: "UI Terminal"
+    status: "in_development"
+    icon: "terminal"
+    color: "#00FF00"
+    description_en: "Lightweight TUI with ratatui"
+    description_fr: "Interface Terminal légère avec ratatui"
+    description_es: "UI Terminal ligera con ratatui"

@@ -2,18 +2,16 @@
 <div class="container mx-auto px-6 py-16">
 
   <!-- HERO -->
-  <section id="download">
-    <div class="hero">
-      <div class="hero-content text-center flex-col">
+  <section id="download" class="py-16 md:py-24">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-        <img src="{{ absURL "images/tornade.png" }}" class="w-44 mb-6" alt="Tornade logo" />
-
-        <h1 class="text-4xl font-semibold">Tornade Audio Player</h1>
-
-        <p class="max-w-xl opacity-80 mt-4">{{ i18n "hero_subtitle" }}</p>
+      <!-- Left: text content -->
+      <div class="flex-1 flex flex-col items-start">
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Tornade Audio Player</h1>
+        <p class="opacity-80 mt-4 text-lg">{{ i18n "hero_subtitle" }}</p>
 
         <!-- PLATFORM BADGES -->
-        <div class="flex flex-wrap justify-center gap-2 mt-6">
+        <div class="flex flex-wrap gap-2 mt-6">
           <div class="badge badge-primary">macOS</div>
           <div class="badge badge-neutral">Windows</div>
           <div class="badge badge-neutral">Linux</div>
@@ -25,35 +23,157 @@
           <button class="btn btn-primary">{{ i18n "cta_download" }}</button>
           <button class="btn btn-ghost">{{ i18n "cta_docs" }}</button>
         </div>
-
       </div>
+
+      <!-- Right: slideshow -->
+      <div class="flex-1 w-full relative group" id="hero-slideshow">
+
+        <!-- Slides -->
+        <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="aspect-ratio:16/10;">
+          <img src="{{ absURL "images/slideshow/tracks.png" }}"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" />
+          <img src="{{ absURL "images/slideshow/albums.png" }}"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" />
+          <img src="{{ absURL "images/slideshow/album-show.png" }}"    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" />
+          <img src="{{ absURL "images/slideshow/artists.png" }}"       class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" />
+          <img src="{{ absURL "images/slideshow/genres.png" }}"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" />
+          <img src="{{ absURL "images/slideshow/global-search.png" }}" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" />
+
+          <!-- Prev arrow -->
+          <button id="slide-prev" aria-label="Previous"
+            class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/90 shadow-lg border border-base-content/10 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
+            ‹
+          </button>
+
+          <!-- Next arrow -->
+          <button id="slide-next" aria-label="Next"
+            class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/90 shadow-lg border border-base-content/10 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
+            ›
+          </button>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="flex justify-center items-center gap-2 mt-4">
+          <button class="dot h-1.5 rounded-full bg-primary          transition-all duration-300 w-6"   data-i="0"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="1"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="2"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="3"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="4"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="5"></button>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <script>
+  (function () {
+    var el     = document.getElementById('hero-slideshow');
+    var slides = el.querySelectorAll('.slide');
+    var dots   = el.querySelectorAll('.dot');
+    var cur    = 0;
+    var timer;
+
+    function goTo(n) {
+      slides[cur].classList.replace('opacity-100', 'opacity-0');
+      dots[cur].classList.remove('bg-primary', 'w-6');
+      dots[cur].classList.add('bg-base-content/25', 'w-1.5');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.replace('opacity-0', 'opacity-100');
+      dots[cur].classList.remove('bg-base-content/25', 'w-1.5');
+      dots[cur].classList.add('bg-primary', 'w-6');
+    }
+
+    function start() { timer = setInterval(function () { goTo(cur + 1); }, 3500); }
+    function stop()  { clearInterval(timer); }
+
+    document.getElementById('slide-next').addEventListener('click', function () { stop(); goTo(cur + 1); start(); });
+    document.getElementById('slide-prev').addEventListener('click', function () { stop(); goTo(cur - 1); start(); });
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () { stop(); goTo(+this.dataset.i); start(); });
+    });
+    el.addEventListener('mouseenter', stop);
+    el.addEventListener('mouseleave', start);
+
+    start();
+  })();
+  </script>
+
   <!-- FEATURES GRID -->
-  <section id="features" class="mt-16">
-    {{ $features := slice
-      (dict "t" "feat_formats_title"     "d" "feat_formats_desc"     "i" "formats")
-      (dict "t" "feat_rust_title"        "d" "feat_rust_desc"        "i" "rust")
-      (dict "t" "feat_queue_title"       "d" "feat_queue_desc"       "i" "queue")
-      (dict "t" "feat_performance_title" "d" "feat_performance_desc" "i" "performance")
-      (dict "t" "feat_memory_title"      "d" "feat_memory_desc"      "i" "memory")
-      (dict "t" "feat_desktop_title"     "d" "feat_desktop_desc"     "i" "desktop")
-      (dict "t" "feat_scan_title"        "d" "feat_scan_desc"        "i" "scan")
-      (dict "t" "feat_metadata_title"    "d" "feat_metadata_desc"    "i" "metadata")
-      (dict "t" "feat_playlists_title"   "d" "feat_playlists_desc"   "i" "playlists")
-    }}
-    <div class="grid md:grid-cols-3 gap-6">
-      {{ range $features }}
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            {{ partial "icon.html" .i }}
+  <section id="features" class="mt-16 mb-20">
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold mb-2">{{ i18n "features_title" }}</h2>
+      <p class="text-lg opacity-75">{{ i18n "features_subtitle" }}</p>
+      <p class="text-sm opacity-60 mt-2">{{ i18n "common_features_subtitle" }}</p>
+    </div>
+
+    <!-- Display all common features -->
+    {{ $commonFeatures := $.Site.Data.features.common }}
+    <div class="space-y-12">
+      <!-- Group features by category -->
+      {{ $currentCategory := "" }}
+      {{ range $commonFeatures }}
+        {{ $category := .category }}
+        {{ if ne $category $currentCategory }}
+          {{ if ne $currentCategory "" }}</div></div>{{ end }}
+          <div class="mb-12">
+            <h3 class="text-xl font-semibold mb-4">{{ i18n (printf "category_%s" $category) }}</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+          {{ $currentCategory = $category }}
+        {{ end }}
+
+        <!-- Feature card -->
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              {{ partial "feature-icon.html" .icon }}
+            </div>
+            <h2 class="card-title">{{ i18n .title_i18n_key }}</h2>
+            <p>{{ i18n .description_i18n_key }}</p>
           </div>
-          <h2 class="card-title">{{ i18n .t }}</h2>
-          <p>{{ i18n .d }}</p>
         </div>
+      {{ end }}
       </div>
+    </div>
+    </div>
+
+    <!-- Explore Platforms Link -->
+    <div class="text-center mt-16">
+      <a href="{{ site.BaseURL }}platforms/" class="btn btn-outline">{{ i18n "explore_platforms" }}</a>
+    </div>
+  </section>
+
+  <!-- PLATFORMS SECTION -->
+  <section id="platforms" class="mt-20 mb-12">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold mb-4">{{ i18n "available_on" }}</h2>
+      <p class="text-lg opacity-75">Choose your platform and explore its unique features</p>
+    </div>
+
+    {{ $platforms := $.Site.Data.platforms.platforms }}
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {{ range $platforms }}
+      <a href="{{ $.Site.BaseURL | strings.TrimSuffix "/" }}/platforms/{{ .slug }}/" class="group">
+        <div class="card bg-base-200 hover:bg-base-300 transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-0.5">
+          <div class="card-body">
+            <div class="text-5xl mb-3">
+              {{ if eq .slug "macos" }}<i class="fa-brands fa-apple"></i>
+              {{ else if eq .slug "windows" }}<i class="fa-brands fa-windows"></i>
+              {{ else if eq .slug "linux" }}<i class="fa-brands fa-linux"></i>
+              {{ else if eq .slug "tui" }}<i class="fa-solid fa-terminal"></i>
+              {{ end }}
+            </div>
+            <h3 class="card-title text-xl">{{ .name_en }}</h3>
+            <p class="text-sm opacity-70">{{ .description_en }}</p>
+
+            <div class="mt-4">
+              {{ if eq .status "stable" }}
+                <span class="badge badge-success badge-sm">{{ i18n "status_stable" }}</span>
+              {{ else if eq .status "in_development" }}
+                <span class="badge badge-warning badge-sm">{{ i18n "status_in_development" }}</span>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </a>
       {{ end }}
     </div>
   </section>
