@@ -1,0 +1,72 @@
+# Linux-specific features (Slint Native GUI - In Development)
+- id: slint_native
+  category: ui_design
+  icon: code
+  title_i18n_key: "feat_linux_slint_title"
+  description_i18n_key: "feat_linux_slint_desc"
+
+- id: theme_integration
+  category: ui_design
+  icon: palette
+  title_i18n_key: "feat_linux_theme_title"
+  description_i18n_key: "feat_linux_theme_desc"
+
+- id: x11_wayland
+  category: ui_design
+  icon: monitor
+  title_i18n_key: "feat_linux_x11_title"
+  description_i18n_key: "feat_linux_x11_desc"
+
+- id: dbus_integration
+  category: integration
+  icon: network
+  title_i18n_key: "feat_linux_dbus_title"
+  description_i18n_key: "feat_linux_dbus_desc"
+
+- id: media_player_control
+  category: integration
+  icon: play
+  title_i18n_key: "feat_linux_mediaplayer_title"
+  description_i18n_key: "feat_linux_mediaplayer_desc"
+
+- id: appimage_distribution
+  category: integration
+  icon: download
+  title_i18n_key: "feat_linux_appimage_title"
+  description_i18n_key: "feat_linux_appimage_desc"
+
+- id: deb_packages
+  category: integration
+  icon: download
+  title_i18n_key: "feat_linux_deb_title"
+  description_i18n_key: "feat_linux_deb_desc"
+
+- id: rpm_packages
+  category: integration
+  icon: download
+  title_i18n_key: "feat_linux_rpm_title"
+  description_i18n_key: "feat_linux_rpm_desc"
+
+- id: visual_library
+  category: navigation
+  icon: grid
+  title_i18n_key: "feat_linux_library_title"
+  description_i18n_key: "feat_linux_library_desc"
+
+- id: artist_exploration
+  category: navigation
+  icon: user
+  title_i18n_key: "feat_linux_artist_title"
+  description_i18n_key: "feat_linux_artist_desc"
+
+- id: advanced_search
+  category: search
+  icon: search
+  title_i18n_key: "feat_linux_search_title"
+  description_i18n_key: "feat_linux_search_desc"
+
+- id: genre_browsing
+  category: search
+  icon: tag
+  title_i18n_key: "feat_linux_genres_title"
+  description_i18n_key: "feat_linux_genres_desc"

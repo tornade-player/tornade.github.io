@@ -2,87 +2,109 @@
 <div class="container mx-auto px-6 py-16">
 
   <!-- HERO -->
-  <section id="download" class="py-16 md:py-24">
-    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+  <section id="download" class="relative overflow-hidden -mx-6 rounded-2xl border border-base-300 min-h-[520px] lg:min-h-[600px] group">
 
-      <!-- Left: text content -->
-      <div class="flex-1 flex flex-col items-start">
-        <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Tornade Audio Player</h1>
-        <p class="opacity-80 mt-4 text-lg">{{ i18n "hero_subtitle" }}</p>
+    <!-- Full-bleed slideshow background -->
+    <div class="absolute inset-0" id="hero-slideshow">
+      <img src="{{ absURL "images/slideshow/tracks.png" }}"        class="slide absolute inset-0 w-full h-full object-contain object-right scale-[1.04] transition-opacity duration-700 opacity-100" alt="Tracks" />
+      <img src="{{ absURL "images/slideshow/albums.png" }}"        class="slide absolute inset-0 w-full h-full object-contain object-right scale-[1.04] transition-opacity duration-700 opacity-0"   alt="Albums" />
+      <img src="{{ absURL "images/slideshow/album-show.png" }}"    class="slide absolute inset-0 w-full h-full object-contain object-right scale-[1.04] transition-opacity duration-700 opacity-0"   alt="Album" />
+      <img src="{{ absURL "images/slideshow/artists.png" }}"       class="slide absolute inset-0 w-full h-full object-contain object-right scale-[1.04] transition-opacity duration-700 opacity-0"   alt="Artists" />
+      <img src="{{ absURL "images/slideshow/genres.png" }}"        class="slide absolute inset-0 w-full h-full object-contain object-right scale-[1.04] transition-opacity duration-700 opacity-0"   alt="Genres" />
+      <img src="{{ absURL "images/slideshow/global-search.png" }}" class="slide absolute inset-0 w-full h-full object-contain object-right scale-[1.04] transition-opacity duration-700 opacity-0"   alt="Search" />
 
-        <!-- PLATFORM BADGES -->
-        <div class="flex flex-wrap gap-2 mt-6">
-          <div class="badge badge-primary">macOS</div>
-          <div class="badge badge-neutral">Windows</div>
-          <div class="badge badge-neutral">Linux</div>
-          <div class="badge badge-neutral">Terminal / CLI</div>
-        </div>
+      <!-- Prev arrow — right half -->
+      <button id="slide-prev" aria-label="Previous"
+        class="absolute right-14 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-20">
+        ‹
+      </button>
 
-        <!-- CTA -->
-        <div class="mt-8 flex gap-4">
-          <button class="btn btn-primary">{{ i18n "cta_download" }}</button>
-          <button class="btn btn-ghost">{{ i18n "cta_docs" }}</button>
-        </div>
-      </div>
-
-      <!-- Right: slideshow -->
-      <div class="flex-1 w-full relative group" id="hero-slideshow">
-
-        <!-- Slides -->
-        <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="aspect-ratio:16/10;">
-          <img src="{{ absURL "images/slideshow/tracks.png" }}"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" />
-          <img src="{{ absURL "images/slideshow/albums.png" }}"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" />
-          <img src="{{ absURL "images/slideshow/album-show.png" }}"    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" />
-          <img src="{{ absURL "images/slideshow/artists.png" }}"       class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" />
-          <img src="{{ absURL "images/slideshow/genres.png" }}"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" />
-          <img src="{{ absURL "images/slideshow/global-search.png" }}" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" />
-
-          <!-- Prev arrow -->
-          <button id="slide-prev" aria-label="Previous"
-            class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/90 shadow-lg border border-base-content/10 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
-            ‹
-          </button>
-
-          <!-- Next arrow -->
-          <button id="slide-next" aria-label="Next"
-            class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/90 shadow-lg border border-base-content/10 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
-            ›
-          </button>
-        </div>
-
-        <!-- Dot indicators -->
-        <div class="flex justify-center items-center gap-2 mt-4">
-          <button class="dot h-1.5 rounded-full bg-primary          transition-all duration-300 w-6"   data-i="0"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="1"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="2"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="3"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="4"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="5"></button>
-        </div>
-      </div>
-
+      <!-- Next arrow — right half -->
+      <button id="slide-next" aria-label="Next"
+        class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-20">
+        ›
+      </button>
     </div>
+
+    <!-- Left gradient overlay: opaque on left, transparent on right -->
+    <div class="absolute inset-0 pointer-events-none bg-gradient-to-r from-base-100 from-30% via-base-100/85 via-55% to-transparent"></div>
+
+    <!-- Text content — relative so it sits above the gradient -->
+    <div class="relative z-10 flex flex-col items-start justify-center h-full py-20 md:py-28 px-8 lg:px-12 max-w-[55%]">
+
+      <!-- Pre-title badge -->
+      <div class="flex items-center gap-2 border border-primary/30 bg-primary/5 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Core in Rust &amp; Open Source
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+        The audio player<br>
+        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">built for you</span>
+      </h1>
+
+      <p class="opacity-70 mt-5 text-lg max-w-md">{{ i18n "hero_subtitle" }}</p>
+
+      <!-- PLATFORM BADGES -->
+      <div class="flex flex-wrap gap-2 mt-6">
+        <div class="badge badge-primary">macOS</div>
+        <div class="badge badge-neutral">Windows</div>
+        <div class="badge badge-neutral">Linux</div>
+        <div class="badge badge-neutral">Terminal / CLI</div>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex gap-8 mt-10 pt-8 border-t border-base-300/60">
+        <div>
+          <div class="text-2xl font-bold">4</div>
+          <div class="text-xs opacity-50 mt-0.5">Platforms</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold">Rust</div>
+          <div class="text-xs opacity-50 mt-0.5">Core</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold">TUI</div>
+          <div class="text-xs opacity-50 mt-0.5">Free &amp; Open Source</div>
+        </div>
+      </div>
+    </div>
+
   </section>
+
+  <!-- Slideshow dot indicators -->
+  <div class="flex justify-center items-center gap-2 mt-3" id="hero-dots">
+    <button class="dot h-2 rounded-full bg-primary          transition-all duration-300 w-8"   data-i="0"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="1"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="2"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="3"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="4"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="5"></button>
+  </div>
 
   <script>
   (function () {
     var el     = document.getElementById('hero-slideshow');
     var slides = el.querySelectorAll('.slide');
-    var dots   = el.querySelectorAll('.dot');
+    var dots   = document.getElementById('hero-dots').querySelectorAll('.dot');
     var cur    = 0;
     var timer;
+    var busy  = false;
 
     function goTo(n) {
+      if (busy) return;
+      busy = true;
       slides[cur].classList.replace('opacity-100', 'opacity-0');
-      dots[cur].classList.remove('bg-primary', 'w-6');
-      dots[cur].classList.add('bg-base-content/25', 'w-1.5');
+      dots[cur].classList.remove('bg-primary', 'w-8');
+      dots[cur].classList.add('bg-gray-500', 'w-2');
       cur = (n + slides.length) % slides.length;
       slides[cur].classList.replace('opacity-0', 'opacity-100');
-      dots[cur].classList.remove('bg-base-content/25', 'w-1.5');
-      dots[cur].classList.add('bg-primary', 'w-6');
+      dots[cur].classList.remove('bg-gray-500', 'w-2');
+      dots[cur].classList.add('bg-primary', 'w-8');
+      setTimeout(function () { busy = false; }, 700);
     }
 
-    function start() { timer = setInterval(function () { goTo(cur + 1); }, 3500); }
+    function start() { timer = setInterval(function () { goTo(cur + 1); }, 4000); }
     function stop()  { clearInterval(timer); }
 
     document.getElementById('slide-next').addEventListener('click', function () { stop(); goTo(cur + 1); start(); });
@@ -90,12 +112,49 @@
     dots.forEach(function (d) {
       d.addEventListener('click', function () { stop(); goTo(+this.dataset.i); start(); });
     });
-    el.addEventListener('mouseenter', stop);
-    el.addEventListener('mouseleave', start);
+    document.getElementById('download').addEventListener('mouseenter', stop);
+    document.getElementById('download').addEventListener('mouseleave', start);
 
     start();
   })();
   </script>
+
+  <!-- PLATFORMS SECTION -->
+  <section id="platforms" class="mt-20 mb-12">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold mb-4">{{ i18n "available_on" }}</h2>
+      <p class="text-lg opacity-75">Choose your platform and explore its unique features</p>
+    </div>
+
+    {{ $platforms := $.Site.Data.platforms.platforms }}
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {{ range $platforms }}
+      <a href="{{ $.Site.BaseURL | strings.TrimSuffix "/" }}/platforms/{{ .slug }}/" class="group">
+        <div class="card bg-base-200 hover:bg-base-300 transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-0.5">
+          <div class="card-body">
+            <div class="text-5xl mb-3">
+              {{ if eq .slug "macos" }}<i class="fa-brands fa-apple"></i>
+              {{ else if eq .slug "windows" }}<i class="fa-brands fa-windows"></i>
+              {{ else if eq .slug "linux" }}<i class="fa-brands fa-linux"></i>
+              {{ else if eq .slug "tui" }}<i class="fa-solid fa-terminal"></i>
+              {{ end }}
+            </div>
+            <h3 class="card-title text-xl">{{ .name_en }}</h3>
+            <p class="text-sm opacity-70">{{ .description_en }}</p>
+
+            <div class="mt-4">
+              {{ if eq .status "stable" }}
+                <span class="badge badge-success badge-sm">{{ i18n "status_stable" }}</span>
+              {{ else if eq .status "in_development" }}
+                <span class="badge badge-warning badge-sm">{{ i18n "status_in_development" }}</span>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </section>
 
   <!-- FEATURES GRID -->
   <section id="features" class="mt-16 mb-20">
@@ -141,42 +200,7 @@
     </div>
   </section>
 
-  <!-- PLATFORMS SECTION -->
-  <section id="platforms" class="mt-20 mb-12">
-    <div class="mb-12 text-center">
-      <h2 class="text-3xl font-bold mb-4">{{ i18n "available_on" }}</h2>
-      <p class="text-lg opacity-75">Choose your platform and explore its unique features</p>
-    </div>
 
-    {{ $platforms := $.Site.Data.platforms.platforms }}
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {{ range $platforms }}
-      <a href="{{ $.Site.BaseURL | strings.TrimSuffix "/" }}/platforms/{{ .slug }}/" class="group">
-        <div class="card bg-base-200 hover:bg-base-300 transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-0.5">
-          <div class="card-body">
-            <div class="text-5xl mb-3">
-              {{ if eq .slug "macos" }}<i class="fa-brands fa-apple"></i>
-              {{ else if eq .slug "windows" }}<i class="fa-brands fa-windows"></i>
-              {{ else if eq .slug "linux" }}<i class="fa-brands fa-linux"></i>
-              {{ else if eq .slug "tui" }}<i class="fa-solid fa-terminal"></i>
-              {{ end }}
-            </div>
-            <h3 class="card-title text-xl">{{ .name_en }}</h3>
-            <p class="text-sm opacity-70">{{ .description_en }}</p>
-
-            <div class="mt-4">
-              {{ if eq .status "stable" }}
-                <span class="badge badge-success badge-sm">{{ i18n "status_stable" }}</span>
-              {{ else if eq .status "in_development" }}
-                <span class="badge badge-warning badge-sm">{{ i18n "status_in_development" }}</span>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-      </a>
-      {{ end }}
-    </div>
-  </section>
 
 </div>
 {{ end }}

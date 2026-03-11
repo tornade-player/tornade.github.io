@@ -4,6 +4,16 @@ cta_download:
   other: "Download"
 cta_docs:
   other: "Documentation"
+features_title:
+  other: "Powerful Features"
+features_subtitle:
+  other: "Everything you need for professional audio playback"
+available_on:
+  other: "Available on Your Platform"
+explore_platforms:
+  other: "Explore Platform-Specific Features"
+
+# Original home page features (kept for backwards compatibility)
 feat_formats_title:
   other: "Professional Audio Formats"
 feat_formats_desc:
@@ -40,3 +50,537 @@ feat_playlists_title:
   other: "Instant Playlists"
 feat_playlists_desc:
   other: "Create and modify playlists on the fly without reloading the audio engine."
+
+# Platform page labels
+platform_title:
+  other: "Tornade for"
+common_features:
+  other: "Common Features"
+common_features_subtitle:
+  other: "Available on all Tornade frontends (macOS, Windows, Linux, Terminal)"
+platform_specific_features:
+  other: "Platform-Specific Features"
+ready_to_download:
+  other: "Ready to Get Started?"
+macos_exclusive:
+  other: "Features exclusively optimized for macOS with SwiftUI"
+windows_exclusive:
+  other: "Planned features for Windows with Slint GUI (in development)"
+linux_exclusive:
+  other: "Planned features for Linux with Slint GUI (in development)"
+tui_exclusive:
+  other: "Terminal-optimized features for lightweight CLI usage"
+
+# Common feature categories
+category_library_management:
+  other: "Library Management"
+category_audio_playback:
+  other: "Audio Playback"
+category_playlist_management:
+  other: "Playlist Management"
+category_user_data:
+  other: "User Data & Persistence"
+
+# macOS categories
+category_ui_design:
+  other: "User Interface Design"
+category_navigation:
+  other: "Navigation & Exploration"
+category_search:
+  other: "Search & Filtering"
+category_playback_controls:
+  other: "Playback Controls"
+category_playlists:
+  other: "Playlists"
+category_ratings:
+  other: "Ratings & Favorites"
+category_performance:
+  other: "Performance & Memory"
+category_multi_screen:
+  other: "Multi-Screen Support"
+category_accessibility:
+  other: "Accessibility"
+category_integration:
+  other: "macOS Integration"
+category_advanced:
+  other: "Advanced Features"
+
+# Windows categories (using generic labels to avoid duplication)
+# Reuses category_ui_design, category_integration, category_navigation, category_search from above
+
+# Linux categories (using generic labels to avoid duplication)
+# Reuses category_ui_design, category_integration, category_navigation, category_search from above
+
+# TUI categories (category_navigation, category_playlists reused from above)
+category_ui_interface:
+  other: "Terminal Interface"
+category_playback:
+  other: "Playback Control"
+category_characteristics:
+  other: "Characteristics"
+
+# Common features
+feat_common_scan_title:
+  other: "Directory Scanning"
+feat_common_scan_desc:
+  other: "Automatic analysis of local folders to discover audio files"
+feat_common_formats_title:
+  other: "Professional Audio Formats"
+feat_common_formats_desc:
+  other: "Support for FLAC, MP3, AAC, ALAC and other high-fidelity formats"
+feat_common_metadata_title:
+  other: "Automatic Metadata Extraction"
+feat_common_metadata_desc:
+  other: "Automatic retrieval of track title, artist, album, genre, year, track number"
+feat_common_artwork_title:
+  other: "Album Artwork Cache"
+feat_common_artwork_desc:
+  other: "Automatic extraction and caching of album covers in multiple resolutions"
+feat_common_fts_title:
+  other: "Full-Text Search"
+feat_common_fts_desc:
+  other: "Fast search across entire music library using SQLite FTS5 engine"
+feat_common_sources_title:
+  other: "Multiple Sources"
+feat_common_sources_desc:
+  other: "Manage multiple music sources including local disks and network drives"
+feat_common_duplicates_title:
+  other: "Duplicate Detection"
+feat_common_duplicates_desc:
+  other: "Automatic identification of duplicate tracks by title, artist and duration"
+feat_common_playback_title:
+  other: "Complete Playback Controls"
+feat_common_playback_desc:
+  other: "Play, pause, resume, stop with full control over playback"
+feat_common_navigation_title:
+  other: "Track Navigation"
+feat_common_navigation_desc:
+  other: "Previous and next track controls for easy navigation"
+feat_common_queue_title:
+  other: "Dynamic Queue Management"
+feat_common_queue_desc:
+  other: "Add, remove and reorganize tracks in the playback queue"
+feat_common_modes_title:
+  other: "Playback Modes"
+feat_common_modes_desc:
+  other: "Shuffle, repeat all, repeat one, and normal playback modes"
+feat_common_volume_title:
+  other: "Volume Control"
+feat_common_volume_desc:
+  other: "Smooth volume adjustment from 0.0 to 1.0"
+feat_common_hifi_title:
+  other: "High-Fidelity Decoding"
+feat_common_hifi_desc:
+  other: "Native codec support via Symphonia for lossless audio playback"
+feat_common_playlist_title:
+  other: "Complete Playlist Management"
+feat_common_playlist_desc:
+  other: "Create, rename, delete and manage playlists effortlessly"
+feat_common_m3u_title:
+  other: "M3U Import/Export"
+feat_common_m3u_desc:
+  other: "Import and export playlists in standard M3U format"
+feat_common_ratings_title:
+  other: "Track Ratings"
+feat_common_ratings_desc:
+  other: "Rate tracks from 0-5 stars with persistent storage"
+feat_common_db_title:
+  other: "SQLite Database"
+feat_common_db_desc:
+  other: "Persistent storage of library, playlists and user preferences"
+feat_common_persistence_title:
+  other: "State Persistence"
+feat_common_persistence_desc:
+  other: "Remember playback position, playlists and preferences"
+feat_common_history_title:
+  other: "History & Favorites"
+feat_common_history_desc:
+  other: "Track playback history and mark favorite tracks"
+
+# macOS features
+feat_macos_swiftui_title:
+  other: "100% Native SwiftUI"
+feat_macos_swiftui_desc:
+  other: "Native interface built with SwiftUI and AppKit for seamless macOS integration (macOS 13+)"
+feat_macos_theme_title:
+  other: "Light/Dark Theme Support"
+feat_macos_theme_desc:
+  other: "Full support for macOS system light and dark modes"
+feat_macos_realtime_title:
+  other: "Real-Time Interface Updates"
+feat_macos_realtime_desc:
+  other: "Fluid interface updates during playback"
+feat_macos_ambient_title:
+  other: "Ambient Background"
+feat_macos_ambient_desc:
+  other: "Animated gradient background derived from album artwork colors"
+feat_macos_transitions_title:
+  other: "Smooth Transitions"
+feat_macos_transitions_desc:
+  other: "Smooth animations between screens and track transitions"
+feat_macos_grid_title:
+  other: "Visual Album Grid"
+feat_macos_grid_desc:
+  other: "Browse your music library with beautiful album covers"
+feat_macos_artists_title:
+  other: "Artist List"
+feat_macos_artists_desc:
+  other: "Hierarchical exploration by artist with discography"
+feat_macos_genres_title:
+  other: "Genre View"
+feat_macos_genres_desc:
+  other: "Filter and navigate music by genre"
+feat_macos_detail_title:
+  other: "Album Detail View"
+feat_macos_detail_desc:
+  other: "Complete album information with high-resolution artwork"
+feat_macos_artist_detail_title:
+  other: "Artist Detail View"
+feat_macos_artist_detail_desc:
+  other: "Artist discography and associated information"
+feat_macos_search_title:
+  other: "Integrated Search"
+feat_macos_search_desc:
+  other: "Fast search with real-time results"
+feat_macos_sidebar_title:
+  other: "Sidebar Navigation"
+feat_macos_sidebar_desc:
+  other: "Quick access to sources, playlists and genres"
+feat_macos_fts_title:
+  other: "Full-Text Search"
+feat_macos_fts_desc:
+  other: "Search by title, artist, album, genre, year"
+feat_macos_filters_title:
+  other: "Advanced Filtering"
+feat_macos_filters_desc:
+  other: "Filter by year, genre, and rating"
+feat_macos_autocomplete_title:
+  other: "Search Autocompletion"
+feat_macos_autocomplete_desc:
+  other: "Suggestions while typing"
+feat_macos_bar_title:
+  other: "Playback Bar"
+feat_macos_bar_desc:
+  other: "Position visualization and temporal scrubbing"
+feat_macos_touchpad_title:
+  other: "Touchpad Controls"
+feat_macos_touchpad_desc:
+  other: "Play/pause, previous/next, shuffle, repeat buttons"
+feat_macos_volume_title:
+  other: "Volume Control & Feedback"
+feat_macos_volume_desc:
+  other: "Volume adjustment with visual feedback"
+feat_macos_queue_title:
+  other: "Current Queue View"
+feat_macos_queue_desc:
+  other: "View and reorganize current playback queue"
+feat_macos_indicators_title:
+  other: "Visual Indicators"
+feat_macos_indicators_desc:
+  other: "Always-visible shuffle and repeat state indicators"
+feat_macos_visual_playlists_title:
+  other: "Visual Playlist Management"
+feat_macos_visual_playlists_desc:
+  other: "Create, rename, delete from sidebar"
+feat_macos_inline_title:
+  other: "Inline Editing"
+feat_macos_inline_desc:
+  other: "Drag-and-drop playlist track reorganization"
+feat_macos_import_export_title:
+  other: "M3U Import/Export"
+feat_macos_import_export_desc:
+  other: "Simple interface for M3U playlist management"
+feat_macos_quick_queue_title:
+  other: "Quick Queue Buttons"
+feat_macos_quick_queue_desc:
+  other: "Add to queue from album and artist views"
+feat_macos_stars_title:
+  other: "Star Rating Display"
+feat_macos_stars_desc:
+  other: "Visual 0-5 star rating interface"
+feat_macos_rating_edit_title:
+  other: "Rating Editing"
+feat_macos_rating_edit_desc:
+  other: "Instant rating modification from track lists"
+feat_macos_rating_filter_title:
+  other: "Rating-Based Filtering"
+feat_macos_rating_filter_desc:
+  other: "Filter library by star rating"
+feat_macos_cache_title:
+  other: "Optimized Artwork Cache"
+feat_macos_cache_desc:
+  other: "Intelligent cache with size limits (200 images, 100MB total)"
+feat_macos_unload_title:
+  other: "Automatic Memory Unload"
+feat_macos_unload_desc:
+  other: "Release off-screen artwork memory automatically"
+feat_macos_memory_title:
+  other: "Memory Stability"
+feat_macos_memory_desc:
+  other: "Stable usage on long sessions (30+ minutes)"
+feat_macos_decoding_title:
+  other: "Optimized Decoding"
+feat_macos_decoding_desc:
+  other: "RAM pre-decoding to prevent audio artifacts"
+feat_macos_multiscreen_title:
+  other: "Dynamic Window Adaptation"
+feat_macos_multiscreen_desc:
+  other: "Adapts to different macOS resolutions"
+feat_macos_fullscreen_title:
+  other: "Full-Screen Mode"
+feat_macos_fullscreen_desc:
+  other: "Complete full-screen support"
+feat_macos_retina_title:
+  other: "Retina Display Support"
+feat_macos_retina_desc:
+  other: "Optimization for high-density displays"
+feat_macos_voiceover_title:
+  other: "VoiceOver Support"
+feat_macos_voiceover_desc:
+  other: "All elements accessible to screen readers"
+feat_macos_keyboard_title:
+  other: "Full Keyboard Navigation"
+feat_macos_keyboard_desc:
+  other: "Complete keyboard control"
+feat_macos_labels_title:
+  other: "Accessibility Labels"
+feat_macos_labels_desc:
+  other: "Contextual labels on all interactive elements"
+feat_macos_localization_title:
+  other: "Localization Ready"
+feat_macos_localization_desc:
+  other: "Multi-language interface support"
+feat_macos_dragdrop_title:
+  other: "Drag & Drop"
+feat_macos_dragdrop_desc:
+  other: "Drop audio files on Dock icon"
+feat_macos_mediakeys_title:
+  other: "Media Keys Support"
+feat_macos_mediakeys_desc:
+  other: "Control via keyboard media keys"
+feat_macos_notifications_title:
+  other: "System Notifications"
+feat_macos_notifications_desc:
+  other: "Track change system notifications"
+feat_macos_appstore_title:
+  other: "App Store Compatible"
+feat_macos_appstore_desc:
+  other: "Signed and notarized DMG distribution"
+feat_macos_scanner_title:
+  other: "Library Scanner"
+feat_macos_scanner_desc:
+  other: "Progress bar interface for library scanning"
+feat_macos_nas_title:
+  other: "NAS Auto-Detection"
+feat_macos_nas_desc:
+  other: "Automatic reconnection to network drives"
+feat_macos_monitor_title:
+  other: "Memory Pressure Monitor"
+feat_macos_monitor_desc:
+  other: "Adaptive degradation under memory pressure"
+feat_macos_dashboard_title:
+  other: "Performance Dashboard"
+feat_macos_dashboard_desc:
+  other: "Debug metrics display (FPS, memory)"
+
+# Windows features
+feat_windows_slint_title:
+  other: "Native Slint GUI"
+feat_windows_slint_desc:
+  other: "Native Windows interface compiled with Slint"
+feat_windows_theme_title:
+  other: "System Theme Integration"
+feat_windows_theme_desc:
+  other: "Integration with Windows 10/11 light/dark theme"
+feat_windows_directsound_title:
+  other: "DirectSound Support"
+feat_windows_directsound_desc:
+  other: "Modern Windows audio API integration"
+feat_windows_notifications_title:
+  other: "Windows Notifications"
+feat_windows_notifications_desc:
+  other: "System notification integration"
+feat_windows_msi_title:
+  other: "MSI Installer"
+feat_windows_msi_desc:
+  other: "Modern Windows Installer (cargo-wix)"
+feat_windows_tray_title:
+  other: "System Tray Icon"
+feat_windows_tray_desc:
+  other: "Taskbar system tray integration"
+feat_windows_media_title:
+  other: "Media Transport Controls"
+feat_windows_media_desc:
+  other: "Windows media control integration"
+feat_windows_explorer_title:
+  other: "Album Explorer"
+feat_windows_explorer_desc:
+  other: "Visual album browsing interface"
+feat_windows_browser_title:
+  other: "Artist Browser"
+feat_windows_browser_desc:
+  other: "Navigate music by artist"
+feat_windows_genres_title:
+  other: "Genre Filtering"
+feat_windows_genres_desc:
+  other: "Filter and browse by music genre"
+feat_windows_search_title:
+  other: "Fast Search"
+feat_windows_search_desc:
+  other: "Quick library search functionality"
+
+# Linux features
+feat_linux_slint_title:
+  other: "Native Slint GUI"
+feat_linux_slint_desc:
+  other: "Native Linux interface compiled with Slint"
+feat_linux_theme_title:
+  other: "GTK/Qt Theme Integration"
+feat_linux_theme_desc:
+  other: "Integration with GTK/Qt system themes"
+feat_linux_x11_title:
+  other: "X11 & Wayland Support"
+feat_linux_x11_desc:
+  other: "Compatibility with modern display servers"
+feat_linux_dbus_title:
+  other: "DBus Integration"
+feat_linux_dbus_desc:
+  other: "Notifications and media control via DBus"
+feat_linux_mediaplayer_title:
+  other: "MediaPlayer Interface"
+feat_linux_mediaplayer_desc:
+  other: "Standard MediaPlayer interface support"
+feat_linux_appimage_title:
+  other: "AppImage Distribution"
+feat_linux_appimage_desc:
+  other: "Portable distribution without dependencies"
+feat_linux_deb_title:
+  other: "Debian/Ubuntu Packages"
+feat_linux_deb_desc:
+  other: ".deb packages for Debian-based distributions"
+feat_linux_rpm_title:
+  other: "Fedora/RHEL Packages"
+feat_linux_rpm_desc:
+  other: ".rpm packages for Red Hat-based distributions"
+feat_linux_library_title:
+  other: "Visual Library"
+feat_linux_library_desc:
+  other: "Browse music library with visual elements"
+feat_linux_artist_title:
+  other: "Artist Exploration"
+feat_linux_artist_desc:
+  other: "Navigate and explore by artist"
+feat_linux_search_title:
+  other: "Advanced Search"
+feat_linux_search_desc:
+  other: "Comprehensive library search"
+feat_linux_genres_title:
+  other: "Genre Browsing"
+feat_linux_genres_desc:
+  other: "Browse and filter by music genre"
+
+# TUI features
+feat_tui_ratatui_title:
+  other: "ratatui Framework"
+feat_tui_ratatui_desc:
+  other: "Modern terminal UI powered by ratatui"
+feat_tui_rendering_title:
+  other: "Real-Time Rendering"
+feat_tui_rendering_desc:
+  other: "Smooth terminal rendering during playback"
+feat_tui_colors_title:
+  other: "Full Color Support"
+feat_tui_colors_desc:
+  other: "Complete 256-color palette support"
+feat_tui_theme_title:
+  other: "Light/Dark Theme"
+feat_tui_theme_desc:
+  other: "Terminal theme adaptation"
+feat_tui_grid_title:
+  other: "Album Grid View"
+feat_tui_grid_desc:
+  other: "ASCII album grid display"
+feat_tui_artists_title:
+  other: "Artist Navigation"
+feat_tui_artists_desc:
+  other: "Browse music by artist"
+feat_tui_genres_title:
+  other: "Genre Filtering"
+feat_tui_genres_desc:
+  other: "Filter and browse by genre"
+feat_tui_search_title:
+  other: "Real-Time Search"
+feat_tui_search_desc:
+  other: "Live search functionality"
+feat_tui_keyboard_title:
+  other: "Keyboard Navigation"
+feat_tui_keyboard_desc:
+  other: "Complete keyboard control (vim-like optional)"
+feat_tui_progress_title:
+  other: "Progress Bar"
+feat_tui_progress_desc:
+  other: "Playback position visualization"
+feat_tui_controls_title:
+  other: "Basic Controls"
+feat_tui_controls_desc:
+  other: "Play, pause, next, previous controls"
+feat_tui_volume_title:
+  other: "Volume Control"
+feat_tui_volume_desc:
+  other: "Terminal volume adjustment"
+feat_tui_queue_title:
+  other: "Queue Display"
+feat_tui_queue_desc:
+  other: "Current playback queue visualization"
+feat_tui_playlists_title:
+  other: "Playlist Display"
+feat_tui_playlists_desc:
+  other: "Available playlists list"
+feat_tui_playlist_mgmt_title:
+  other: "Playlist Management"
+feat_tui_playlist_mgmt_desc:
+  other: "Create, delete, and modify playlists"
+feat_tui_lightweight_title:
+  other: "Lightweight"
+feat_tui_lightweight_desc:
+  other: "Minimal memory footprint (ideal for servers/SSH)"
+feat_tui_nodeps_title:
+  other: "No Graphical Dependencies"
+feat_tui_nodeps_desc:
+  other: "No X11, Wayland, or DirectSound dependencies"
+feat_tui_portable_title:
+  other: "Portable"
+feat_tui_portable_desc:
+  other: "Works on any Unix/Linux terminal"
+feat_tui_headless_title:
+  other: "Headless Mode"
+feat_tui_headless_desc:
+  other: "CLI control for scripting integration"
+
+# Status badges
+status_stable:
+  other: "Stable"
+status_in_development:
+  other: "In Development"
+
+# Contact
+contact_title:
+  other: "Contact"
+contact_subtitle:
+  other: "A question or feedback? Write to us."
+contact_fullname:
+  other: "Full name"
+contact_email:
+  other: "Email"
+contact_message:
+  other: "Message"
+contact_send:
+  other: "Send"
+
+# Contact success
+contact_success_title:
+  other: "Message sent!"
+contact_success_message:
+  other: "Thank you for reaching out. We'll get back to you as soon as possible."
+contact_success_back:
+  other: "Back to home"

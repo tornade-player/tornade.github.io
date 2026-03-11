@@ -1,0 +1,276 @@
+# macOS-specific features (SwiftUI Native GUI)
+- id: swiftui_native
+  category: ui_design
+  icon: code
+  title_i18n_key: "feat_macos_swiftui_title"
+  description_i18n_key: "feat_macos_swiftui_desc"
+
+- id: light_dark_theme
+  category: ui_design
+  icon: theme
+  title_i18n_key: "feat_macos_theme_title"
+  description_i18n_key: "feat_macos_theme_desc"
+
+- id: realtime_ui
+  category: ui_design
+  icon: zap
+  title_i18n_key: "feat_macos_realtime_title"
+  description_i18n_key: "feat_macos_realtime_desc"
+
+- id: ambient_background
+  category: ui_design
+  icon: gradient
+  title_i18n_key: "feat_macos_ambient_title"
+  description_i18n_key: "feat_macos_ambient_desc"
+
+- id: smooth_transitions
+  category: ui_design
+  icon: animation
+  title_i18n_key: "feat_macos_transitions_title"
+  description_i18n_key: "feat_macos_transitions_desc"
+
+- id: album_grid
+  category: navigation
+  icon: grid
+  title_i18n_key: "feat_macos_grid_title"
+  description_i18n_key: "feat_macos_grid_desc"
+
+- id: artist_list
+  category: navigation
+  icon: user
+  title_i18n_key: "feat_macos_artists_title"
+  description_i18n_key: "feat_macos_artists_desc"
+
+- id: genre_view
+  category: navigation
+  icon: tag
+  title_i18n_key: "feat_macos_genres_title"
+  description_i18n_key: "feat_macos_genres_desc"
+
+- id: album_detail
+  category: navigation
+  icon: album
+  title_i18n_key: "feat_macos_detail_title"
+  description_i18n_key: "feat_macos_detail_desc"
+
+- id: artist_detail
+  category: navigation
+  icon: user
+  title_i18n_key: "feat_macos_artist_detail_title"
+  description_i18n_key: "feat_macos_artist_detail_desc"
+
+- id: integrated_search
+  category: navigation
+  icon: search
+  title_i18n_key: "feat_macos_search_title"
+  description_i18n_key: "feat_macos_search_desc"
+
+- id: sidebar
+  category: navigation
+  icon: menu
+  title_i18n_key: "feat_macos_sidebar_title"
+  description_i18n_key: "feat_macos_sidebar_desc"
+
+- id: fulltext_search
+  category: search
+  icon: search
+  title_i18n_key: "feat_macos_fts_title"
+  description_i18n_key: "feat_macos_fts_desc"
+
+- id: advanced_filters
+  category: search
+  icon: filter
+  title_i18n_key: "feat_macos_filters_title"
+  description_i18n_key: "feat_macos_filters_desc"
+
+- id: autocomplete
+  category: search
+  icon: sparkles
+  title_i18n_key: "feat_macos_autocomplete_title"
+  description_i18n_key: "feat_macos_autocomplete_desc"
+
+- id: playback_bar
+  category: playback_controls
+  icon: play
+  title_i18n_key: "feat_macos_bar_title"
+  description_i18n_key: "feat_macos_bar_desc"
+
+- id: touchpad_controls
+  category: playback_controls
+  icon: touch
+  title_i18n_key: "feat_macos_touchpad_title"
+  description_i18n_key: "feat_macos_touchpad_desc"
+
+- id: volume_feedback
+  category: playback_controls
+  icon: volume
+  title_i18n_key: "feat_macos_volume_title"
+  description_i18n_key: "feat_macos_volume_desc"
+
+- id: current_queue
+  category: playback_controls
+  icon: queue
+  title_i18n_key: "feat_macos_queue_title"
+  description_i18n_key: "feat_macos_queue_desc"
+
+- id: visual_indicators
+  category: playback_controls
+  icon: eye
+  title_i18n_key: "feat_macos_indicators_title"
+  description_i18n_key: "feat_macos_indicators_desc"
+
+- id: visual_playlists
+  category: playlists
+  icon: list
+  title_i18n_key: "feat_macos_visual_playlists_title"
+  description_i18n_key: "feat_macos_visual_playlists_desc"
+
+- id: inline_editing
+  category: playlists
+  icon: edit
+  title_i18n_key: "feat_macos_inline_title"
+  description_i18n_key: "feat_macos_inline_desc"
+
+- id: playlist_import_export
+  category: playlists
+  icon: import
+  title_i18n_key: "feat_macos_import_export_title"
+  description_i18n_key: "feat_macos_import_export_desc"
+
+- id: quick_queue
+  category: playlists
+  icon: plus
+  title_i18n_key: "feat_macos_quick_queue_title"
+  description_i18n_key: "feat_macos_quick_queue_desc"
+
+- id: star_display
+  category: ratings
+  icon: star
+  title_i18n_key: "feat_macos_stars_title"
+  description_i18n_key: "feat_macos_stars_desc"
+
+- id: rating_editing
+  category: ratings
+  icon: edit
+  title_i18n_key: "feat_macos_rating_edit_title"
+  description_i18n_key: "feat_macos_rating_edit_desc"
+
+- id: rating_filter
+  category: ratings
+  icon: filter
+  title_i18n_key: "feat_macos_rating_filter_title"
+  description_i18n_key: "feat_macos_rating_filter_desc"
+
+- id: cache_optimization
+  category: performance
+  icon: zap
+  title_i18n_key: "feat_macos_cache_title"
+  description_i18n_key: "feat_macos_cache_desc"
+
+- id: auto_unload
+  category: performance
+  icon: trash
+  title_i18n_key: "feat_macos_unload_title"
+  description_i18n_key: "feat_macos_unload_desc"
+
+- id: memory_stability
+  category: performance
+  icon: check
+  title_i18n_key: "feat_macos_memory_title"
+  description_i18n_key: "feat_macos_memory_desc"
+
+- id: optimized_decoding
+  category: performance
+  icon: sound
+  title_i18n_key: "feat_macos_decoding_title"
+  description_i18n_key: "feat_macos_decoding_desc"
+
+- id: multiscreen_support
+  category: multi_screen
+  icon: monitor
+  title_i18n_key: "feat_macos_multiscreen_title"
+  description_i18n_key: "feat_macos_multiscreen_desc"
+
+- id: fullscreen_mode
+  category: multi_screen
+  icon: maximize
+  title_i18n_key: "feat_macos_fullscreen_title"
+  description_i18n_key: "feat_macos_fullscreen_desc"
+
+- id: retina_support
+  category: multi_screen
+  icon: sparkles
+  title_i18n_key: "feat_macos_retina_title"
+  description_i18n_key: "feat_macos_retina_desc"
+
+- id: voiceover_support
+  category: accessibility
+  icon: ear
+  title_i18n_key: "feat_macos_voiceover_title"
+  description_i18n_key: "feat_macos_voiceover_desc"
+
+- id: keyboard_navigation
+  category: accessibility
+  icon: keyboard
+  title_i18n_key: "feat_macos_keyboard_title"
+  description_i18n_key: "feat_macos_keyboard_desc"
+
+- id: accessibility_labels
+  category: accessibility
+  icon: tag
+  title_i18n_key: "feat_macos_labels_title"
+  description_i18n_key: "feat_macos_labels_desc"
+
+- id: localization
+  category: accessibility
+  icon: globe
+  title_i18n_key: "feat_macos_localization_title"
+  description_i18n_key: "feat_macos_localization_desc"
+
+- id: drag_drop
+  category: integration
+  icon: hand
+  title_i18n_key: "feat_macos_dragdrop_title"
+  description_i18n_key: "feat_macos_dragdrop_desc"
+
+- id: media_keys
+  category: integration
+  icon: keyboard
+  title_i18n_key: "feat_macos_mediakeys_title"
+  description_i18n_key: "feat_macos_mediakeys_desc"
+
+- id: notifications
+  category: integration
+  icon: bell
+  title_i18n_key: "feat_macos_notifications_title"
+  description_i18n_key: "feat_macos_notifications_desc"
+
+- id: app_store
+  category: integration
+  icon: download
+  title_i18n_key: "feat_macos_appstore_title"
+  description_i18n_key: "feat_macos_appstore_desc"
+
+- id: library_scanner
+  category: advanced
+  icon: scan
+  title_i18n_key: "feat_macos_scanner_title"
+  description_i18n_key: "feat_macos_scanner_desc"
+
+- id: nas_detection
+  category: advanced
+  icon: network
+  title_i18n_key: "feat_macos_nas_title"
+  description_i18n_key: "feat_macos_nas_desc"
+
+- id: memory_monitor
+  category: advanced
+  icon: gauge
+  title_i18n_key: "feat_macos_monitor_title"
+  description_i18n_key: "feat_macos_monitor_desc"
+
+- id: performance_dashboard
+  category: advanced
+  icon: chart
+  title_i18n_key: "feat_macos_dashboard_title"
+  description_i18n_key: "feat_macos_dashboard_desc"

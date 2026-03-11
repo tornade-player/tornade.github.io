@@ -1,0 +1,66 @@
+# Windows-specific features (Slint Native GUI - In Development)
+- id: slint_native
+  category: ui_design
+  icon: code
+  title_i18n_key: "feat_windows_slint_title"
+  description_i18n_key: "feat_windows_slint_desc"
+
+- id: light_dark_integration
+  category: ui_design
+  icon: theme
+  title_i18n_key: "feat_windows_theme_title"
+  description_i18n_key: "feat_windows_theme_desc"
+
+- id: directsound_support
+  category: integration
+  icon: sound
+  title_i18n_key: "feat_windows_directsound_title"
+  description_i18n_key: "feat_windows_directsound_desc"
+
+- id: modern_notifications
+  category: integration
+  icon: bell
+  title_i18n_key: "feat_windows_notifications_title"
+  description_i18n_key: "feat_windows_notifications_desc"
+
+- id: msi_installer
+  category: integration
+  icon: download
+  title_i18n_key: "feat_windows_msi_title"
+  description_i18n_key: "feat_windows_msi_desc"
+
+- id: system_tray
+  category: integration
+  icon: minimize
+  title_i18n_key: "feat_windows_tray_title"
+  description_i18n_key: "feat_windows_tray_desc"
+
+- id: media_control
+  category: integration
+  icon: play
+  title_i18n_key: "feat_windows_media_title"
+  description_i18n_key: "feat_windows_media_desc"
+
+- id: album_explorer
+  category: navigation
+  icon: grid
+  title_i18n_key: "feat_windows_explorer_title"
+  description_i18n_key: "feat_windows_explorer_desc"
+
+- id: artist_browser
+  category: navigation
+  icon: user
+  title_i18n_key: "feat_windows_browser_title"
+  description_i18n_key: "feat_windows_browser_desc"
+
+- id: genre_filtering
+  category: search
+  icon: filter
+  title_i18n_key: "feat_windows_genres_title"
+  description_i18n_key: "feat_windows_genres_desc"
+
+- id: fast_search
+  category: search
+  icon: search
+  title_i18n_key: "feat_windows_search_title"
+  description_i18n_key: "feat_windows_search_desc"

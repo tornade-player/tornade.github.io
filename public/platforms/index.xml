@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tornade Platforms on Tornade Audio Player</title>
+    <link>http://localhost:1313/platforms/</link>
+    <description>Recent content in Tornade Platforms on Tornade Audio Player</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/platforms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tornade for Linux — Native Slint Audio Player</title>
+      <link>http://localhost:1313/platforms/linux/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/platforms/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tornade for macOS — Native SwiftUI Audio Player</title>
+      <link>http://localhost:1313/platforms/macos/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/platforms/macos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tornade for Windows — Native Slint Audio Player</title>
+      <link>http://localhost:1313/platforms/windows/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/platforms/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tornade Terminal UI — Lightweight Audio Player for CLI</title>
+      <link>http://localhost:1313/platforms/tui/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/platforms/tui/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

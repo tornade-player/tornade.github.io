@@ -1,0 +1,114 @@
+# Common features available on all Tornade frontends
+- id: scan_directories
+  category: library_management
+  icon: scan
+  title_i18n_key: "feat_common_scan_title"
+  description_i18n_key: "feat_common_scan_desc"
+
+- id: audio_formats
+  category: library_management
+  icon: formats
+  title_i18n_key: "feat_common_formats_title"
+  description_i18n_key: "feat_common_formats_desc"
+
+- id: metadata_extraction
+  category: library_management
+  icon: metadata
+  title_i18n_key: "feat_common_metadata_title"
+  description_i18n_key: "feat_common_metadata_desc"
+
+- id: artwork_extraction
+  category: library_management
+  icon: image
+  title_i18n_key: "feat_common_artwork_title"
+  description_i18n_key: "feat_common_artwork_desc"
+
+- id: full_text_search
+  category: library_management
+  icon: search
+  title_i18n_key: "feat_common_fts_title"
+  description_i18n_key: "feat_common_fts_desc"
+
+- id: multiple_sources
+  category: library_management
+  icon: folder
+  title_i18n_key: "feat_common_sources_title"
+  description_i18n_key: "feat_common_sources_desc"
+
+- id: duplicate_detection
+  category: library_management
+  icon: duplicate
+  title_i18n_key: "feat_common_duplicates_title"
+  description_i18n_key: "feat_common_duplicates_desc"
+
+- id: playback_controls
+  category: audio_playback
+  icon: play
+  title_i18n_key: "feat_common_playback_title"
+  description_i18n_key: "feat_common_playback_desc"
+
+- id: navigation
+  category: audio_playback
+  icon: skip
+  title_i18n_key: "feat_common_navigation_title"
+  description_i18n_key: "feat_common_navigation_desc"
+
+- id: queue_management
+  category: audio_playback
+  icon: queue
+  title_i18n_key: "feat_common_queue_title"
+  description_i18n_key: "feat_common_queue_desc"
+
+- id: playback_modes
+  category: audio_playback
+  icon: shuffle
+  title_i18n_key: "feat_common_modes_title"
+  description_i18n_key: "feat_common_modes_desc"
+
+- id: volume_control
+  category: audio_playback
+  icon: volume
+  title_i18n_key: "feat_common_volume_title"
+  description_i18n_key: "feat_common_volume_desc"
+
+- id: hifi_decoding
+  category: audio_playback
+  icon: hifi
+  title_i18n_key: "feat_common_hifi_title"
+  description_i18n_key: "feat_common_hifi_desc"
+
+- id: playlist_crud
+  category: playlist_management
+  icon: list
+  title_i18n_key: "feat_common_playlist_title"
+  description_i18n_key: "feat_common_playlist_desc"
+
+- id: m3u_import
+  category: playlist_management
+  icon: import
+  title_i18n_key: "feat_common_m3u_title"
+  description_i18n_key: "feat_common_m3u_desc"
+
+- id: ratings
+  category: user_data
+  icon: star
+  title_i18n_key: "feat_common_ratings_title"
+  description_i18n_key: "feat_common_ratings_desc"
+
+- id: sqlite_database
+  category: user_data
+  icon: database
+  title_i18n_key: "feat_common_db_title"
+  description_i18n_key: "feat_common_db_desc"
+
+- id: state_persistence
+  category: user_data
+  icon: save
+  title_i18n_key: "feat_common_persistence_title"
+  description_i18n_key: "feat_common_persistence_desc"
+
+- id: history_favorites
+  category: user_data
+  icon: heart
+  title_i18n_key: "feat_common_history_title"
+  description_i18n_key: "feat_common_history_desc"

@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<title>Tornade for macOS — Native SwiftUI Audio Player | Tornade Audio Player</title>
+
+
+<link rel="canonical" href="http://localhost:1313/platforms/macos/" />
+
+
+
+<meta name="description" content="Experience Tornade on macOS with a native SwiftUI interface, ambient backgrounds, advanced library navigation and high-fidelity audio playback." />
+
+
+<meta name="robots" content="index, follow" />
+
+
+
+<link rel="alternate" hreflang="en" href="http://localhost:1313/platforms/macos/" />
+<link rel="alternate" hreflang="x-default" href="http://localhost:1313/platforms/macos/" />
+
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/platforms/macos/" />
+
+
+<link rel="alternate" hreflang="es" href="http://localhost:1313/es/platforms/macos/" />
+
+
+
+
+
+
+
+
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="Tornade for macOS — Native SwiftUI Audio Player" />
+<meta property="og:description" content="High-performance audio player for macOS with native SwiftUI interface, ambient backgrounds, 60MB RAM footprint and complete playlist management" />
+<meta property="og:url"         content="http://localhost:1313/platforms/macos/" />
+<meta property="og:site_name"   content="Tornade Audio Player" />
+<meta property="og:locale"      content="en_US" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="es_ES" />
+
+<meta property="og:image" content="http://localhost:1313/images/og-image.png" />
+
+
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="Tornade for macOS — Native SwiftUI Audio Player" />
+<meta name="twitter:description" content="High-performance audio player for macOS with native SwiftUI interface, ambient backgrounds, 60MB RAM footprint and complete playlist management" />
+<meta name="twitter:image" content="http://localhost:1313/images/og-image.png" />
+<meta name="twitter:site" content="@tornade_app" />
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"MultimediaApplication","name":"Tornade","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"macOS, Windows, Linux","url":"http://localhost:1313/"}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'base-100':        'var(--color-base-100)',
+        'base-200':        'var(--color-base-200)',
+        'base-300':        'var(--color-base-300)',
+        'base-content':    'var(--color-base-content)',
+        'primary':         'var(--color-primary)',
+        'primary-content': 'var(--color-primary-content)',
+        'secondary':       'var(--color-secondary)',
+        'secondary-content':'var(--color-secondary-content)',
+        'accent':          'var(--color-accent)',
+        'neutral':         'var(--color-neutral)',
+        'neutral-content': 'var(--color-neutral-content)',
+        'info':            'var(--color-info)',
+        'success':         'var(--color-success)',
+        'warning':         'var(--color-warning)',
+        'error':           'var(--color-error)',
+      }
+    }
+  }
+}
+</script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="min-h-screen flex flex-col bg-base-100">
+  <div class="navbar bg-base-200 border-b border-base-300 px-6">
+  <div class="flex-1 gap-3">
+    <a href="http://localhost:1313/" class="flex items-center gap-2">
+      <img src="http://localhost:1313/images/tornade.png" class="w-7 h-7" alt="Tornade logo" />
+      <span class="font-semibold tracking-wide">Tornade</span>
+    </a>
+  </div>
+  <div class="flex-none gap-2">
+    
+    <a href="/platforms/" class="btn btn-ghost btn-sm hidden md:inline-flex">Platforms</a>
+    
+    <a href="/contact/" class="btn btn-ghost btn-sm hidden md:inline-flex">Contact</a>
+    
+
+    
+    
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-sm gap-1">
+        English
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-36 p-2 shadow">
+        
+        <li>
+          <a href="http://localhost:1313/platforms/macos/" class="active">
+            English
+          </a>
+        </li>
+        
+        <li>
+          <a href="http://localhost:1313/fr/platforms/macos/" >
+            Français
+          </a>
+        </li>
+        
+        <li>
+          <a href="http://localhost:1313/es/platforms/macos/" >
+            Español
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+  <main class="flex-1">
+    
+<div class="min-h-screen bg-base-100">
+
+  
+  <section class="bg-gradient-to-br from-base-200 to-base-100 py-16 md:py-24">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Tornade for macOS
+        </h1>
+        <p class="text-lg md:text-xl opacity-80 mb-6">
+          Native GUI with SwiftUI — High-performance audio player for macOS 13&#43; with system-level integration, advanced search, and beautiful interface
+        </p>
+
+        
+        <div class="flex justify-center gap-3 flex-wrap mb-8">
+          
+            <span class="badge badge-success badge-lg">Stable</span>
+          
+        </div>
+
+        
+        <div class="flex justify-center gap-3 flex-wrap">
+          <a href="https://github.com/tornade-player/tornade-gui/releases/latest/download/tornade-macos.dmg" class="btn bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-content gap-2">
+            <i class="fa-brands fa-apple"></i>
+            Download — Universal (Intel + Apple Silicon)
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="py-16 md:py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-3">Common Features</h2>
+          <p class="text-lg opacity-75">Available on all Tornade frontends (macOS, Windows, Linux, Terminal)</p>
+        </div>
+
+        
+        
+        <div class="space-y-12">
+          
+          
+          
+            
+            
+              
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Library Management</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M3 7v6h18V7"/>
+    <path d="M3 7a2 2 0 0 1 2-2h5l2 3h6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+    <path d="M9 12h6M9 16h6"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Directory Scanning</h4>
+                    <p class="text-sm opacity-70 mt-1">Automatic analysis of local folders to discover audio files</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M9 18V5l12-2v13A4 4 0 1 1 15 12A4 4 0 0 0 9 18z"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Professional Audio Formats</h4>
+                    <p class="text-sm opacity-70 mt-1">Support for FLAC, MP3, AAC, ALAC and other high-fidelity formats</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Automatic Metadata Extraction</h4>
+                    <p class="text-sm opacity-70 mt-1">Automatic retrieval of track title, artist, album, genre, year, track number</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Album Artwork Cache</h4>
+                    <p class="text-sm opacity-70 mt-1">Automatic extraction and caching of album covers in multiple resolutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="11" cy="11" r="8"/>
+    <path d="m21 21-4.35-4.35"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Full-Text Search</h4>
+                    <p class="text-sm opacity-70 mt-1">Fast search across entire music library using SQLite FTS5 engine</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Multiple Sources</h4>
+                    <p class="text-sm opacity-70 mt-1">Manage multiple music sources including local disks and network drives</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Duplicate Detection</h4>
+                    <p class="text-sm opacity-70 mt-1">Automatic identification of duplicate tracks by title, artist and duration</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Audio Playback</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Complete Playback Controls</h4>
+                    <p class="text-sm opacity-70 mt-1">Play, pause, resume, stop with full control over playback</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M5 4l14 8-14 8V4z"/>
+    <path d="M19 4v16"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Track Navigation</h4>
+                    <p class="text-sm opacity-70 mt-1">Previous and next track controls for easy navigation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Dynamic Queue Management</h4>
+                    <p class="text-sm opacity-70 mt-1">Add, remove and reorganize tracks in the playback queue</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="23 1 23 7 17 7"/>
+    <polyline points="1 23 1 17 7 17"/>
+    <path d="M20.49 9a9 9 0 0 0-12.12-5.36L9 9M3.5 14a9 9 0 0 0 15.85 2.07L15 15"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Playback Modes</h4>
+                    <p class="text-sm opacity-70 mt-1">Shuffle, repeat all, repeat one, and normal playback modes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Volume Control</h4>
+                    <p class="text-sm opacity-70 mt-1">Smooth volume adjustment from 0.0 to 1.0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M12 1a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V5a4 4 0 0 0-4-4z"/>
+    <path d="M3 9a9 9 0 0 1 18 0"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">High-Fidelity Decoding</h4>
+                    <p class="text-sm opacity-70 mt-1">Native codec support via Symphonia for lossless audio playback</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Playlist Management</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><line x1="8" y1="6" x2="21" y2="6"/>
+    <line x1="8" y1="12" x2="21" y2="12"/>
+    <line x1="8" y1="18" x2="21" y2="18"/>
+    <line x1="3" y1="6" x2="3.01" y2="6"/>
+    <line x1="3" y1="12" x2="3.01" y2="12"/>
+    <line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Complete Playlist Management</h4>
+                    <p class="text-sm opacity-70 mt-1">Create, rename, delete and manage playlists effortlessly</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <polyline points="7 10 12 15 17 10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">M3U Import/Export</h4>
+                    <p class="text-sm opacity-70 mt-1">Import and export playlists in standard M3U format</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">User Data &amp; Persistence</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.73 20.09 25 12 19.54 3.91 25 6.82 16.73 0 10.27 8.91 10.26 12 2"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Track Ratings</h4>
+                    <p class="text-sm opacity-70 mt-1">Rate tracks from 0-5 stars with persistent storage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><ellipse cx="12" cy="5" rx="9" ry="3"/>
+    <path d="M3 5v14a9 3 0 0 0 18 0V5"/>
+    <path d="M3 12a9 3 0 0 0 18 0"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">SQLite Database</h4>
+                    <p class="text-sm opacity-70 mt-1">Persistent storage of library, playlists and user preferences</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+    <polyline points="17 21 17 13 7 13 7 21"/>
+    <polyline points="7 3 7 8 15 8"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">State Persistence</h4>
+                    <p class="text-sm opacity-70 mt-1">Remember playback position, playlists and preferences</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-200 hover:bg-base-300 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">History &amp; Favorites</h4>
+                    <p class="text-sm opacity-70 mt-1">Track playback history and mark favorite tracks</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  
+  <section class="py-16 md:py-20 bg-base-200">
+    <div class="container mx-auto px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-3">Platform-Specific Features</h2>
+          <p class="text-lg opacity-75">
+            Features exclusively optimized for macOS with SwiftUI
+          </p>
+        </div>
+
+        
+        <div class="space-y-12">
+          
+          
+            
+            
+              
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">User Interface Design</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">100% Native SwiftUI</h4>
+                    <p class="text-sm opacity-70 mt-1">Native interface built with SwiftUI and AppKit for seamless macOS integration (macOS 13&#43;)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Light/Dark Theme Support</h4>
+                    <p class="text-sm opacity-70 mt-1">Full support for macOS system light and dark modes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Real-Time Interface Updates</h4>
+                    <p class="text-sm opacity-70 mt-1">Fluid interface updates during playback</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Ambient Background</h4>
+                    <p class="text-sm opacity-70 mt-1">Animated gradient background derived from album artwork colors</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Smooth Transitions</h4>
+                    <p class="text-sm opacity-70 mt-1">Smooth animations between screens and track transitions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Navigation &amp; Exploration</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Visual Album Grid</h4>
+                    <p class="text-sm opacity-70 mt-1">Browse your music library with beautiful album covers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Artist List</h4>
+                    <p class="text-sm opacity-70 mt-1">Hierarchical exploration by artist with discography</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Genre View</h4>
+                    <p class="text-sm opacity-70 mt-1">Filter and navigate music by genre</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Album Detail View</h4>
+                    <p class="text-sm opacity-70 mt-1">Complete album information with high-resolution artwork</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Artist Detail View</h4>
+                    <p class="text-sm opacity-70 mt-1">Artist discography and associated information</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="11" cy="11" r="8"/>
+    <path d="m21 21-4.35-4.35"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Integrated Search</h4>
+                    <p class="text-sm opacity-70 mt-1">Fast search with real-time results</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Sidebar Navigation</h4>
+                    <p class="text-sm opacity-70 mt-1">Quick access to sources, playlists and genres</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Search &amp; Filtering</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="11" cy="11" r="8"/>
+    <path d="m21 21-4.35-4.35"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Full-Text Search</h4>
+                    <p class="text-sm opacity-70 mt-1">Search by title, artist, album, genre, year</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Advanced Filtering</h4>
+                    <p class="text-sm opacity-70 mt-1">Filter by year, genre, and rating</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Search Autocompletion</h4>
+                    <p class="text-sm opacity-70 mt-1">Suggestions while typing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Playback Controls</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Playback Bar</h4>
+                    <p class="text-sm opacity-70 mt-1">Position visualization and temporal scrubbing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Touchpad Controls</h4>
+                    <p class="text-sm opacity-70 mt-1">Play/pause, previous/next, shuffle, repeat buttons</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Volume Control &amp; Feedback</h4>
+                    <p class="text-sm opacity-70 mt-1">Volume adjustment with visual feedback</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Current Queue View</h4>
+                    <p class="text-sm opacity-70 mt-1">View and reorganize current playback queue</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Visual Indicators</h4>
+                    <p class="text-sm opacity-70 mt-1">Always-visible shuffle and repeat state indicators</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Playlists</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><line x1="8" y1="6" x2="21" y2="6"/>
+    <line x1="8" y1="12" x2="21" y2="12"/>
+    <line x1="8" y1="18" x2="21" y2="18"/>
+    <line x1="3" y1="6" x2="3.01" y2="6"/>
+    <line x1="3" y1="12" x2="3.01" y2="12"/>
+    <line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Visual Playlist Management</h4>
+                    <p class="text-sm opacity-70 mt-1">Create, rename, delete from sidebar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Inline Editing</h4>
+                    <p class="text-sm opacity-70 mt-1">Drag-and-drop playlist track reorganization</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <polyline points="7 10 12 15 17 10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">M3U Import/Export</h4>
+                    <p class="text-sm opacity-70 mt-1">Simple interface for M3U playlist management</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Quick Queue Buttons</h4>
+                    <p class="text-sm opacity-70 mt-1">Add to queue from album and artist views</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Ratings &amp; Favorites</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.73 20.09 25 12 19.54 3.91 25 6.82 16.73 0 10.27 8.91 10.26 12 2"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Star Rating Display</h4>
+                    <p class="text-sm opacity-70 mt-1">Visual 0-5 star rating interface</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Rating Editing</h4>
+                    <p class="text-sm opacity-70 mt-1">Instant rating modification from track lists</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Rating-Based Filtering</h4>
+                    <p class="text-sm opacity-70 mt-1">Filter library by star rating</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Performance &amp; Memory</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Optimized Artwork Cache</h4>
+                    <p class="text-sm opacity-70 mt-1">Intelligent cache with size limits (200 images, 100MB total)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Automatic Memory Unload</h4>
+                    <p class="text-sm opacity-70 mt-1">Release off-screen artwork memory automatically</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Memory Stability</h4>
+                    <p class="text-sm opacity-70 mt-1">Stable usage on long sessions (30&#43; minutes)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Optimized Decoding</h4>
+                    <p class="text-sm opacity-70 mt-1">RAM pre-decoding to prevent audio artifacts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Multi-Screen Support</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Dynamic Window Adaptation</h4>
+                    <p class="text-sm opacity-70 mt-1">Adapts to different macOS resolutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Full-Screen Mode</h4>
+                    <p class="text-sm opacity-70 mt-1">Complete full-screen support</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Retina Display Support</h4>
+                    <p class="text-sm opacity-70 mt-1">Optimization for high-density displays</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Accessibility</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">VoiceOver Support</h4>
+                    <p class="text-sm opacity-70 mt-1">All elements accessible to screen readers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Full Keyboard Navigation</h4>
+                    <p class="text-sm opacity-70 mt-1">Complete keyboard control</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Accessibility Labels</h4>
+                    <p class="text-sm opacity-70 mt-1">Contextual labels on all interactive elements</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Localization Ready</h4>
+                    <p class="text-sm opacity-70 mt-1">Multi-language interface support</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">macOS Integration</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Drag &amp; Drop</h4>
+                    <p class="text-sm opacity-70 mt-1">Drop audio files on Dock icon</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Media Keys Support</h4>
+                    <p class="text-sm opacity-70 mt-1">Control via keyboard media keys</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">System Notifications</h4>
+                    <p class="text-sm opacity-70 mt-1">Track change system notifications</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">App Store Compatible</h4>
+                    <p class="text-sm opacity-70 mt-1">Signed and notarized DMG distribution</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+              </div></div>
+              <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Advanced Features</h3>
+                <div class="grid md:grid-cols-2 gap-5">
+              
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M3 7v6h18V7"/>
+    <path d="M3 7a2 2 0 0 1 2-2h5l2 3h6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+    <path d="M9 12h6M9 16h6"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Library Scanner</h4>
+                    <p class="text-sm opacity-70 mt-1">Progress bar interface for library scanning</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">NAS Auto-Detection</h4>
+                    <p class="text-sm opacity-70 mt-1">Automatic reconnection to network drives</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Memory Pressure Monitor</h4>
+                    <p class="text-sm opacity-70 mt-1">Adaptive degradation under memory pressure</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            
+
+            
+            <div class="card bg-base-100 hover:bg-base-200 transition-all duration-200">
+              <div class="card-body">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
+
+                  </div>
+                  <div class="flex-grow">
+                    <h4 class="card-title text-lg">Performance Dashboard</h4>
+                    <p class="text-sm opacity-70 mt-1">Debug metrics display (FPS, memory)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+</div>
+
+  </main>
+  <footer class="footer footer-center p-6 bg-base-200 text-base-content">
+  <aside>
+    <p>© 2026 – Tornade Audio Player</p>
+  </aside>
+</footer>
+
+</body>
+</html>

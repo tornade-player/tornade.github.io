@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="dim">
 <head>
-	<meta name="generator" content="Hugo 0.155.3"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.157.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -56,26 +56,49 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"MultimediaApplication","name":"Tornade","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"macOS, Windows, Linux","url":"http://localhost:1313/"}</script>
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'base-100':        'var(--color-base-100)',
+        'base-200':        'var(--color-base-200)',
+        'base-300':        'var(--color-base-300)',
+        'base-content':    'var(--color-base-content)',
+        'primary':         'var(--color-primary)',
+        'primary-content': 'var(--color-primary-content)',
+        'secondary':       'var(--color-secondary)',
+        'secondary-content':'var(--color-secondary-content)',
+        'accent':          'var(--color-accent)',
+        'neutral':         'var(--color-neutral)',
+        'neutral-content': 'var(--color-neutral-content)',
+        'info':            'var(--color-info)',
+        'success':         'var(--color-success)',
+        'warning':         'var(--color-warning)',
+        'error':           'var(--color-error)',
+      }
+    }
+  }
+}
+</script>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body class="min-h-screen flex flex-col bg-base-100">
   <div class="navbar bg-base-200 border-b border-base-300 px-6">
   <div class="flex-1 gap-3">
-    <a href="http://localhost:1313/fr/" class="flex items-center gap-3">
+    <a href="http://localhost:1313/fr/" class="flex items-center gap-2">
+      <img src="http://localhost:1313/images/tornade.png" class="w-7 h-7" alt="Tornade logo" />
       <span class="font-semibold tracking-wide">Tornade</span>
     </a>
   </div>
   <div class="flex-none gap-2">
     
-    <a href="#download" class="btn btn-ghost btn-sm hidden md:inline-flex">Téléchargement</a>
+    <a href="/fr/platforms/" class="btn btn-ghost btn-sm hidden md:inline-flex">Plateformes</a>
     
-    <a href="#features" class="btn btn-ghost btn-sm hidden md:inline-flex">Fonctionnalités</a>
-    
-    <a href="#about" class="btn btn-ghost btn-sm hidden md:inline-flex">À propos</a>
-    
-    <a href="#contact" class="btn btn-ghost btn-sm hidden md:inline-flex">Contact</a>
+    <a href="/fr/contact/" class="btn btn-ghost btn-sm hidden md:inline-flex">Contact</a>
     
 
     
@@ -118,239 +141,577 @@
 <div class="container mx-auto px-6 py-16">
 
   
-  <section id="download">
-    <div class="hero">
-      <div class="hero-content text-center flex-col">
+  <section id="download" class="relative overflow-hidden py-20 md:py-28 -mx-6 px-6 rounded-2xl border border-base-300">
 
-        <img src="http://localhost:1313/images/tornade.png" class="w-44 mb-6" alt="Tornade logo" />
+    
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/2 right-1/4 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] rounded-full bg-primary opacity-10 blur-[120px]"></div>
+      <div class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-secondary opacity-10 blur-[100px]"></div>
+    </div>
 
-        <h1 class="text-4xl font-semibold">Tornade Audio Player</h1>
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative">
 
-        <p class="max-w-xl opacity-80 mt-4">Application audio native haute performance disponible sur macOS, Windows, Linux et utilisable directement depuis le Terminal.</p>
+      
+      <div class="flex-1 flex flex-col items-start">
 
         
-        <div class="flex flex-wrap justify-center gap-2 mt-6">
+        <div class="flex items-center gap-2 border border-primary/30 bg-primary/5 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Core in Rust &amp; Open Source
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+          The audio player<br>
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">built for you</span>
+        </h1>
+
+        <p class="opacity-70 mt-5 text-lg max-w-md">Application audio native haute performance disponible sur macOS, Windows, Linux et utilisable directement depuis le Terminal.</p>
+
+        
+        <div class="flex flex-wrap gap-2 mt-6">
           <div class="badge badge-primary">macOS</div>
           <div class="badge badge-neutral">Windows</div>
           <div class="badge badge-neutral">Linux</div>
           <div class="badge badge-neutral">Terminal / CLI</div>
         </div>
 
+
         
-        <div class="mt-8 flex gap-4">
-          <button class="btn btn-primary">Télécharger</button>
-          <button class="btn btn-ghost">Documentation</button>
+        <div class="flex gap-8 mt-10 pt-8 border-t border-base-300">
+          <div>
+            <div class="text-2xl font-bold">4</div>
+            <div class="text-xs opacity-50 mt-0.5">Platforms</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold">Rust</div>
+            <div class="text-xs opacity-50 mt-0.5">Core</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold">TUI</div>
+            <div class="text-xs opacity-50 mt-0.5">Free &amp; Open Source</div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="flex-1 w-full relative group" id="hero-slideshow">
+
+        
+        <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="aspect-ratio:16/10;">
+          <img src="http://localhost:1313/images/slideshow/tracks.png"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" />
+          <img src="http://localhost:1313/images/slideshow/albums.png"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" />
+          <img src="http://localhost:1313/images/slideshow/album-show.png"    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" />
+          <img src="http://localhost:1313/images/slideshow/artists.png"       class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" />
+          <img src="http://localhost:1313/images/slideshow/genres.png"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" />
+          <img src="http://localhost:1313/images/slideshow/global-search.png" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" />
+
+          
+          <button id="slide-prev" aria-label="Previous"
+            class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/90 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
+            ‹
+          </button>
+
+          
+          <button id="slide-next" aria-label="Next"
+            class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/90 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
+            ›
+          </button>
         </div>
 
+        
+        <div class="flex justify-center items-center gap-2 mt-4">
+          <button class="dot h-1.5 rounded-full bg-primary          transition-all duration-300 w-6"   data-i="0"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="1"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="2"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="3"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="4"></button>
+          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="5"></button>
+        </div>
       </div>
+
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    var el     = document.getElementById('hero-slideshow');
+    var slides = el.querySelectorAll('.slide');
+    var dots   = el.querySelectorAll('.dot');
+    var cur    = 0;
+    var timer;
+
+    function goTo(n) {
+      slides[cur].classList.replace('opacity-100', 'opacity-0');
+      dots[cur].classList.remove('bg-primary', 'w-6');
+      dots[cur].classList.add('bg-base-content/25', 'w-1.5');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.replace('opacity-0', 'opacity-100');
+      dots[cur].classList.remove('bg-base-content/25', 'w-1.5');
+      dots[cur].classList.add('bg-primary', 'w-6');
+    }
+
+    function start() { timer = setInterval(function () { goTo(cur + 1); }, 3500); }
+    function stop()  { clearInterval(timer); }
+
+    document.getElementById('slide-next').addEventListener('click', function () { stop(); goTo(cur + 1); start(); });
+    document.getElementById('slide-prev').addEventListener('click', function () { stop(); goTo(cur - 1); start(); });
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () { stop(); goTo(+this.dataset.i); start(); });
+    });
+    el.addEventListener('mouseenter', stop);
+    el.addEventListener('mouseleave', start);
+
+    start();
+  })();
+  </script>
+
+  
+  <section id="platforms" class="mt-20 mb-12">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold mb-4">Disponible sur Votre Plateforme</h2>
+      <p class="text-lg opacity-75">Choose your platform and explore its unique features</p>
+    </div>
+
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <a href="http://localhost:1313/platforms/macos/" class="group">
+        <div class="card bg-base-200 hover:bg-base-300 transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-0.5">
+          <div class="card-body">
+            <div class="text-5xl mb-3">
+              <i class="fa-brands fa-apple"></i>
+              
+            </div>
+            <h3 class="card-title text-xl">macOS</h3>
+            <p class="text-sm opacity-70">Native GUI with SwiftUI</p>
+
+            <div class="mt-4">
+              
+                <span class="badge badge-success badge-sm">Stable</span>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="http://localhost:1313/platforms/windows/" class="group">
+        <div class="card bg-base-200 hover:bg-base-300 transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-0.5">
+          <div class="card-body">
+            <div class="text-5xl mb-3">
+              <i class="fa-brands fa-windows"></i>
+              
+            </div>
+            <h3 class="card-title text-xl">Windows</h3>
+            <p class="text-sm opacity-70">Native GUI with Slint (in development)</p>
+
+            <div class="mt-4">
+              
+                <span class="badge badge-warning badge-sm">En Développement</span>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="http://localhost:1313/platforms/linux/" class="group">
+        <div class="card bg-base-200 hover:bg-base-300 transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-0.5">
+          <div class="card-body">
+            <div class="text-5xl mb-3">
+              <i class="fa-brands fa-linux"></i>
+              
+            </div>
+            <h3 class="card-title text-xl">Linux</h3>
+            <p class="text-sm opacity-70">Native GUI with Slint (in development)</p>
+
+            <div class="mt-4">
+              
+                <span class="badge badge-warning badge-sm">En Développement</span>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="http://localhost:1313/platforms/tui/" class="group">
+        <div class="card bg-base-200 hover:bg-base-300 transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-0.5">
+          <div class="card-body">
+            <div class="text-5xl mb-3">
+              <i class="fa-solid fa-terminal"></i>
+              
+            </div>
+            <h3 class="card-title text-xl">Terminal UI</h3>
+            <p class="text-sm opacity-70">Lightweight TUI with ratatui</p>
+
+            <div class="mt-4">
+              
+                <span class="badge badge-warning badge-sm">En Développement</span>
+              
+            </div>
+          </div>
+        </div>
+      </a>
+      
     </div>
   </section>
 
   
-  <section id="features" class="mt-16">
+  <section id="features" class="mt-16 mb-20">
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold mb-2">Fonctionnalités Puissantes</h2>
+      <p class="text-lg opacity-75">Tout ce dont vous avez besoin pour une lecture audio professionnelle</p>
+      <p class="text-sm opacity-60 mt-2">Disponible sur tous les frontends Tornade (macOS, Windows, Linux, Terminal)</p>
+    </div>
+
     
-    <div class="grid md:grid-cols-3 gap-6">
+    
+    <div class="space-y-12">
       
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <path d="M2 10v4M6 7v10M10 4v16M14 8v8M18 7v10M22 10v4"/></svg>
+      
+      
+        
+        
+          
+          <div class="mb-12">
+            <h3 class="text-xl font-semibold mb-4">Gestion de Bibliothèque</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+          
+        
 
-          </div>
-          <h2 class="card-title">Formats Audio Professionnels</h2>
-          <p>Lecture native FLAC, OGG, MP3, WAV, AIFF et formats haute fidélité sans conversion intermédiaire.</p>
-        </div>
-      </div>
-      
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z"/>
-    <circle cx="12" cy="12" r="3"/></svg>
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M3 7v6h18V7"/>
+    <path d="M3 7a2 2 0 0 1 2-2h5l2 3h6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+    <path d="M9 12h6M9 16h6"/></svg>
 
+            </div>
+            <h2 class="card-title">Scan de Répertoires</h2>
+            <p>Analyse automatique des dossiers locaux pour découvrir les fichiers audio</p>
           </div>
-          <h2 class="card-title">Core Développé en Rust</h2>
-          <p>Moteur audio entièrement écrit en Rust garantissant sécurité mémoire, stabilité maximale et performances constantes.</p>
         </div>
-      </div>
       
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <path d="M3 5h18M3 11h18M3 17h14"/>
-    <path d="M19 13l4 4-4 4"/></svg>
+        
+        
 
-          </div>
-          <h2 class="card-title">Queue Temps Réel</h2>
-          <p>Création dynamique de file de lecture permettant d&#39;ajouter ou prévoir des morceaux sans interrompre la lecture.</p>
-        </div>
-      </div>
-      
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <path d="M13 2L3 14h9l-1 8L21 10h-9z"/></svg>
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M9 18V5l12-2v13A4 4 0 1 1 15 12A4 4 0 0 0 9 18z"/></svg>
 
+            </div>
+            <h2 class="card-title">Formats Audio Professionnels</h2>
+            <p>Support FLAC, MP3, AAC, ALAC et autres formats haute fidélité</p>
           </div>
-          <h2 class="card-title">Performance Native</h2>
-          <p>Architecture compilée pour chaque OS offrant latence minimale et intégration profonde avec les API systèmes.</p>
         </div>
-      </div>
       
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <rect x="7" y="7" width="10" height="10" rx="1"/>
-    <path d="M9 3v4M12 3v4M15 3v4M9 17v4M12 17v4M15 17v4M3 9h4M3 12h4M3 15h4M17 9h4M17 12h4M17 15h4"/></svg>
+        
+        
 
-          </div>
-          <h2 class="card-title">Empreinte Mémoire Réduite</h2>
-          <p>Environ 60MB de RAM sur macOS tout en conservant des performances audio haute résolution.</p>
-        </div>
-      </div>
-      
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <rect x="2" y="3" width="20" height="14" rx="2"/>
-    <path d="M8 21h8M12 17v4"/></svg>
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
 
+            </div>
+            <h2 class="card-title">Extraction Automatique de Métadonnées</h2>
+            <p>Récupération automatique du titre, artiste, album, genre, année, numéro de piste</p>
           </div>
-          <h2 class="card-title">Pensé Pour Desktop</h2>
-          <p>Exploite drag &amp; drop, menus contextuels et interactions système avancées des OS modernes.</p>
         </div>
-      </div>
       
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <circle cx="12" cy="12" r="2"/>
-    <circle cx="12" cy="12" r="6"/>
-    <circle cx="12" cy="12" r="10"/>
-    <path d="M12 12l6-4"/></svg>
+        
+        
 
-          </div>
-          <h2 class="card-title">Scan Local &amp; Réseau</h2>
-          <p>Analyse automatique de bibliothèques locales ou NAS, stockages réseau et serveurs distants.</p>
-        </div>
-      </div>
-      
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
-    <circle cx="7" cy="7" r="1.5"/></svg>
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="1"/>
+    <path d="M4 12h16M12 4v16"/>
+    <path d="M7 7h10v10H7zM7 17h10"/></svg>
 
+            </div>
+            <h2 class="card-title">Cache de Pochettes d&#39;Album</h2>
+            <p>Extraction automatique et cache des pochettes d&#39;album en plusieurs résolutions</p>
           </div>
-          <h2 class="card-title">Scrapping Métadonnées</h2>
-          <p>Récupération automatique des pochettes d&#39;albums et informations artistes.</p>
         </div>
-      </div>
       
-      <div class="card bg-base-200 shadow-sm">
-        <div class="card-body">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-1">
-            
-<svg class="w-6 h-6"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-    <path d="M3 6h18M3 12h18M3 18h11"/>
-    <path d="M17 15.5l5.5 3.5-5.5 3.5v-7z" fill="currentColor" stroke="none"/></svg>
+        
+        
 
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="11" cy="11" r="8"/>
+    <path d="m21 21-4.35-4.35"/></svg>
+
+            </div>
+            <h2 class="card-title">Recherche Full-Text</h2>
+            <p>Recherche rapide dans toute la bibliothèque en utilisant le moteur SQLite FTS5</p>
           </div>
-          <h2 class="card-title">Playlists Instantanées</h2>
-          <p>Création et modification de playlists à la volée sans rechargement du moteur audio.</p>
         </div>
-      </div>
       
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+
+            </div>
+            <h2 class="card-title">Sources Multiples</h2>
+            <p>Gérez plusieurs sources musicales incluant disques locaux et lecteurs réseau</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+
+            </div>
+            <h2 class="card-title">Détection de Doublons</h2>
+            <p>Identification automatique des doublons par titre, artiste et durée</p>
+          </div>
+        </div>
+      
+        
+        
+          </div></div>
+          <div class="mb-12">
+            <h3 class="text-xl font-semibold mb-4">Lecture Audio</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+          
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+
+            </div>
+            <h2 class="card-title">Contrôles de Lecture Complets</h2>
+            <p>Lecture, pause, reprise, arrêt avec contrôle complet</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M5 4l14 8-14 8V4z"/>
+    <path d="M19 4v16"/></svg>
+
+            </div>
+            <h2 class="card-title">Navigation de Piste</h2>
+            <p>Contrôles piste précédente et suivante pour navigation facile</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+
+            </div>
+            <h2 class="card-title">Gestion Dynamique de Queue</h2>
+            <p>Ajoutez, supprimez et réorganisez les pistes dans la queue</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polyline points="23 1 23 7 17 7"/>
+    <polyline points="1 23 1 17 7 17"/>
+    <path d="M20.49 9a9 9 0 0 0-12.12-5.36L9 9M3.5 14a9 9 0 0 0 15.85 2.07L15 15"/></svg>
+
+            </div>
+            <h2 class="card-title">Modes de Lecture</h2>
+            <p>Aléatoire, répéter tout, répéter une, et modes de lecture normale</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+
+            </div>
+            <h2 class="card-title">Contrôle du Volume</h2>
+            <p>Ajustement fluide du volume de 0.0 à 1.0</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M12 1a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V5a4 4 0 0 0-4-4z"/>
+    <path d="M3 9a9 9 0 0 1 18 0"/></svg>
+
+            </div>
+            <h2 class="card-title">Décodage Haute-Fidélité</h2>
+            <p>Support natif des codecs via Symphonia pour lecture audio sans perte</p>
+          </div>
+        </div>
+      
+        
+        
+          </div></div>
+          <div class="mb-12">
+            <h3 class="text-xl font-semibold mb-4">Gestion de Playlists</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+          
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><line x1="8" y1="6" x2="21" y2="6"/>
+    <line x1="8" y1="12" x2="21" y2="12"/>
+    <line x1="8" y1="18" x2="21" y2="18"/>
+    <line x1="3" y1="6" x2="3.01" y2="6"/>
+    <line x1="3" y1="12" x2="3.01" y2="12"/>
+    <line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+
+            </div>
+            <h2 class="card-title">Gestion Complète de Playlists</h2>
+            <p>Créez, renommez, supprimez et gérez facilement les playlists</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <polyline points="7 10 12 15 17 10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/></svg>
+
+            </div>
+            <h2 class="card-title">Import/Export M3U</h2>
+            <p>Importez et exportez les playlists au format M3U standard</p>
+          </div>
+        </div>
+      
+        
+        
+          </div></div>
+          <div class="mb-12">
+            <h3 class="text-xl font-semibold mb-4">Données Utilisateur &amp; Persistance</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+          
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="12 2 15.09 10.26 24 10.27 17.18 16.73 20.09 25 12 19.54 3.91 25 6.82 16.73 0 10.27 8.91 10.26 12 2"/></svg>
+
+            </div>
+            <h2 class="card-title">Évaluation de Pistes</h2>
+            <p>Évaluez les pistes de 0 à 5 étoiles avec stockage persistant</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><ellipse cx="12" cy="5" rx="9" ry="3"/>
+    <path d="M3 5v14a9 3 0 0 0 18 0V5"/>
+    <path d="M3 12a9 3 0 0 0 18 0"/></svg>
+
+            </div>
+            <h2 class="card-title">Base de Données SQLite</h2>
+            <p>Stockage persistant de la bibliothèque, playlists et préférences utilisateur</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+    <polyline points="17 21 17 13 7 13 7 21"/>
+    <polyline points="7 3 7 8 15 8"/></svg>
+
+            </div>
+            <h2 class="card-title">Persistance d&#39;État</h2>
+            <p>Mémorisez la position de lecture, playlists et préférences</p>
+          </div>
+        </div>
+      
+        
+        
+
+        
+        <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="card-body">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 text-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+
+            </div>
+            <h2 class="card-title">Historique &amp; Favoris</h2>
+            <p>Suivi de l&#39;historique de lecture et marquage de pistes favorites</p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    </div>
+
+    
+    <div class="text-center mt-16">
+      <a href="http://localhost:1313/platforms/" class="btn btn-outline">Découvrez les Fonctionnalités Spécifiques</a>
     </div>
   </section>
+
+
 
 </div>
 

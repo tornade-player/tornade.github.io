@@ -34,21 +34,13 @@ disableKinds    = ['taxonomy', 'term']
     locale      = "en_US"
 
   [[languages.en.menus.main]]
-    name = 'Download'
-    url  = '#download'
+    name = 'Platforms'
+    url  = '/platforms/'
     weight = 10
   [[languages.en.menus.main]]
-    name = 'Features'
-    url  = '#features'
-    weight = 20
-  [[languages.en.menus.main]]
-    name = 'About'
-    url  = '#about'
-    weight = 30
-  [[languages.en.menus.main]]
     name = 'Contact'
-    url  = '#contact'
-    weight = 40
+    url  = '/contact/'
+    weight = 20
 
 # ── Français (served at /fr/) ─────────────────────────────────────────────────
 [languages.fr]
@@ -62,21 +54,13 @@ disableKinds    = ['taxonomy', 'term']
     locale      = "fr_FR"
 
   [[languages.fr.menus.main]]
-    name = 'Téléchargement'
-    url  = '#download'
+    name = 'Plateformes'
+    url  = '/fr/platforms/'
     weight = 10
   [[languages.fr.menus.main]]
-    name = 'Fonctionnalités'
-    url  = '#features'
-    weight = 20
-  [[languages.fr.menus.main]]
-    name = 'À propos'
-    url  = '#about'
-    weight = 30
-  [[languages.fr.menus.main]]
     name = 'Contact'
-    url  = '#contact'
-    weight = 40
+    url  = '/fr/contact/'
+    weight = 20
 
 # ── Español (served at /es/) ──────────────────────────────────────────────────
 [languages.es]
@@ -90,18 +74,10 @@ disableKinds    = ['taxonomy', 'term']
     locale      = "es_ES"
 
   [[languages.es.menus.main]]
-    name = 'Descarga'
-    url  = '#download'
+    name = 'Plataformas'
+    url  = '/es/platforms/'
     weight = 10
   [[languages.es.menus.main]]
-    name = 'Características'
-    url  = '#features'
-    weight = 20
-  [[languages.es.menus.main]]
-    name = 'Acerca de'
-    url  = '#about'
-    weight = 30
-  [[languages.es.menus.main]]
     name = 'Contacto'
-    url  = '#contact'
-    weight = 40
+    url  = '/es/contact/'
+    weight = 20

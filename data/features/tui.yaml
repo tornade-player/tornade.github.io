@@ -1,0 +1,114 @@
+# Terminal UI (TUI) specific features
+- id: ratatui_framework
+  category: ui_interface
+  icon: code
+  title_i18n_key: "feat_tui_ratatui_title"
+  description_i18n_key: "feat_tui_ratatui_desc"
+
+- id: realtime_rendering
+  category: ui_interface
+  icon: zap
+  title_i18n_key: "feat_tui_rendering_title"
+  description_i18n_key: "feat_tui_rendering_desc"
+
+- id: color_support
+  category: ui_interface
+  icon: palette
+  title_i18n_key: "feat_tui_colors_title"
+  description_i18n_key: "feat_tui_colors_desc"
+
+- id: light_dark_theme
+  category: ui_interface
+  icon: theme
+  title_i18n_key: "feat_tui_theme_title"
+  description_i18n_key: "feat_tui_theme_desc"
+
+- id: album_grid_tui
+  category: navigation
+  icon: grid
+  title_i18n_key: "feat_tui_grid_title"
+  description_i18n_key: "feat_tui_grid_desc"
+
+- id: artist_navigation
+  category: navigation
+  icon: user
+  title_i18n_key: "feat_tui_artists_title"
+  description_i18n_key: "feat_tui_artists_desc"
+
+- id: genre_view_tui
+  category: navigation
+  icon: tag
+  title_i18n_key: "feat_tui_genres_title"
+  description_i18n_key: "feat_tui_genres_desc"
+
+- id: search_tui
+  category: navigation
+  icon: search
+  title_i18n_key: "feat_tui_search_title"
+  description_i18n_key: "feat_tui_search_desc"
+
+- id: keyboard_control
+  category: navigation
+  icon: keyboard
+  title_i18n_key: "feat_tui_keyboard_title"
+  description_i18n_key: "feat_tui_keyboard_desc"
+
+- id: progress_bar
+  category: playback
+  icon: progress
+  title_i18n_key: "feat_tui_progress_title"
+  description_i18n_key: "feat_tui_progress_desc"
+
+- id: basic_controls
+  category: playback
+  icon: play
+  title_i18n_key: "feat_tui_controls_title"
+  description_i18n_key: "feat_tui_controls_desc"
+
+- id: volume_tui
+  category: playback
+  icon: volume
+  title_i18n_key: "feat_tui_volume_title"
+  description_i18n_key: "feat_tui_volume_desc"
+
+- id: queue_display
+  category: playback
+  icon: queue
+  title_i18n_key: "feat_tui_queue_title"
+  description_i18n_key: "feat_tui_queue_desc"
+
+- id: playlist_list
+  category: playlists
+  icon: list
+  title_i18n_key: "feat_tui_playlists_title"
+  description_i18n_key: "feat_tui_playlists_desc"
+
+- id: playlist_management
+  category: playlists
+  icon: edit
+  title_i18n_key: "feat_tui_playlist_mgmt_title"
+  description_i18n_key: "feat_tui_playlist_mgmt_desc"
+
+- id: lightweight
+  category: characteristics
+  icon: feather
+  title_i18n_key: "feat_tui_lightweight_title"
+  description_i18n_key: "feat_tui_lightweight_desc"
+
+- id: no_deps
+  category: characteristics
+  icon: check
+  title_i18n_key: "feat_tui_nodeps_title"
+  description_i18n_key: "feat_tui_nodeps_desc"
+
+- id: portable
+  category: characteristics
+  icon: package
+  title_i18n_key: "feat_tui_portable_title"
+  description_i18n_key: "feat_tui_portable_desc"
+
+- id: headless_mode
+  category: characteristics
+  icon: terminal
+  title_i18n_key: "feat_tui_headless_title"
+  description_i18n_key: "feat_tui_headless_desc"
