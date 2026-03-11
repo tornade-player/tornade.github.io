@@ -1,10 +1,3 @@
-# Linux-specific features (Slint Native GUI - In Development)
-- id: slint_native
-  category: ui_design
-  icon: code
-  title_i18n_key: "feat_linux_slint_title"
-  description_i18n_key: "feat_linux_slint_desc"
-
 - id: theme_integration
   category: ui_design
   icon: palette

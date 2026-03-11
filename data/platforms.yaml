@@ -19,9 +19,9 @@ platforms:
     status: "in_development"
     icon: "windows"
     color: "#0078D4"
-    description_en: "Native GUI with Slint (in development)"
-    description_fr: "GUI native avec Slint (en développement)"
-    description_es: "GUI nativa con Slint (en desarrollo)"
+    description_en: "Native GUI (in development)"
+    description_fr: "GUI native (en développement)"
+    description_es: "GUI nativa (en desarrollo)"
 
   - id: linux
     slug: linux
@@ -31,9 +31,9 @@ platforms:
     status: "in_development"
     icon: "linux"
     color: "#FCC624"
-    description_en: "Native GUI with Slint (in development)"
-    description_fr: "GUI native avec Slint (en développement)"
-    description_es: "GUI nativa con Slint (en desarrollo)"
+    description_en: "Native GUI (in development)"
+    description_fr: "GUI native (en développement)"
+    description_es: "GUI nativa (en desarrollo)"
 
   - id: tui
     slug: tui

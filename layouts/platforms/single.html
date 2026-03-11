@@ -21,11 +21,92 @@
           {{ end }}
         </div>
 
+        {{ if eq .Params.platform_id "macos" }}
+        <!-- Slideshow -->
+        <div class="relative group mt-8 mb-6 max-w-3xl mx-auto" id="platform-slideshow">
+          <div class="relative overflow-hidden rounded-2xl" style="aspect-ratio:16/10;">
+            <img src="{{ absURL "images/slideshow/tracks.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" />
+            <img src="{{ absURL "images/slideshow/albums.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" />
+            <img src="{{ absURL "images/slideshow/album-show.png" }}"    class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" />
+            <img src="{{ absURL "images/slideshow/artists.png" }}"       class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" />
+            <img src="{{ absURL "images/slideshow/genres.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" />
+            <img src="{{ absURL "images/slideshow/global-search.png" }}" class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" />
+
+            <button id="pslide-prev" aria-label="Previous"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
+              ‹
+            </button>
+            <button id="pslide-next" aria-label="Next"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
+              ›
+            </button>
+          </div>
+
+          <!-- Dots -->
+          <div class="flex justify-center items-center gap-2 mt-3" id="pslide-dots">
+            <button class="pdot h-2 rounded-full bg-primary    transition-all duration-300 w-8" data-i="0"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="1"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="2"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="3"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="4"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="5"></button>
+          </div>
+        </div>
+
+        <script>
+        (function () {
+          var el     = document.getElementById('platform-slideshow');
+          var slides = el.querySelectorAll('.pslide');
+          var dots   = document.getElementById('pslide-dots').querySelectorAll('.pdot');
+          var cur    = 0;
+          var timer;
+          var busy   = false;
+
+          function goTo(n) {
+            if (busy) return;
+            busy = true;
+            slides[cur].classList.replace('opacity-100', 'opacity-0');
+            dots[cur].classList.remove('bg-primary', 'w-8');
+            dots[cur].classList.add('bg-gray-500', 'w-2');
+            cur = (n + slides.length) % slides.length;
+            slides[cur].classList.replace('opacity-0', 'opacity-100');
+            dots[cur].classList.remove('bg-gray-500', 'w-2');
+            dots[cur].classList.add('bg-primary', 'w-8');
+            setTimeout(function () { busy = false; }, 700);
+          }
+
+          function start() { timer = setInterval(function () { goTo(cur + 1); }, 4000); }
+          function stop()  { clearInterval(timer); }
+
+          document.getElementById('pslide-next').addEventListener('click', function () { stop(); goTo(cur + 1); start(); });
+          document.getElementById('pslide-prev').addEventListener('click', function () { stop(); goTo(cur - 1); start(); });
+          dots.forEach(function (d) {
+            d.addEventListener('click', function () { stop(); goTo(+this.dataset.i); start(); });
+          });
+          el.addEventListener('mouseenter', stop);
+          el.addEventListener('mouseleave', start);
+
+          start();
+        })();
+        </script>
+        {{ end }}
+
         {{ if .Params.download_url }}
+        <!-- Pricing -->
+        {{ if .Params.price }}
+        <div class="flex flex-col items-center gap-1 mb-5">
+          <div class="flex items-baseline gap-2">
+            <span class="text-3xl font-bold">{{ .Params.price }}</span>
+            {{ if .Params.free_trial_days }}
+            <span class="text-sm opacity-60">— {{ i18n "free_trial" (dict "days" .Params.free_trial_days) }}</span>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
         <div class="flex justify-center gap-3 flex-wrap">
           <a href="{{ .Params.download_url }}" class="btn bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-content gap-2">
             <i class="fa-brands fa-apple"></i>
-            Download — Universal (Intel + Apple Silicon)
+            {{ i18n "download_free_trial" }}
           </a>
         </div>
         {{ end }}

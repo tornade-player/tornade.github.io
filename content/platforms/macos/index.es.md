@@ -14,4 +14,6 @@ draft = false
   ogDescription = "Reproductor de audio de alto rendimiento para macOS con interfaz SwiftUI nativa, fondos ambientales, huella RAM de 60MB y gestión completa de listas de reproducción"
   ogType = "website"
   download_url = "https://github.com/tornade-player/tornade-gui/releases/latest/download/tornade-macos.dmg"
+  price = "9,99 €"
+  free_trial_days = 30
 +++

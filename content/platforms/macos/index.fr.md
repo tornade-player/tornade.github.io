@@ -14,4 +14,6 @@ draft = false
   ogDescription = "Lecteur audio haute performance pour macOS avec interface SwiftUI native, arrière-plans ambiants, empreinte RAM 60MB et gestion complète de playlists"
   ogType = "website"
   download_url = "https://github.com/tornade-player/tornade-gui/releases/latest/download/tornade-macos.dmg"
+  price = "9,99 €"
+  free_trial_days = 30
 +++

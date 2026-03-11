@@ -14,4 +14,6 @@ draft = false
   ogDescription = "High-performance audio player for macOS with native SwiftUI interface, ambient backgrounds, 60MB RAM footprint and complete playlist management"
   ogType = "website"
   download_url = "https://github.com/tornade-player/tornade-gui/releases/latest/download/tornade-macos.dmg"
+  price = "€9.99"
+  free_trial_days = 30
 +++

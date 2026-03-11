@@ -12,6 +12,10 @@ available_on:
   other: "Disponible en Tu Plataforma"
 explore_platforms:
   other: "Explora Características Específicas de la Plataforma"
+free_trial:
+  other: "{{ .days }} días de prueba gratuita"
+download_free_trial:
+  other: "Descargar — Prueba Gratuita"
 
 # Original home page features (kept for backwards compatibility)
 feat_formats_title:
@@ -65,9 +69,9 @@ ready_to_download:
 macos_exclusive:
   other: "Características exclusivamente optimizadas para macOS con SwiftUI"
 windows_exclusive:
-  other: "Características planeadas para Windows con GUI Slint (en desarrollo)"
+  other: "Características planeadas para Windows (en desarrollo)"
 linux_exclusive:
-  other: "Características planeadas para Linux con GUI Slint (en desarrollo)"
+  other: "Características planeadas para Linux (en desarrollo)"
 tui_exclusive:
   other: "Características optimizadas para terminal para uso CLI ligero"
 
@@ -378,10 +382,6 @@ feat_macos_dashboard_desc:
   other: "Visualización de depuración de métricas de rendimiento (FPS, memoria)"
 
 # Windows features
-feat_windows_slint_title:
-  other: "GUI Slint Nativa"
-feat_windows_slint_desc:
-  other: "Interfaz Windows nativa compilada con Slint"
 feat_windows_theme_title:
   other: "Integración de Tema del Sistema"
 feat_windows_theme_desc:
@@ -424,10 +424,6 @@ feat_windows_search_desc:
   other: "Funcionalidad de búsqueda rápida de biblioteca"
 
 # Linux features
-feat_linux_slint_title:
-  other: "GUI Slint Nativa"
-feat_linux_slint_desc:
-  other: "Interfaz Linux nativa compilada con Slint"
 feat_linux_theme_title:
   other: "Integración de Tema GTK/Qt"
 feat_linux_theme_desc:
