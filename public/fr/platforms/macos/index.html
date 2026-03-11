@@ -89,7 +89,7 @@ tailwind.config = {
   <div class="navbar bg-base-200 border-b border-base-300 px-6">
   <div class="flex-1 gap-3">
     <a href="http://localhost:1313/fr/" class="flex items-center gap-2">
-      <img src="http://localhost:1313/images/tornade.png" class="w-7 h-7" alt="Tornade logo" />
+      <img src="http://localhost:1313/images/tornade.png" class="w-7 h-7 rounded-full" alt="Tornade logo" />
       <span class="font-semibold tracking-wide">Tornade</span>
     </a>
   </div>
@@ -158,10 +158,91 @@ tailwind.config = {
         </div>
 
         
+        
+        <div class="relative group mt-8 mb-6 max-w-3xl mx-auto" id="platform-slideshow">
+          <div class="relative overflow-hidden rounded-2xl" style="aspect-ratio:16/10;">
+            <img src="http://localhost:1313/images/slideshow/tracks.png"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" />
+            <img src="http://localhost:1313/images/slideshow/albums.png"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" />
+            <img src="http://localhost:1313/images/slideshow/album-show.png"    class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" />
+            <img src="http://localhost:1313/images/slideshow/artists.png"       class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" />
+            <img src="http://localhost:1313/images/slideshow/genres.png"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" />
+            <img src="http://localhost:1313/images/slideshow/global-search.png" class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" />
+
+            <button id="pslide-prev" aria-label="Previous"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
+              ‹
+            </button>
+            <button id="pslide-next" aria-label="Next"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
+              ›
+            </button>
+          </div>
+
+          
+          <div class="flex justify-center items-center gap-2 mt-3" id="pslide-dots">
+            <button class="pdot h-2 rounded-full bg-primary    transition-all duration-300 w-8" data-i="0"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="1"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="2"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="3"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="4"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="5"></button>
+          </div>
+        </div>
+
+        <script>
+        (function () {
+          var el     = document.getElementById('platform-slideshow');
+          var slides = el.querySelectorAll('.pslide');
+          var dots   = document.getElementById('pslide-dots').querySelectorAll('.pdot');
+          var cur    = 0;
+          var timer;
+          var busy   = false;
+
+          function goTo(n) {
+            if (busy) return;
+            busy = true;
+            slides[cur].classList.replace('opacity-100', 'opacity-0');
+            dots[cur].classList.remove('bg-primary', 'w-8');
+            dots[cur].classList.add('bg-gray-500', 'w-2');
+            cur = (n + slides.length) % slides.length;
+            slides[cur].classList.replace('opacity-0', 'opacity-100');
+            dots[cur].classList.remove('bg-gray-500', 'w-2');
+            dots[cur].classList.add('bg-primary', 'w-8');
+            setTimeout(function () { busy = false; }, 700);
+          }
+
+          function start() { timer = setInterval(function () { goTo(cur + 1); }, 4000); }
+          function stop()  { clearInterval(timer); }
+
+          document.getElementById('pslide-next').addEventListener('click', function () { stop(); goTo(cur + 1); start(); });
+          document.getElementById('pslide-prev').addEventListener('click', function () { stop(); goTo(cur - 1); start(); });
+          dots.forEach(function (d) {
+            d.addEventListener('click', function () { stop(); goTo(+this.dataset.i); start(); });
+          });
+          el.addEventListener('mouseenter', stop);
+          el.addEventListener('mouseleave', start);
+
+          start();
+        })();
+        </script>
+        
+
+        
+        
+        
+        <div class="flex flex-col items-center gap-1 mb-5">
+          <div class="flex items-baseline gap-2">
+            <span class="text-3xl font-bold">9,99 €</span>
+            
+            <span class="text-sm opacity-60">— 30 jours d&#39;essai gratuit</span>
+            
+          </div>
+        </div>
+        
         <div class="flex justify-center gap-3 flex-wrap">
           <a href="https://github.com/tornade-player/tornade-gui/releases/latest/download/tornade-macos.dmg" class="btn bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-content gap-2">
             <i class="fa-brands fa-apple"></i>
-            Download — Universal (Intel + Apple Silicon)
+            Télécharger — Essai Gratuit
           </a>
         </div>
         

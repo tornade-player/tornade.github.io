@@ -90,7 +90,7 @@ tailwind.config = {
   <div class="navbar bg-base-200 border-b border-base-300 px-6">
   <div class="flex-1 gap-3">
     <a href="http://localhost:1313/es/" class="flex items-center gap-2">
-      <img src="http://localhost:1313/images/tornade.png" class="w-7 h-7" alt="Tornade logo" />
+      <img src="http://localhost:1313/images/tornade.png" class="w-7 h-7 rounded-full" alt="Tornade logo" />
       <span class="font-semibold tracking-wide">Tornade</span>
     </a>
   </div>
@@ -141,116 +141,109 @@ tailwind.config = {
 <div class="container mx-auto px-6 py-16">
 
   
-  <section id="download" class="relative overflow-hidden py-20 md:py-28 -mx-6 px-6 rounded-2xl border border-base-300">
+  <section id="download" class="relative overflow-hidden -mx-6 rounded-2xl border border-base-300 min-h-[520px] lg:min-h-[600px] group">
 
     
-    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <div class="absolute top-1/2 right-1/4 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] rounded-full bg-primary opacity-10 blur-[120px]"></div>
-      <div class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-secondary opacity-10 blur-[100px]"></div>
-    </div>
-
-    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative">
+    <div class="absolute inset-0" id="hero-slideshow">
+      <img src="http://localhost:1313/images/slideshow/tracks.png"        class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-100" alt="Tracks" />
+      <img src="http://localhost:1313/images/slideshow/albums.png"        class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Albums" />
+      <img src="http://localhost:1313/images/slideshow/album-show.png"    class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Album" />
+      <img src="http://localhost:1313/images/slideshow/artists.png"       class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Artists" />
+      <img src="http://localhost:1313/images/slideshow/genres.png"        class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Genres" />
+      <img src="http://localhost:1313/images/slideshow/global-search.png" class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Search" />
 
       
-      <div class="flex-1 flex flex-col items-start">
+      <button id="slide-prev" aria-label="Previous"
+        class="absolute right-14 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-20">
+        ‹
+      </button>
 
-        
-        <div class="flex items-center gap-2 border border-primary/30 bg-primary/5 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-5">
-          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-          Core in Rust &amp; Open Source
-        </div>
+      
+      <button id="slide-next" aria-label="Next"
+        class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-20">
+        ›
+      </button>
+    </div>
 
-        <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-          The audio player<br>
-          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">built for you</span>
-        </h1>
+    
+    <div class="absolute inset-0 pointer-events-none bg-gradient-to-r from-base-100 from-30% via-base-100/85 via-55% to-transparent"></div>
 
-        <p class="opacity-70 mt-5 text-lg max-w-md">Aplicación de audio nativa de alto rendimiento disponible en macOS, Windows, Linux y directamente desde el Terminal.</p>
+    
+    <div class="relative z-10 flex flex-col items-start justify-center h-full py-20 md:py-28 px-8 lg:px-12 max-w-[55%]">
 
-        
-        <div class="flex flex-wrap gap-2 mt-6">
-          <div class="badge badge-primary">macOS</div>
-          <div class="badge badge-neutral">Windows</div>
-          <div class="badge badge-neutral">Linux</div>
-          <div class="badge badge-neutral">Terminal / CLI</div>
-        </div>
+      
+      <div class="flex items-center gap-2 border border-primary/30 bg-primary/5 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Core in Rust &amp; Open Source
+      </div>
 
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+        The audio player<br>
+        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">built for you</span>
+      </h1>
 
-        
-        <div class="flex gap-8 mt-10 pt-8 border-t border-base-300">
-          <div>
-            <div class="text-2xl font-bold">4</div>
-            <div class="text-xs opacity-50 mt-0.5">Platforms</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold">Rust</div>
-            <div class="text-xs opacity-50 mt-0.5">Core</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold">TUI</div>
-            <div class="text-xs opacity-50 mt-0.5">Free &amp; Open Source</div>
-          </div>
-        </div>
+      <p class="opacity-70 mt-5 text-lg max-w-md">Aplicación de audio nativa de alto rendimiento disponible en macOS, Windows, Linux y directamente desde el Terminal.</p>
+
+      
+      <div class="flex flex-wrap gap-2 mt-6">
+        <div class="badge badge-primary">macOS</div>
+        <div class="badge badge-neutral">Windows</div>
+        <div class="badge badge-neutral">Linux</div>
+        <div class="badge badge-neutral">Terminal / CLI</div>
       </div>
 
       
-      <div class="flex-1 w-full relative group" id="hero-slideshow">
-
-        
-        <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="aspect-ratio:16/10;">
-          <img src="http://localhost:1313/images/slideshow/tracks.png"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" />
-          <img src="http://localhost:1313/images/slideshow/albums.png"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" />
-          <img src="http://localhost:1313/images/slideshow/album-show.png"    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" />
-          <img src="http://localhost:1313/images/slideshow/artists.png"       class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" />
-          <img src="http://localhost:1313/images/slideshow/genres.png"        class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" />
-          <img src="http://localhost:1313/images/slideshow/global-search.png" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" />
-
-          
-          <button id="slide-prev" aria-label="Previous"
-            class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/90 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
-            ‹
-          </button>
-
-          
-          <button id="slide-next" aria-label="Next"
-            class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/90 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
-            ›
-          </button>
+      <div class="flex gap-8 mt-10 pt-8 border-t border-base-300/60">
+        <div>
+          <div class="text-2xl font-bold">4</div>
+          <div class="text-xs opacity-50 mt-0.5">Platforms</div>
         </div>
-
-        
-        <div class="flex justify-center items-center gap-2 mt-4">
-          <button class="dot h-1.5 rounded-full bg-primary          transition-all duration-300 w-6"   data-i="0"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="1"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="2"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="3"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="4"></button>
-          <button class="dot h-1.5 rounded-full bg-base-content/25  transition-all duration-300 w-1.5" data-i="5"></button>
+        <div>
+          <div class="text-2xl font-bold">Rust</div>
+          <div class="text-xs opacity-50 mt-0.5">Core</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold">TUI</div>
+          <div class="text-xs opacity-50 mt-0.5">Free &amp; Open Source</div>
         </div>
       </div>
-
     </div>
+
   </section>
+
+  
+  <div class="flex justify-center items-center gap-2 mt-3" id="hero-dots">
+    <button class="dot h-2 rounded-full bg-primary          transition-all duration-300 w-8"   data-i="0"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="1"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="2"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="3"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="4"></button>
+    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="5"></button>
+  </div>
 
   <script>
   (function () {
     var el     = document.getElementById('hero-slideshow');
     var slides = el.querySelectorAll('.slide');
-    var dots   = el.querySelectorAll('.dot');
+    var dots   = document.getElementById('hero-dots').querySelectorAll('.dot');
     var cur    = 0;
     var timer;
+    var busy  = false;
 
     function goTo(n) {
+      if (busy) return;
+      busy = true;
       slides[cur].classList.replace('opacity-100', 'opacity-0');
-      dots[cur].classList.remove('bg-primary', 'w-6');
-      dots[cur].classList.add('bg-base-content/25', 'w-1.5');
+      dots[cur].classList.remove('bg-primary', 'w-8');
+      dots[cur].classList.add('bg-gray-500', 'w-2');
       cur = (n + slides.length) % slides.length;
       slides[cur].classList.replace('opacity-0', 'opacity-100');
-      dots[cur].classList.remove('bg-base-content/25', 'w-1.5');
-      dots[cur].classList.add('bg-primary', 'w-6');
+      dots[cur].classList.remove('bg-gray-500', 'w-2');
+      dots[cur].classList.add('bg-primary', 'w-8');
+      setTimeout(function () { busy = false; }, 700);
     }
 
-    function start() { timer = setInterval(function () { goTo(cur + 1); }, 3500); }
+    function start() { timer = setInterval(function () { goTo(cur + 1); }, 4000); }
     function stop()  { clearInterval(timer); }
 
     document.getElementById('slide-next').addEventListener('click', function () { stop(); goTo(cur + 1); start(); });
@@ -258,8 +251,8 @@ tailwind.config = {
     dots.forEach(function (d) {
       d.addEventListener('click', function () { stop(); goTo(+this.dataset.i); start(); });
     });
-    el.addEventListener('mouseenter', stop);
-    el.addEventListener('mouseleave', start);
+    document.getElementById('download').addEventListener('mouseenter', stop);
+    document.getElementById('download').addEventListener('mouseleave', start);
 
     start();
   })();
@@ -302,7 +295,7 @@ tailwind.config = {
               
             </div>
             <h3 class="card-title text-xl">Windows</h3>
-            <p class="text-sm opacity-70">Native GUI with Slint (in development)</p>
+            <p class="text-sm opacity-70">Native GUI (in development)</p>
 
             <div class="mt-4">
               
@@ -321,7 +314,7 @@ tailwind.config = {
               
             </div>
             <h3 class="card-title text-xl">Linux</h3>
-            <p class="text-sm opacity-70">Native GUI with Slint (in development)</p>
+            <p class="text-sm opacity-70">Native GUI (in development)</p>
 
             <div class="mt-4">
               

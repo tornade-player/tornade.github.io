@@ -9,7 +9,7 @@
     <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/platforms/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tornade for Linux — Native Slint Audio Player</title>
+      <title>Tornade for Linux — Native Audio Player</title>
       <link>http://localhost:1313/platforms/linux/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/platforms/linux/</guid>
@@ -23,7 +23,7 @@
       <description></description>
     </item>
     <item>
-      <title>Tornade for Windows — Native Slint Audio Player</title>
+      <title>Tornade for Windows — Native Audio Player</title>
       <link>http://localhost:1313/platforms/windows/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/platforms/windows/</guid>
