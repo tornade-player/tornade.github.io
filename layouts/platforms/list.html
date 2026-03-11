@@ -19,7 +19,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {{ $platforms := $.Site.Data.platforms.platforms }}
         {{ range $platforms }}
-        <a href="{{ $.Site.BaseURL | strings.TrimSuffix "/" }}/platforms/{{ .slug }}{{ if ne $.Page.Lang "en" }}/{{ $.Page.Lang }}{{ end }}" class="group">
+        <a href="{{ $.Site.BaseURL | strings.TrimSuffix "/" }}{{ $.Site.LanguagePrefix }}/platforms/{{ .slug }}/" class="group">
           <div class="card bg-base-200 hover:bg-base-300 transition-all duration-300 h-full shadow-md hover:shadow-xl hover:-translate-y-1">
             <div class="card-body">
               <div class="text-4xl mb-4">
