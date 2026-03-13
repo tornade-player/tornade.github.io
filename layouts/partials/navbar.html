@@ -1,7 +1,10 @@
 <div class="navbar bg-base-200 border-b border-base-300 px-6">
   <div class="flex-1 gap-3">
     <a href="{{ site.Home.Permalink }}" class="flex items-center gap-2">
-      <img src="{{ absURL "images/tornade.png" }}" class="w-7 h-7 rounded-full" alt="Tornade logo" />
+      <picture>
+        <source srcset="{{ absURL "images/tornade.webp" }}" type="image/webp" />
+        <img src="{{ absURL "images/tornade.png" }}" class="w-7 h-7 rounded-full" alt="Tornade logo" />
+      </picture>
       <span class="font-semibold tracking-wide">Tornade</span>
     </a>
   </div>
