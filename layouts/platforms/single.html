@@ -25,12 +25,12 @@
         <!-- Slideshow -->
         <div class="relative group mt-8 mb-6 max-w-3xl mx-auto" id="platform-slideshow">
           <div class="relative overflow-hidden rounded-2xl" style="aspect-ratio:16/10;">
-            <img src="{{ absURL "images/slideshow/tracks.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" />
-            <img src="{{ absURL "images/slideshow/albums.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" />
-            <img src="{{ absURL "images/slideshow/album-show.png" }}"    class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" />
-            <img src="{{ absURL "images/slideshow/artists.png" }}"       class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" />
-            <img src="{{ absURL "images/slideshow/genres.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" />
-            <img src="{{ absURL "images/slideshow/global-search.png" }}" class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" />
+            <img src="{{ absURL "images/slideshow/tracks.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" fetchpriority="high" />
+            <img src="{{ absURL "images/slideshow/albums.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" loading="lazy" />
+            <img src="{{ absURL "images/slideshow/album-show.png" }}"    class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" loading="lazy" />
+            <img src="{{ absURL "images/slideshow/artists.png" }}"       class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" loading="lazy" />
+            <img src="{{ absURL "images/slideshow/genres.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" loading="lazy" />
+            <img src="{{ absURL "images/slideshow/global-search.png" }}" class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" loading="lazy" />
 
             <button id="pslide-prev" aria-label="Previous"
               class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
@@ -43,13 +43,13 @@
           </div>
 
           <!-- Dots -->
-          <div class="flex justify-center items-center gap-2 mt-3" id="pslide-dots">
-            <button class="pdot h-2 rounded-full bg-primary    transition-all duration-300 w-8" data-i="0"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="1"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="2"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="3"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="4"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="5"></button>
+          <div class="flex justify-center items-center gap-2 mt-3" id="pslide-dots" role="tablist" aria-label="Slideshow navigation">
+            <button class="pdot h-2 rounded-full bg-primary    transition-all duration-300 w-8" data-i="0" aria-label="Slide 1" aria-selected="true"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="1" aria-label="Slide 2" aria-selected="false"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="2" aria-label="Slide 3" aria-selected="false"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="3" aria-label="Slide 4" aria-selected="false"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="4" aria-label="Slide 5" aria-selected="false"></button>
+            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="5" aria-label="Slide 6" aria-selected="false"></button>
           </div>
         </div>
 
@@ -104,7 +104,7 @@
         </div>
         {{ end }}
         <div class="flex justify-center gap-3 flex-wrap">
-          <a href="{{ .Params.download_url }}" class="btn bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-content gap-2">
+          <a href="{{ .Params.download_url }}" class="btn btn-outline btn-primary gap-2">
             <i class="fa-brands fa-apple"></i>
             {{ i18n "download_free_trial" }}
           </a>
@@ -211,4 +211,21 @@
 
 
 </div>
+
+{{/* JSON-LD SoftwareApplication per platform */}}
+{{ $platformOS := dict "macos" "macOS 13+" "windows" "Windows 10+" "linux" "Linux" "tui" "macOS, Windows, Linux" }}
+{{ $ld := dict
+  "@context"            "https://schema.org"
+  "@type"               "SoftwareApplication"
+  "name"                (printf "Tornade for %s" .Params.platform_name)
+  "operatingSystem"     (index $platformOS .Params.platform_id)
+  "applicationCategory" "MultimediaApplication"
+  "url"                 .Permalink
+}}
+{{ if .Params.price_numeric }}
+  {{ $offers := dict "@type" "Offer" "price" .Params.price_numeric "priceCurrency" (.Params.price_currency | default "EUR") }}
+  {{ $ld = merge $ld (dict "offers" $offers) }}
+{{ end }}
+{{ with .Params.download_url }}{{ $ld = merge $ld (dict "downloadUrl" .) }}{{ end }}
+{{- $ld | jsonify | printf "<script type=\"application/ld+json\">%s</script>" | safeHTML -}}
 {{ end }}

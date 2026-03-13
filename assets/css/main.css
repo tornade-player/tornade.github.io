@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@source "../../layouts/**/*.html";
+@source "../../content/**/*.md";
+
+@plugin "daisyui" {
+  themes: dim;
+  logs: false;
+}

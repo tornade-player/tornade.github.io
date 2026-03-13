@@ -14,8 +14,6 @@ disableKinds    = ['taxonomy', 'term']
     name                = "Tornade"
     operatingSystem     = "macOS, Windows, Linux"
     applicationCategory = "MultimediaApplication"
-    offers_price        = "0"
-    offers_currency     = "EUR"
 
 [sitemap]
   changefreq = 'monthly'
@@ -38,6 +36,10 @@ disableKinds    = ['taxonomy', 'term']
     url  = '/platforms/'
     weight = 10
   [[languages.en.menus.main]]
+    name = 'Changelog'
+    url  = '/changelog/'
+    weight = 15
+  [[languages.en.menus.main]]
     name = 'Contact'
     url  = '/contact/'
     weight = 20
@@ -58,6 +60,10 @@ disableKinds    = ['taxonomy', 'term']
     url  = '/fr/platforms/'
     weight = 10
   [[languages.fr.menus.main]]
+    name = 'Changelog'
+    url  = '/fr/changelog/'
+    weight = 15
+  [[languages.fr.menus.main]]
     name = 'Contact'
     url  = '/fr/contact/'
     weight = 20
@@ -77,6 +83,10 @@ disableKinds    = ['taxonomy', 'term']
     name = 'Plataformas'
     url  = '/es/platforms/'
     weight = 10
+  [[languages.es.menus.main]]
+    name = 'Changelog'
+    url  = '/es/changelog/'
+    weight = 15
   [[languages.es.menus.main]]
     name = 'Contacto'
     url  = '/es/contact/'

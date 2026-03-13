@@ -1,6 +1,6 @@
 +++
-title = "Tornade for Windows — Native Audio Player"
-description = "Experience Tornade on Windows with a native interface, DirectSound integration, and cross-platform audio playback (in development)."
+title = "Tornade for Windows — FLAC Audio Player (Coming Soon)"
+description = "Tornade for Windows is in development: native FLAC and lossless audio player. Windows 10/11 support."
 date = "2026-02-27"
 draft = false
 
@@ -10,7 +10,7 @@ draft = false
   status = "in_development"
   platform_description = "Native GUI (in development) — High-performance audio player for Windows 10+ with system theme integration and modern UI"
   cta_description = "Join us as we build the Windows experience for Tornade with native GUI, DirectSound audio API integration, and Windows 10/11 theme support."
-  ogTitle = "Tornade for Windows — Native Audio Player (in development)"
-  ogDescription = "Upcoming audio player for Windows with native interface, DirectSound support, Windows Installer and system media controls integration"
+  ogTitle = "Tornade for Windows — FLAC Audio Player (Coming Soon)"
+  ogDescription = "Tornade for Windows is in development: native FLAC and lossless audio player. Windows 10/11 support."
   ogType = "website"
 +++

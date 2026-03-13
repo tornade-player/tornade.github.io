@@ -1,11 +1,11 @@
 +++
-title       = "Tornade Audio Player — High-performance native audio player"
-description = "Tornade is a high-performance native audio player for macOS, Windows, Linux and Terminal. FLAC, OGG, MP3, WAV, AIFF. Rust engine, low memory footprint."
+title       = "Tornade — FLAC & Lossless Audio Player for macOS, Windows, Linux"
+description = "Native FLAC, hi-res and lossless audio player built in Rust. Available on macOS (€9.99), Windows, Linux and Terminal. Low-memory, high-performance."
 date        = "2026-02-15"
 draft       = false
 
 [params]
-  ogTitle       = "Tornade Audio Player — High-performance native audio player"
-  ogDescription = "Native audio player for macOS, Windows, Linux and CLI. FLAC, OGG, MP3, WAV, AIFF. Rust core, 60MB RAM. Real-time queue, local & network scanning."
+  ogTitle       = "Tornade — FLAC & Lossless Audio Player for macOS, Windows, Linux"
+  ogDescription = "Native FLAC, hi-res and lossless audio player built in Rust. Available on macOS (€9.99), Windows, Linux and Terminal. Low-memory, high-performance."
   ogType        = "website"
 +++

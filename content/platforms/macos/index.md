@@ -1,6 +1,6 @@
 +++
-title = "Tornade for macOS — Native SwiftUI Audio Player"
-description = "Experience Tornade on macOS with a native SwiftUI interface, ambient backgrounds, advanced library navigation and high-fidelity audio playback."
+title = "Tornade for macOS — FLAC & Lossless Audio Player (€9.99)"
+description = "Native macOS FLAC and lossless audio player. Hi-res playback, SwiftUI interface, universal binary for Intel & Apple Silicon. €9.99 — 30-day free trial."
 date = "2026-02-27"
 draft = false
 
@@ -8,12 +8,14 @@ draft = false
   platform_id = "macos"
   platform_name = "macOS"
   status = "stable"
-  platform_description = "Native GUI with SwiftUI — High-performance audio player for macOS 13+ with system-level integration, advanced search, and beautiful interface"
+  platform_description = "Native FLAC and lossless audio player for macOS 13+ — SwiftUI interface, hi-res playback, advanced library search, Apple Silicon native."
   cta_description = "Discover the ultimate macOS audio experience with native SwiftUI integration, universal binary for Intel and Apple Silicon."
-  ogTitle = "Tornade for macOS — Native SwiftUI Audio Player"
-  ogDescription = "High-performance audio player for macOS with native SwiftUI interface, ambient backgrounds, 60MB RAM footprint and complete playlist management"
+  ogTitle = "Tornade for macOS — FLAC & Lossless Audio Player (€9.99)"
+  ogDescription = "Native macOS FLAC and lossless audio player. Hi-res playback, SwiftUI interface, universal binary for Intel & Apple Silicon. €9.99 — 30-day free trial."
   ogType = "website"
   download_url = "https://github.com/tornade-player/tornade-gui/releases/latest/download/tornade-macos.dmg"
   price = "€9.99"
+  price_numeric = "9.99"
+  price_currency = "EUR"
   free_trial_days = 30
 +++

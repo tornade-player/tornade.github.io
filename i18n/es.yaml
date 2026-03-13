@@ -1,3 +1,7 @@
+hero_h1:
+  other: "El reproductor de audio FLAC"
+hero_h1_accent:
+  other: "y sin pérdidas"
 hero_subtitle:
   other: "Aplicación de audio nativa de alto rendimiento disponible en macOS, Windows, Linux y directamente desde el Terminal."
 cta_download:

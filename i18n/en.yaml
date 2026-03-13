@@ -1,3 +1,7 @@
+hero_h1:
+  other: "The FLAC & lossless"
+hero_h1_accent:
+  other: "audio player"
 hero_subtitle:
   other: "High-performance native audio application available on macOS, Windows, Linux and directly from the Terminal."
 cta_download:

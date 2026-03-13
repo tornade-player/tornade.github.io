@@ -1,8 +1,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#1d232a" />
+<link rel="icon" type="image/png" href="/images/tornade.png" />
+<link rel="apple-touch-icon" href="/images/tornade.png" />
 
 {{/* Title */}}
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ .Title | default site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
 
 {{/* Canonical */}}
 <link rel="canonical" href="{{ .Permalink }}" />
@@ -42,49 +45,34 @@
 {{ with $ogImage }}<meta name="twitter:image" content="{{ . }}" />{{ end }}
 {{ with site.Params.twitterHandle }}<meta name="twitter:site" content="{{ . }}" />{{ end }}
 
-{{/* JSON-LD SoftwareApplication */}}
+{{/* JSON-LD SoftwareApplication — only on non-platform pages */}}
+{{ if not .Params.platform_id }}
 {{ $ld := dict
   "@context"            "https://schema.org"
   "@type"               site.Params.jsonld.type
   "name"                site.Params.jsonld.name
   "operatingSystem"     site.Params.jsonld.operatingSystem
   "applicationCategory" site.Params.jsonld.applicationCategory
-  "offers"              (dict
-    "@type"         "Offer"
-    "price"         site.Params.jsonld.offers_price
-    "priceCurrency" site.Params.jsonld.offers_currency
-  )
-  "url" site.BaseURL
+  "url"                 site.BaseURL
 }}
 {{- $ld | jsonify | printf "<script type=\"application/ld+json\">%s</script>" | safeHTML -}}
+{{ end }}
 
-{{/* CDN */}}
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        'base-100':        'var(--color-base-100)',
-        'base-200':        'var(--color-base-200)',
-        'base-300':        'var(--color-base-300)',
-        'base-content':    'var(--color-base-content)',
-        'primary':         'var(--color-primary)',
-        'primary-content': 'var(--color-primary-content)',
-        'secondary':       'var(--color-secondary)',
-        'secondary-content':'var(--color-secondary-content)',
-        'accent':          'var(--color-accent)',
-        'neutral':         'var(--color-neutral)',
-        'neutral-content': 'var(--color-neutral-content)',
-        'info':            'var(--color-info)',
-        'success':         'var(--color-success)',
-        'warning':         'var(--color-warning)',
-        'error':           'var(--color-error)',
-      }
-    }
-  }
-}
-</script>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" type="text/css" />
+{{/* JSON-LD Organization — all pages */}}
+{{ $org := dict
+  "@context" "https://schema.org"
+  "@type"    "Organization"
+  "name"     "Tornade"
+  "url"      "https://tornade.tf/"
+  "logo"     "https://tornade.tf/images/tornade.png"
+  "sameAs"   (slice "https://github.com/tornade-player")
+}}
+{{- $org | jsonify | printf "<script type=\"application/ld+json\">%s</script>" | safeHTML -}}
+
+{{/* CSS — Hugo Pipes (PostCSS + Tailwind v4 + DaisyUI v5) */}}
+{{ $css := resources.Get "css/main.css" | css.PostCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous" />
+
+{{/* Font Awesome */}}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" />

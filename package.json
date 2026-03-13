@@ -1,0 +1,11 @@
+{
+  "name": "tornade-website",
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "daisyui": "^5",
+    "postcss": "^8",
+    "postcss-cli": "^11",
+    "tailwindcss": "^4"
+  }
+}

@@ -1,6 +1,6 @@
 +++
 title = "Tornade Platforms"
-description = "Choose your Tornade platform: macOS with SwiftUI, Windows and Linux with Slint GUI, or Terminal UI for CLI users."
+description = "Choose your Tornade platform: native FLAC and lossless audio player for macOS, Windows, Linux and Terminal. Open-source Rust core."
 date = "2026-02-27"
 draft = false
 +++
