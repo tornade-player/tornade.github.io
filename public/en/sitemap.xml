@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/changelog/</loc>
+    <lastmod>2026-03-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/changelog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/changelog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/changelog/"
+                />
+  </url><url>
     <loc>http://localhost:1313/platforms/linux/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

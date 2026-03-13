@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tornade Audio Player — Lecteur audio natif haute performance on Tornade Audio Player</title>
+    <title>Tornade — Lecteur Audio FLAC &amp; Lossless pour macOS, Windows, Linux on Tornade Audio Player</title>
     <link>http://localhost:1313/fr/</link>
-    <description>Recent content in Tornade Audio Player — Lecteur audio natif haute performance on Tornade Audio Player</description>
+    <description>Recent content in Tornade — Lecteur Audio FLAC &amp; Lossless pour macOS, Windows, Linux on Tornade Audio Player</description>
     <generator>Hugo</generator>
     <language>fr</language>
     <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tornade Interface Terminal — Lecteur Audio Léger pour CLI</title>
-      <link>http://localhost:1313/fr/platforms/tui/</link>
-      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/fr/platforms/tui/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tornade pour Linux — Lecteur Audio Natif</title>
+      <title>Tornade pour Linux — Lecteur Audio FLAC (Bientôt disponible)</title>
       <link>http://localhost:1313/fr/platforms/linux/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/fr/platforms/linux/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tornade pour macOS — Lecteur Audio Native SwiftUI</title>
+      <title>Tornade pour macOS — Lecteur Audio FLAC &amp; Lossless (9,99 €)</title>
       <link>http://localhost:1313/fr/platforms/macos/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/fr/platforms/macos/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tornade pour Windows — Lecteur Audio Natif</title>
+      <title>Tornade pour Windows — Lecteur Audio FLAC (Bientôt disponible)</title>
       <link>http://localhost:1313/fr/platforms/windows/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/fr/platforms/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tornade TUI — Lecteur Audio FLAC Gratuit pour Terminal / CLI</title>
+      <link>http://localhost:1313/fr/platforms/tui/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fr/platforms/tui/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tornade Audio Player — High-performance native audio player on Tornade Audio Player</title>
+    <title>Tornade — FLAC &amp; Lossless Audio Player for macOS, Windows, Linux on Tornade Audio Player</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Tornade Audio Player — High-performance native audio player on Tornade Audio Player</description>
+    <description>Recent content in Tornade — FLAC &amp; Lossless Audio Player for macOS, Windows, Linux on Tornade Audio Player</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tornade for Linux — Native Audio Player</title>
+      <title>Tornade for Linux — FLAC Audio Player (Coming Soon)</title>
       <link>http://localhost:1313/platforms/linux/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/platforms/linux/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tornade for macOS — Native SwiftUI Audio Player</title>
+      <title>Tornade for macOS — FLAC &amp; Lossless Audio Player (€9.99)</title>
       <link>http://localhost:1313/platforms/macos/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/platforms/macos/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tornade for Windows — Native Audio Player</title>
+      <title>Tornade for Windows — FLAC Audio Player (Coming Soon)</title>
       <link>http://localhost:1313/platforms/windows/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/platforms/windows/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tornade Terminal UI — Lightweight Audio Player for CLI</title>
+      <title>Tornade TUI — Free FLAC Audio Player for Terminal / CLI</title>
       <link>http://localhost:1313/platforms/tui/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/platforms/tui/</guid>

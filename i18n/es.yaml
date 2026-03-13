@@ -4,6 +4,8 @@ hero_h1_accent:
   other: "y sin pérdidas"
 hero_subtitle:
   other: "Aplicación de audio nativa de alto rendimiento disponible en macOS, Windows, Linux y directamente desde el Terminal."
+formats_label:
+  other: "Formatos"
 cta_download:
   other: "Descargar"
 cta_docs:

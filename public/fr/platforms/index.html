@@ -3,6 +3,9 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#1d232a" />
+<link rel="icon" type="image/png" href="/images/tornade-32.png" />
+<link rel="apple-touch-icon" href="/images/tornade-128.png" />
 
 
 <title>Plateformes Tornade | Tornade Audio Player</title>
@@ -12,7 +15,7 @@
 
 
 
-<meta name="description" content="Choisissez votre plateforme Tornade : macOS avec SwiftUI, Windows et Linux avec GUI Slint, ou Interface Terminal pour les utilisateurs CLI." />
+<meta name="description" content="Choisissez votre plateforme Tornade : lecteur audio natif FLAC et lossless pour macOS, Windows, Linux et Terminal. Core Rust open source." />
 
 
 <meta name="robots" content="index, follow" />
@@ -36,7 +39,7 @@
 
 <meta property="og:type"        content="website" />
 <meta property="og:title"       content="Plateformes Tornade" />
-<meta property="og:description" content="Choisissez votre plateforme Tornade : macOS avec SwiftUI, Windows et Linux avec GUI Slint, ou Interface Terminal pour les utilisateurs CLI." />
+<meta property="og:description" content="Choisissez votre plateforme Tornade : lecteur audio natif FLAC et lossless pour macOS, Windows, Linux et Terminal. Core Rust open source." />
 <meta property="og:url"         content="http://localhost:1313/fr/platforms/" />
 <meta property="og:site_name"   content="Tornade Audio Player" />
 <meta property="og:locale"      content="fr_FR" />
@@ -48,54 +51,41 @@
 
 <meta name="twitter:card"        content="summary_large_image" />
 <meta name="twitter:title"       content="Plateformes Tornade" />
-<meta name="twitter:description" content="Choisissez votre plateforme Tornade : macOS avec SwiftUI, Windows et Linux avec GUI Slint, ou Interface Terminal pour les utilisateurs CLI." />
+<meta name="twitter:description" content="Choisissez votre plateforme Tornade : lecteur audio natif FLAC et lossless pour macOS, Windows, Linux et Terminal. Core Rust open source." />
 <meta name="twitter:image" content="http://localhost:1313/images/og-image.png" />
 <meta name="twitter:site" content="@tornade_app" />
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"MultimediaApplication","name":"Tornade","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"macOS, Windows, Linux","url":"http://localhost:1313/"}</script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        'base-100':        'var(--color-base-100)',
-        'base-200':        'var(--color-base-200)',
-        'base-300':        'var(--color-base-300)',
-        'base-content':    'var(--color-base-content)',
-        'primary':         'var(--color-primary)',
-        'primary-content': 'var(--color-primary-content)',
-        'secondary':       'var(--color-secondary)',
-        'secondary-content':'var(--color-secondary-content)',
-        'accent':          'var(--color-accent)',
-        'neutral':         'var(--color-neutral)',
-        'neutral-content': 'var(--color-neutral-content)',
-        'info':            'var(--color-info)',
-        'success':         'var(--color-success)',
-        'warning':         'var(--color-warning)',
-        'error':           'var(--color-error)',
-      }
-    }
-  }
-}
-</script>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" type="text/css" />
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"MultimediaApplication","name":"Tornade","operatingSystem":"macOS, Windows, Linux","url":"http://localhost:1313/"}</script>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","logo":"https://tornade.tf/images/tornade.png","name":"Tornade","sameAs":["https://github.com/tornade-player"],"url":"https://tornade.tf/"}</script>
+
+<link rel="stylesheet" href="http://localhost:1313/css/main.min.357e8161f5b22498c8c980b76d51d241b17ff5751de23d95fe13c94bbbe6ff29.css" integrity="sha256-NX6BYfWyJJjIyYC3bVHSQbF/9XUd4j2V/hPJS7vm/yk=" crossorigin="anonymous" />
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" crossorigin="anonymous" /></noscript>
 
 </head>
 <body class="min-h-screen flex flex-col bg-base-100">
   <div class="navbar bg-base-200 border-b border-base-300 px-6">
   <div class="flex-1 gap-3">
     <a href="http://localhost:1313/fr/" class="flex items-center gap-2">
-      <img src="http://localhost:1313/images/tornade.png" class="w-7 h-7 rounded-full" alt="Tornade logo" />
+      <picture>
+        <source srcset="http://localhost:1313/images/tornade-128.webp" type="image/webp" />
+        <img src="http://localhost:1313/images/tornade-128.png" class="w-7 h-7 rounded-full" alt="Tornade logo" width="128" height="128" />
+      </picture>
       <span class="font-semibold tracking-wide">Tornade</span>
     </a>
   </div>
   <div class="flex-none gap-2">
     
     <a href="/fr/platforms/" class="btn btn-ghost btn-sm hidden md:inline-flex">Plateformes</a>
+    
+    <a href="/fr/changelog/" class="btn btn-ghost btn-sm hidden md:inline-flex">Changelog</a>
     
     <a href="/fr/contact/" class="btn btn-ghost btn-sm hidden md:inline-flex">Contact</a>
     

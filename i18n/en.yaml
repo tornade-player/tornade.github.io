@@ -4,6 +4,8 @@ hero_h1_accent:
   other: "audio player"
 hero_subtitle:
   other: "High-performance native audio application available on macOS, Windows, Linux and directly from the Terminal."
+formats_label:
+  other: "Formats"
 cta_download:
   other: "Download"
 cta_docs:
