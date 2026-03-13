@@ -6,12 +6,30 @@
 
     <!-- Full-bleed slideshow background -->
     <div class="absolute inset-0" id="hero-slideshow">
-      <img src="{{ absURL "images/slideshow/tracks.png" }}"        class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-100" alt="Tracks" fetchpriority="high" />
-      <img src="{{ absURL "images/slideshow/albums.png" }}"        class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Albums" loading="lazy" />
-      <img src="{{ absURL "images/slideshow/album-show.png" }}"    class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Album" loading="lazy" />
-      <img src="{{ absURL "images/slideshow/artists.png" }}"       class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Artists" loading="lazy" />
-      <img src="{{ absURL "images/slideshow/genres.png" }}"        class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Genres" loading="lazy" />
-      <img src="{{ absURL "images/slideshow/global-search.png" }}" class="slide absolute inset-0 w-full h-full object-cover object-right scale-[1.08] transition-opacity duration-700 opacity-0"   alt="Search" loading="lazy" />
+      <picture class="slide block absolute inset-0 transition-opacity duration-700 opacity-100">
+        <source srcset="{{ absURL "images/slideshow/tracks.webp" }}" type="image/webp" />
+        <img src="{{ absURL "images/slideshow/tracks.png" }}" class="w-full h-full object-cover object-right scale-[1.08]" alt="Tracks" fetchpriority="high" />
+      </picture>
+      <picture class="slide block absolute inset-0 transition-opacity duration-700 opacity-0">
+        <source srcset="{{ absURL "images/slideshow/albums.webp" }}" type="image/webp" />
+        <img src="{{ absURL "images/slideshow/albums.png" }}" class="w-full h-full object-cover object-right scale-[1.08]" alt="Albums" loading="lazy" />
+      </picture>
+      <picture class="slide block absolute inset-0 transition-opacity duration-700 opacity-0">
+        <source srcset="{{ absURL "images/slideshow/album-show.webp" }}" type="image/webp" />
+        <img src="{{ absURL "images/slideshow/album-show.png" }}" class="w-full h-full object-cover object-right scale-[1.08]" alt="Album" loading="lazy" />
+      </picture>
+      <picture class="slide block absolute inset-0 transition-opacity duration-700 opacity-0">
+        <source srcset="{{ absURL "images/slideshow/artists.webp" }}" type="image/webp" />
+        <img src="{{ absURL "images/slideshow/artists.png" }}" class="w-full h-full object-cover object-right scale-[1.08]" alt="Artists" loading="lazy" />
+      </picture>
+      <picture class="slide block absolute inset-0 transition-opacity duration-700 opacity-0">
+        <source srcset="{{ absURL "images/slideshow/genres.webp" }}" type="image/webp" />
+        <img src="{{ absURL "images/slideshow/genres.png" }}" class="w-full h-full object-cover object-right scale-[1.08]" alt="Genres" loading="lazy" />
+      </picture>
+      <picture class="slide block absolute inset-0 transition-opacity duration-700 opacity-0">
+        <source srcset="{{ absURL "images/slideshow/global-search.webp" }}" type="image/webp" />
+        <img src="{{ absURL "images/slideshow/global-search.png" }}" class="w-full h-full object-cover object-right scale-[1.08]" alt="Search" loading="lazy" />
+      </picture>
 
       <!-- Prev arrow — right half -->
       <button id="slide-prev" aria-label="Previous"
@@ -74,12 +92,12 @@
 
   <!-- Slideshow dot indicators -->
   <div class="flex justify-center items-center gap-2 mt-3" id="hero-dots" role="tablist" aria-label="Slideshow navigation">
-    <button class="dot h-2 rounded-full bg-primary          transition-all duration-300 w-8"   data-i="0" aria-label="Slide 1" aria-selected="true"></button>
-    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="1" aria-label="Slide 2" aria-selected="false"></button>
-    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="2" aria-label="Slide 3" aria-selected="false"></button>
-    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="3" aria-label="Slide 4" aria-selected="false"></button>
-    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="4" aria-label="Slide 5" aria-selected="false"></button>
-    <button class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="5" aria-label="Slide 6" aria-selected="false"></button>
+    <button role="tab" class="dot h-2 rounded-full bg-primary          transition-all duration-300 w-8"   data-i="0" aria-label="Slide 1" aria-selected="true"></button>
+    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="1" aria-label="Slide 2" aria-selected="false"></button>
+    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="2" aria-label="Slide 3" aria-selected="false"></button>
+    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="3" aria-label="Slide 4" aria-selected="false"></button>
+    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="4" aria-label="Slide 5" aria-selected="false"></button>
+    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="5" aria-label="Slide 6" aria-selected="false"></button>
   </div>
 
   <script>

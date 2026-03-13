@@ -25,12 +25,30 @@
         <!-- Slideshow -->
         <div class="relative group mt-8 mb-6 max-w-3xl mx-auto" id="platform-slideshow">
           <div class="relative overflow-hidden rounded-2xl" style="aspect-ratio:16/10;">
-            <img src="{{ absURL "images/slideshow/tracks.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" alt="Tracks" fetchpriority="high" />
-            <img src="{{ absURL "images/slideshow/albums.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Albums" loading="lazy" />
-            <img src="{{ absURL "images/slideshow/album-show.png" }}"    class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Album" loading="lazy" />
-            <img src="{{ absURL "images/slideshow/artists.png" }}"       class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Artists" loading="lazy" />
-            <img src="{{ absURL "images/slideshow/genres.png" }}"        class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Genres" loading="lazy" />
-            <img src="{{ absURL "images/slideshow/global-search.png" }}" class="pslide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"   alt="Search" loading="lazy" />
+            <picture class="pslide block absolute inset-0 transition-opacity duration-700 opacity-100">
+              <source srcset="{{ absURL "images/slideshow/tracks.webp" }}" type="image/webp" />
+              <img src="{{ absURL "images/slideshow/tracks.png" }}" class="w-full h-full object-cover" alt="Tracks" fetchpriority="high" />
+            </picture>
+            <picture class="pslide block absolute inset-0 transition-opacity duration-700 opacity-0">
+              <source srcset="{{ absURL "images/slideshow/albums.webp" }}" type="image/webp" />
+              <img src="{{ absURL "images/slideshow/albums.png" }}" class="w-full h-full object-cover" alt="Albums" loading="lazy" />
+            </picture>
+            <picture class="pslide block absolute inset-0 transition-opacity duration-700 opacity-0">
+              <source srcset="{{ absURL "images/slideshow/album-show.webp" }}" type="image/webp" />
+              <img src="{{ absURL "images/slideshow/album-show.png" }}" class="w-full h-full object-cover" alt="Album" loading="lazy" />
+            </picture>
+            <picture class="pslide block absolute inset-0 transition-opacity duration-700 opacity-0">
+              <source srcset="{{ absURL "images/slideshow/artists.webp" }}" type="image/webp" />
+              <img src="{{ absURL "images/slideshow/artists.png" }}" class="w-full h-full object-cover" alt="Artists" loading="lazy" />
+            </picture>
+            <picture class="pslide block absolute inset-0 transition-opacity duration-700 opacity-0">
+              <source srcset="{{ absURL "images/slideshow/genres.webp" }}" type="image/webp" />
+              <img src="{{ absURL "images/slideshow/genres.png" }}" class="w-full h-full object-cover" alt="Genres" loading="lazy" />
+            </picture>
+            <picture class="pslide block absolute inset-0 transition-opacity duration-700 opacity-0">
+              <source srcset="{{ absURL "images/slideshow/global-search.webp" }}" type="image/webp" />
+              <img src="{{ absURL "images/slideshow/global-search.png" }}" class="w-full h-full object-cover" alt="Search" loading="lazy" />
+            </picture>
 
             <button id="pslide-prev" aria-label="Previous"
               class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-base-100/80 shadow-lg border border-base-300 flex items-center justify-center text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-base-100 z-10">
@@ -44,12 +62,12 @@
 
           <!-- Dots -->
           <div class="flex justify-center items-center gap-2 mt-3" id="pslide-dots" role="tablist" aria-label="Slideshow navigation">
-            <button class="pdot h-2 rounded-full bg-primary    transition-all duration-300 w-8" data-i="0" aria-label="Slide 1" aria-selected="true"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="1" aria-label="Slide 2" aria-selected="false"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="2" aria-label="Slide 3" aria-selected="false"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="3" aria-label="Slide 4" aria-selected="false"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="4" aria-label="Slide 5" aria-selected="false"></button>
-            <button class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="5" aria-label="Slide 6" aria-selected="false"></button>
+            <button role="tab" class="pdot h-2 rounded-full bg-primary    transition-all duration-300 w-8" data-i="0" aria-label="Slide 1" aria-selected="true"></button>
+            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="1" aria-label="Slide 2" aria-selected="false"></button>
+            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="2" aria-label="Slide 3" aria-selected="false"></button>
+            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="3" aria-label="Slide 4" aria-selected="false"></button>
+            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="4" aria-label="Slide 5" aria-selected="false"></button>
+            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="5" aria-label="Slide 6" aria-selected="false"></button>
           </div>
         </div>
 
