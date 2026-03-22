@@ -8,13 +8,13 @@ hero_pretitle_badge:
   other: "Core Rust · TUI gratuito & open source"
 
 highlight_queue_title:
-  other: "Crea tu lista de reproducción al vuelo"
+  other: "Encuentra, organiza y pon en cola tu música al instante"
 highlight_queue_desc:
-  other: "Añade, reordena y gestiona pistas en tiempo real sin interrumpir la reproducción. Tu cola, tus reglas."
+  other: "Busca en toda tu biblioteca, gestiona listas de reproducción y construye tu cola en tiempo real — sin interrumpir la música."
 highlight_performance_title:
-  other: "Rápido y ligero — uso mínimo de CPU"
+  other: "Sin bloat — rápido, reactivo, sin estorbos"
 highlight_performance_desc:
-  other: "~60MB de RAM en macOS, CPU casi nulo en reposo. Motor Rust compilado nativamente para tu SO."
+  other: "~60MB de RAM en macOS, CPU casi nulo en reposo. Una app nativa que responde al instante, siempre."
 highlight_crossplatform_title:
   other: "GUI o Terminal — tú decides"
 highlight_crossplatform_desc:

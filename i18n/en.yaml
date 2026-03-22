@@ -8,13 +8,13 @@ hero_pretitle_badge:
   other: "Rust core · TUI free & open source"
 
 highlight_queue_title:
-  other: "Build your playlist on the fly"
+  other: "Find, organize, and queue your music instantly"
 highlight_queue_desc:
-  other: "Add, reorder, and manage tracks in real time without interrupting playback. Your queue, your rules."
+  other: "Search your entire library, manage playlists, and build your queue in real time — without interrupting playback."
 highlight_performance_title:
-  other: "Fast and light — minimal CPU usage"
+  other: "No bloat — fast, responsive, stays out of your way"
 highlight_performance_desc:
-  other: "~60MB RAM on macOS, near-zero CPU at rest. Rust-powered engine, compiled natively for your OS."
+  other: "~60MB RAM on macOS, near-zero CPU at rest. A native app that feels instant, every time."
 highlight_crossplatform_title:
   other: "GUI or Terminal — your choice"
 highlight_crossplatform_desc:
