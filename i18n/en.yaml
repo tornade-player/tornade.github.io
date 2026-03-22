@@ -1,9 +1,22 @@
 hero_h1:
-  other: "The FLAC & lossless"
+  other: "Not just a music player."
 hero_h1_accent:
-  other: "audio player"
+  other: "A listening tool"
 hero_subtitle:
-  other: "High-performance native audio application available on macOS, Windows, Linux and directly from the Terminal."
+  other: "Interactive queue, native performance, and full control over your lossless audio."
+highlight_queue_title:
+  other: "Interactive Queue"
+highlight_queue_desc:
+  other: "Control your playback flow like never before. Inspired by classic players, redesigned for modern usage."
+highlight_performance_title:
+  other: "Native Performance"
+highlight_performance_desc:
+  other: "Built with native technologies for speed, efficiency, and low resource usage."
+highlight_crossplatform_title:
+  other: "Cross-platform + Terminal"
+highlight_crossplatform_desc:
+  other: "Available on macOS, Windows, Linux — and directly from the command line."
+
 formats_label:
   other: "Formats"
 cta_download:
