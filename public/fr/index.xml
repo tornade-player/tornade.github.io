@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tornade — Lecteur Audio FLAC &amp; Lossless pour macOS, Windows, Linux on Tornade Audio Player</title>
-    <link>http://localhost:1313/fr/</link>
-    <description>Recent content in Tornade — Lecteur Audio FLAC &amp; Lossless pour macOS, Windows, Linux on Tornade Audio Player</description>
+    <title>Tornade — Le Lecteur Audio Lossless Qui Vous Donne le Contrôle on Tornade Audio Player</title>
+    <link>https://tornade.tf/fr/</link>
+    <description>Recent content in Tornade — Le Lecteur Audio Lossless Qui Vous Donne le Contrôle on Tornade Audio Player</description>
     <generator>Hugo</generator>
     <language>fr</language>
     <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/fr/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tornade.tf/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tornade pour Linux — Lecteur Audio FLAC (Bientôt disponible)</title>
-      <link>http://localhost:1313/fr/platforms/linux/</link>
+      <link>https://tornade.tf/fr/platforms/linux/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/fr/platforms/linux/</guid>
+      <guid>https://tornade.tf/fr/platforms/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Tornade pour macOS — Lecteur Audio FLAC &amp; Lossless (9,99 €)</title>
-      <link>http://localhost:1313/fr/platforms/macos/</link>
+      <link>https://tornade.tf/fr/platforms/macos/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/fr/platforms/macos/</guid>
+      <guid>https://tornade.tf/fr/platforms/macos/</guid>
       <description></description>
     </item>
     <item>
       <title>Tornade pour Windows — Lecteur Audio FLAC (Bientôt disponible)</title>
-      <link>http://localhost:1313/fr/platforms/windows/</link>
+      <link>https://tornade.tf/fr/platforms/windows/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/fr/platforms/windows/</guid>
+      <guid>https://tornade.tf/fr/platforms/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Tornade TUI — Lecteur Audio FLAC Gratuit pour Terminal / CLI</title>
-      <link>http://localhost:1313/fr/platforms/tui/</link>
+      <link>https://tornade.tf/fr/platforms/tui/</link>
       <pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/fr/platforms/tui/</guid>
+      <guid>https://tornade.tf/fr/platforms/tui/</guid>
       <description></description>
     </item>
   </channel>

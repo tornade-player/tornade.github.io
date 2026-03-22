@@ -1,24 +1,24 @@
 hero_h1:
-  other: "Your music, your way."
+  other: "The music player"
 hero_h1_accent:
-  other: "Lossless, and in control."
+  other: "you've been missing."
 hero_subtitle:
-  other: "Interact with your music like never before — control, organize, and experience your lossless audio with precision."
+  other: "Your library, your queue, your rules. Browse, organize, and play your music — no streaming account, no bloat, no complexity."
 hero_pretitle_badge:
-  other: "Rust core · TUI free & open source"
+  other: "Native app · TUI free & open source"
 
 highlight_queue_title:
-  other: "Find, organize, and queue your music instantly"
+  other: "Build your listening session, your way"
 highlight_queue_desc:
-  other: "Search your entire library, manage playlists, and build your queue in real time — without interrupting playback."
+  other: "Add tracks, reorder on the fly, and shape the perfect queue — without ever stopping playback."
 highlight_performance_title:
-  other: "No bloat — fast, responsive, stays out of your way"
+  other: "Fast, light, stays out of your way"
 highlight_performance_desc:
-  other: "~60MB RAM on macOS, near-zero CPU at rest. A native app that feels instant, every time."
+  other: "~60MB RAM on macOS, near-zero CPU at rest. Opens instantly, plays forever."
 highlight_crossplatform_title:
-  other: "GUI or Terminal — your choice"
+  other: "Every platform, one player"
 highlight_crossplatform_desc:
-  other: "Use the polished macOS app or go headless with the TUI. Windows and Linux GUIs coming soon."
+  other: "macOS available now. Windows and Linux coming soon. Free terminal version included."
 
 formats_label:
   other: "Formats"
@@ -40,29 +40,29 @@ cta_docs:
 whatyoucando_title:
   other: "What you can do"
 wycd_library:
-  other: "Manage large music libraries with ease"
+  other: "Browse your collection by album, artist, or genre"
 wycd_queue:
-  other: "Build and reorder playback queues on the fly"
+  other: "Build and reorder your queue without stopping playback"
 wycd_hotkeys:
-  other: "Control playback with hotkeys or via Terminal"
+  other: "Control everything from your keyboard"
 wycd_ratings:
-  other: "Rate and organize your tracks seamlessly"
+  other: "Rate your tracks and rediscover your favorites"
 wycd_formats:
-  other: "Play FLAC, ALAC, OGG, MP3, WAV and more natively"
+  other: "Play MP3, FLAC, WAV, ALAC and more — natively"
 wycd_tui:
-  other: "Use it headless over SSH — no GUI needed"
+  other: "Use the free terminal version — even over SSH"
 
 platforms_subtitle:
   other: "Choose your platform and explore its unique features"
 
 bottom_cta_title:
-  other: "Ready to experience your music differently?"
+  other: "Your music is waiting."
 bottom_cta_subtitle:
   other: "Download Tornade for macOS — free 30-day trial, no account required."
 features_title:
-  other: "Powerful Features"
+  other: "Everything you need. Nothing you don't."
 features_subtitle:
-  other: "Everything you need for professional audio playback"
+  other: "A music player built for your library."
 available_on:
   other: "Available on Your Platform"
 explore_platforms:

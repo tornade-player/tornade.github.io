@@ -2,184 +2,184 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/fr/changelog/</loc>
+    <loc>https://tornade.tf/fr/changelog/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/changelog/"
+                href="https://tornade.tf/changelog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/changelog/"
+                href="https://tornade.tf/es/changelog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/changelog/"
+                href="https://tornade.tf/fr/changelog/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/platforms/</loc>
+    <loc>https://tornade.tf/fr/platforms/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/platforms/"
+                href="https://tornade.tf/platforms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/platforms/"
+                href="https://tornade.tf/es/platforms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/platforms/"
+                href="https://tornade.tf/fr/platforms/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/platforms/linux/</loc>
+    <loc>https://tornade.tf/fr/platforms/linux/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/platforms/linux/"
+                href="https://tornade.tf/platforms/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/platforms/linux/"
+                href="https://tornade.tf/es/platforms/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/platforms/linux/"
+                href="https://tornade.tf/fr/platforms/linux/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/platforms/macos/</loc>
+    <loc>https://tornade.tf/fr/platforms/macos/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/platforms/macos/"
+                href="https://tornade.tf/platforms/macos/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/platforms/macos/"
+                href="https://tornade.tf/es/platforms/macos/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/platforms/macos/"
+                href="https://tornade.tf/fr/platforms/macos/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/platforms/windows/</loc>
+    <loc>https://tornade.tf/fr/platforms/windows/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/platforms/windows/"
+                href="https://tornade.tf/platforms/windows/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/platforms/windows/"
+                href="https://tornade.tf/es/platforms/windows/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/platforms/windows/"
+                href="https://tornade.tf/fr/platforms/windows/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/platforms/tui/</loc>
+    <loc>https://tornade.tf/fr/platforms/tui/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/platforms/tui/"
+                href="https://tornade.tf/platforms/tui/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/platforms/tui/"
+                href="https://tornade.tf/es/platforms/tui/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/platforms/tui/"
+                href="https://tornade.tf/fr/platforms/tui/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/contact/</loc>
+    <loc>https://tornade.tf/fr/contact/</loc>
     <lastmod>2026-02-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/contact/"
+                href="https://tornade.tf/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/contact/"
+                href="https://tornade.tf/es/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/contact/"
+                href="https://tornade.tf/fr/contact/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/contact/success/</loc>
+    <loc>https://tornade.tf/fr/contact/success/</loc>
     <lastmod>2026-02-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/contact/success/"
+                href="https://tornade.tf/contact/success/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/contact/success/"
+                href="https://tornade.tf/es/contact/success/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/contact/success/"
+                href="https://tornade.tf/fr/contact/success/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/</loc>
+    <loc>https://tornade.tf/fr/</loc>
     <lastmod>2026-02-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="https://tornade.tf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/"
+                href="https://tornade.tf/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/"
+                href="https://tornade.tf/fr/"
                 />
   </url>
 </urlset>
