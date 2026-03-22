@@ -1,11 +1,11 @@
 +++
-title       = "Tornade — Reproductor de Audio FLAC & Lossless para macOS, Windows, Linux"
-description = "Reproductor de audio nativo FLAC, hi-res y lossless desarrollado en Rust. Disponible en macOS (9,99 €), Windows, Linux y Terminal. Baja memoria, alto rendimiento."
+title       = "Tornade — El Reproductor Lossless Que Te Da el Control"
+description = "Interactúa con tu música como nunca antes. Reproductor FLAC, ALAC y lossless nativo en Rust. Cola interactiva, bajo consumo de memoria — macOS, Windows, Linux & Terminal."
 date        = "2026-02-15"
 draft       = false
 
 [params]
-  ogTitle       = "Tornade — Reproductor de Audio FLAC & Lossless para macOS, Windows, Linux"
-  ogDescription = "Reproductor de audio nativo FLAC, hi-res y lossless desarrollado en Rust. Disponible en macOS (9,99 €), Windows, Linux y Terminal. Baja memoria, alto rendimiento."
+  ogTitle       = "Tornade — El Reproductor Lossless Que Te Da el Control"
+  ogDescription = "Interactúa con tu música como nunca antes. Reproductor FLAC, ALAC y lossless nativo en Rust. Cola interactiva, bajo consumo de memoria — macOS, Windows, Linux & Terminal."
   ogType        = "website"
 +++

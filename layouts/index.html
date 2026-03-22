@@ -53,7 +53,7 @@
       <!-- Pre-title badge -->
       <div class="flex items-center gap-2 border border-primary/30 bg-primary/5 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-5">
         <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-        Core in Rust &amp; Open Source
+        {{ i18n "hero_pretitle_badge" }}
       </div>
 
       <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
@@ -62,6 +62,24 @@
       </h1>
 
       <p class="opacity-70 mt-5 text-lg max-w-md">{{ i18n "hero_subtitle" }}</p>
+
+      <!-- CTA BLOCK -->
+      <div class="flex items-center gap-4 mt-8">
+        <a id="cta-primary-btn"
+           href="{{ site.BaseURL }}platforms/macos/"
+           data-label-windows="{{ i18n "cta_coming_windows" }}"
+           data-label-linux="{{ i18n "cta_coming_linux" }}"
+           data-label-generic="{{ i18n "cta_download" }}"
+           class="btn btn-primary btn-lg font-semibold px-8 shadow-lg">
+          <i id="cta-os-icon" class="fa-brands fa-apple mr-2"></i>
+          <span id="cta-primary-label">{{ i18n "cta_download_macos" }}</span>
+        </a>
+        <a href="{{ site.BaseURL }}platforms/"
+           class="btn btn-ghost btn-lg text-sm opacity-70 hover:opacity-100">
+          {{ i18n "cta_see_all_platforms" }}
+        </a>
+      </div>
+      <p id="cta-trial-note" class="text-xs opacity-40 mt-2">{{ i18n "cta_trial_note" }}</p>
 
       <!-- PLATFORM BADGES -->
       <div class="flex flex-wrap gap-2 mt-6">
@@ -148,6 +166,65 @@
   })();
   </script>
 
+  <script>
+  (function () {
+    var ua  = navigator.userAgent;
+    var btn = document.getElementById('cta-primary-btn');
+    var icon = document.getElementById('cta-os-icon');
+    var label = document.getElementById('cta-primary-label');
+    var note = document.getElementById('cta-trial-note');
+    if (/Macintosh|Mac OS X/.test(ua)) {
+      // default — macOS already configured in HTML
+    } else if (/Windows/.test(ua)) {
+      btn.href = '{{ site.BaseURL }}platforms/';
+      icon.className = 'fa-brands fa-windows mr-2';
+      label.textContent = btn.dataset.labelWindows;
+      note.style.display = 'none';
+    } else if (/Linux/.test(ua)) {
+      btn.href = '{{ site.BaseURL }}platforms/';
+      icon.className = 'fa-brands fa-linux mr-2';
+      label.textContent = btn.dataset.labelLinux;
+      note.style.display = 'none';
+    } else {
+      btn.href = '{{ site.BaseURL }}platforms/';
+      icon.className = 'fa-solid fa-download mr-2';
+      label.textContent = btn.dataset.labelGeneric;
+      note.style.display = 'none';
+    }
+  })();
+  </script>
+
+  <!-- WHAT YOU CAN DO -->
+  <section class="mt-10 mb-2 px-1">
+    <h2 class="text-xs font-semibold uppercase tracking-widest opacity-40 mb-5">{{ i18n "whatyoucando_title" }}</h2>
+    <ul class="grid sm:grid-cols-2 gap-x-12 gap-y-3">
+      <li class="flex items-start gap-3 text-sm opacity-75">
+        <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+        {{ i18n "wycd_library" }}
+      </li>
+      <li class="flex items-start gap-3 text-sm opacity-75">
+        <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+        {{ i18n "wycd_queue" }}
+      </li>
+      <li class="flex items-start gap-3 text-sm opacity-75">
+        <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+        {{ i18n "wycd_hotkeys" }}
+      </li>
+      <li class="flex items-start gap-3 text-sm opacity-75">
+        <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+        {{ i18n "wycd_ratings" }}
+      </li>
+      <li class="flex items-start gap-3 text-sm opacity-75">
+        <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+        {{ i18n "wycd_formats" }}
+      </li>
+      <li class="flex items-start gap-3 text-sm opacity-75">
+        <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+        {{ i18n "wycd_tui" }}
+      </li>
+    </ul>
+  </section>
+
   <!-- KEY HIGHLIGHTS -->
   <section class="mt-12 mb-4">
     <div class="grid md:grid-cols-3 gap-5">
@@ -183,7 +260,7 @@
   <section id="platforms" class="mt-20 mb-12">
     <div class="mb-12 text-center">
       <h2 class="text-3xl font-bold mb-4">{{ i18n "available_on" }}</h2>
-      <p class="text-lg opacity-75">Choose your platform and explore its unique features</p>
+      <p class="text-lg opacity-75">{{ i18n "platforms_subtitle" }}</p>
     </div>
 
     {{ $platforms := $.Site.Data.platforms.platforms }}
@@ -260,7 +337,21 @@
     </div>
   </section>
 
-
+  <!-- BOTTOM CTA -->
+  <section class="mt-16 mb-4 rounded-2xl border border-primary/20 bg-primary/5 p-10 text-center">
+    <h2 class="text-2xl font-bold mb-2">{{ i18n "bottom_cta_title" }}</h2>
+    <p class="opacity-60 mb-6 text-sm max-w-md mx-auto">{{ i18n "bottom_cta_subtitle" }}</p>
+    <div class="flex items-center justify-center gap-4">
+      <a href="{{ site.BaseURL }}platforms/macos/" class="btn btn-primary btn-lg font-semibold px-8">
+        <i class="fa-brands fa-apple mr-2"></i>
+        {{ i18n "cta_download_macos" }}
+      </a>
+      <a href="{{ site.BaseURL }}platforms/" class="btn btn-ghost text-sm opacity-60 hover:opacity-100">
+        {{ i18n "cta_see_all_platforms" }}
+      </a>
+    </div>
+    <p class="text-xs opacity-30 mt-3">{{ i18n "cta_trial_note" }}</p>
+  </section>
 
 </div>
 {{ end }}

@@ -1,28 +1,64 @@
 hero_h1:
-  other: "Not just a music player."
+  other: "Your music, your way."
 hero_h1_accent:
-  other: "A listening tool"
+  other: "Lossless, and in control."
 hero_subtitle:
-  other: "Interactive queue, native performance, and full control over your lossless audio."
+  other: "Interact with your music like never before — control, organize, and experience your lossless audio with precision."
+hero_pretitle_badge:
+  other: "Rust core · TUI free & open source"
+
 highlight_queue_title:
-  other: "Interactive Queue"
+  other: "Build your playlist on the fly"
 highlight_queue_desc:
-  other: "Control your playback flow like never before. Inspired by classic players, redesigned for modern usage."
+  other: "Add, reorder, and manage tracks in real time without interrupting playback. Your queue, your rules."
 highlight_performance_title:
-  other: "Native Performance"
+  other: "Fast and light — minimal CPU usage"
 highlight_performance_desc:
-  other: "Built with native technologies for speed, efficiency, and low resource usage."
+  other: "~60MB RAM on macOS, near-zero CPU at rest. Rust-powered engine, compiled natively for your OS."
 highlight_crossplatform_title:
-  other: "Cross-platform + Terminal"
+  other: "GUI or Terminal — your choice"
 highlight_crossplatform_desc:
-  other: "Available on macOS, Windows, Linux — and directly from the command line."
+  other: "Use the polished macOS app or go headless with the TUI. Windows and Linux GUIs coming soon."
 
 formats_label:
   other: "Formats"
 cta_download:
   other: "Download"
+cta_download_macos:
+  other: "Download for macOS"
+cta_coming_windows:
+  other: "Windows — coming soon"
+cta_coming_linux:
+  other: "Linux — coming soon"
+cta_see_all_platforms:
+  other: "See all platforms"
+cta_trial_note:
+  other: "Free 30-day trial — no account required"
 cta_docs:
   other: "Documentation"
+
+whatyoucando_title:
+  other: "What you can do"
+wycd_library:
+  other: "Manage large music libraries with ease"
+wycd_queue:
+  other: "Build and reorder playback queues on the fly"
+wycd_hotkeys:
+  other: "Control playback with hotkeys or via Terminal"
+wycd_ratings:
+  other: "Rate and organize your tracks seamlessly"
+wycd_formats:
+  other: "Play FLAC, ALAC, OGG, MP3, WAV and more natively"
+wycd_tui:
+  other: "Use it headless over SSH — no GUI needed"
+
+platforms_subtitle:
+  other: "Choose your platform and explore its unique features"
+
+bottom_cta_title:
+  other: "Ready to experience your music differently?"
+bottom_cta_subtitle:
+  other: "Download Tornade for macOS — free 30-day trial, no account required."
 features_title:
   other: "Powerful Features"
 features_subtitle:

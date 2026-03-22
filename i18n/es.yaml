@@ -1,28 +1,64 @@
 hero_h1:
-  other: "No es solo un reproductor de música."
+  other: "Tu música, a tu manera."
 hero_h1_accent:
-  other: "Una herramienta de escucha"
+  other: "Sin pérdidas, con control total."
 hero_subtitle:
-  other: "Cola interactiva, rendimiento nativo y control total sobre tu audio sin pérdidas."
+  other: "Interactúa con tu música como nunca antes — controla, organiza y experimenta tu audio sin pérdidas con precisión."
+hero_pretitle_badge:
+  other: "Core Rust · TUI gratuito & open source"
+
 highlight_queue_title:
-  other: "Cola interactiva"
+  other: "Crea tu lista de reproducción al vuelo"
 highlight_queue_desc:
-  other: "Controla tu flujo de reproducción como nunca antes. Inspirado en reproductores clásicos, rediseñado para un uso moderno."
+  other: "Añade, reordena y gestiona pistas en tiempo real sin interrumpir la reproducción. Tu cola, tus reglas."
 highlight_performance_title:
-  other: "Rendimiento nativo"
+  other: "Rápido y ligero — uso mínimo de CPU"
 highlight_performance_desc:
-  other: "Construido con tecnologías nativas para velocidad, eficiencia y bajo uso de recursos."
+  other: "~60MB de RAM en macOS, CPU casi nulo en reposo. Motor Rust compilado nativamente para tu SO."
 highlight_crossplatform_title:
-  other: "Multiplataforma + Terminal"
+  other: "GUI o Terminal — tú decides"
 highlight_crossplatform_desc:
-  other: "Disponible en macOS, Windows, Linux — y directamente desde la línea de comandos."
+  other: "Usa la app macOS pulida o el TUI sin interfaz. Las GUI de Windows y Linux llegan pronto."
 
 formats_label:
   other: "Formatos"
 cta_download:
   other: "Descargar"
+cta_download_macos:
+  other: "Descargar para macOS"
+cta_coming_windows:
+  other: "Windows — próximamente"
+cta_coming_linux:
+  other: "Linux — próximamente"
+cta_see_all_platforms:
+  other: "Ver todas las plataformas"
+cta_trial_note:
+  other: "Prueba gratuita 30 días — sin cuenta"
 cta_docs:
   other: "Documentación"
+
+whatyoucando_title:
+  other: "Lo que puedes hacer"
+wycd_library:
+  other: "Gestionar grandes bibliotecas musicales con facilidad"
+wycd_queue:
+  other: "Crear y reordenar colas de reproducción al vuelo"
+wycd_hotkeys:
+  other: "Controlar la reproducción con atajos o desde el Terminal"
+wycd_ratings:
+  other: "Calificar y organizar tus pistas sin esfuerzo"
+wycd_formats:
+  other: "Reproducir FLAC, ALAC, OGG, MP3, WAV y más de forma nativa"
+wycd_tui:
+  other: "Usarlo sin interfaz gráfica vía SSH — sin necesidad de GUI"
+
+platforms_subtitle:
+  other: "Elige tu plataforma y explora sus características únicas"
+
+bottom_cta_title:
+  other: "¿Listo para vivir tu música de otra forma?"
+bottom_cta_subtitle:
+  other: "Descarga Tornade para macOS — prueba gratuita 30 días, sin cuenta."
 features_title:
   other: "Características Potentes"
 features_subtitle:
