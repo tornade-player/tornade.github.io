@@ -14,7 +14,7 @@ highlight_queue_desc:
 highlight_performance_title:
   other: "Fast, light, stays out of your way"
 highlight_performance_desc:
-  other: "~60MB RAM on macOS, near-zero CPU at rest. Opens instantly, plays forever."
+  other: "Low RAM footprint on macOS, near-zero CPU at rest. Opens instantly, plays forever."
 highlight_crossplatform_title:
   other: "Every platform, one player"
 highlight_crossplatform_desc:

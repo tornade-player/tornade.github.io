@@ -14,7 +14,7 @@ highlight_queue_desc:
 highlight_performance_title:
   other: "Rápido, ligero, sin estorbos"
 highlight_performance_desc:
-  other: "~60MB de RAM en macOS, CPU casi nulo en reposo. Arranca en un segundo, suena sin fin."
+  other: "Bajo consumo de RAM en macOS, CPU casi nulo en reposo. Arranca en un segundo, suena sin fin."
 highlight_crossplatform_title:
   other: "Cada plataforma, un solo reproductor"
 highlight_crossplatform_desc:

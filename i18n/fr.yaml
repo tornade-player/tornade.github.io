@@ -14,7 +14,7 @@ highlight_queue_desc:
 highlight_performance_title:
   other: "Rapide, léger, discret"
 highlight_performance_desc:
-  other: "~60MB de RAM sur macOS, CPU quasi nul au repos. Démarre en une seconde, joue sans fin."
+  other: "Faible consommation de RAM sur macOS, CPU quasi nul au repos. Démarre en une seconde, joue sans fin."
 highlight_crossplatform_title:
   other: "Chaque plateforme, un seul lecteur"
 highlight_crossplatform_desc:
