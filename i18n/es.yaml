@@ -3,14 +3,14 @@ hero_h1:
 hero_h1_accent:
   other: "que te faltaba."
 hero_subtitle:
-  other: "Tu biblioteca, tu cola, tus reglas. Explora, organiza y escucha tu música — sin streaming, sin complejidad."
+  other: "Tu biblioteca, tu flow, tus reglas. Explora, organiza y escucha tu música con total simplicidad."
 hero_pretitle_badge:
   other: "App nativa · TUI gratuito & open source"
 
 highlight_queue_title:
   other: "Construye tu sesión de escucha a tu manera"
 highlight_queue_desc:
-  other: "Añade pistas, reordena al vuelo y crea la cola perfecta — sin interrumpir nunca la reproducción."
+  other: "Añade pistas, reordena al vuelo y crea la cola perfecta, sin interrumpir nunca la reproducción."
 highlight_performance_title:
   other: "Rápido, ligero, sin estorbos"
 highlight_performance_desc:
@@ -27,13 +27,13 @@ cta_download:
 cta_download_macos:
   other: "Descargar para macOS"
 cta_coming_windows:
-  other: "Windows — próximamente"
+  other: "Windows, próximamente"
 cta_coming_linux:
-  other: "Linux — próximamente"
+  other: "Linux, próximamente"
 cta_see_all_platforms:
   other: "Ver todas las plataformas"
 cta_trial_note:
-  other: "Prueba gratuita 30 días — sin cuenta"
+  other: "Prueba gratuita 30 días, sin cuenta"
 cta_docs:
   other: "Documentación"
 
@@ -48,9 +48,9 @@ wycd_hotkeys:
 wycd_ratings:
   other: "Califica tus pistas y redescubre tus favoritos"
 wycd_formats:
-  other: "Reproduce MP3, FLAC, WAV, ALAC y más — de forma nativa"
+  other: "Reproduce MP3, FLAC, WAV, ALAC y más, de forma nativa"
 wycd_tui:
-  other: "Usa la versión terminal gratuita — incluso vía SSH"
+  other: "Usa la versión terminal gratuita, incluso vía SSH"
 
 platforms_subtitle:
   other: "Elige tu plataforma y explora sus características únicas"
@@ -58,7 +58,7 @@ platforms_subtitle:
 bottom_cta_title:
   other: "Tu música te espera."
 bottom_cta_subtitle:
-  other: "Descarga Tornade para macOS — prueba gratuita 30 días, sin cuenta."
+  other: "Descarga Tornade para macOS. Prueba gratuita 30 días, sin cuenta."
 features_title:
   other: "Lo que necesitas. Nada más."
 features_subtitle:
@@ -70,7 +70,7 @@ explore_platforms:
 free_trial:
   other: "{{ .days }} días de prueba gratuita"
 download_free_trial:
-  other: "Descargar — Prueba Gratuita"
+  other: "Descargar, Prueba Gratuita"
 
 # Original home page features (kept for backwards compatibility)
 feat_formats_title:

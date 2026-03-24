@@ -3,14 +3,14 @@ hero_h1:
 hero_h1_accent:
   other: "you've been missing."
 hero_subtitle:
-  other: "Your library, your queue, your rules. Browse, organize, and play your music — no streaming account, no bloat, no complexity."
+  other: "Your library, your flow, your rules. Browse, organize, and listen to your music, effortlessly."
 hero_pretitle_badge:
   other: "Native app · TUI free & open source"
 
 highlight_queue_title:
   other: "Build your listening session, your way"
 highlight_queue_desc:
-  other: "Add tracks, reorder on the fly, and shape the perfect queue — without ever stopping playback."
+  other: "Add tracks, reorder on the fly, and shape the perfect queue, without ever stopping playback."
 highlight_performance_title:
   other: "Fast, light, stays out of your way"
 highlight_performance_desc:
@@ -27,13 +27,13 @@ cta_download:
 cta_download_macos:
   other: "Download for macOS"
 cta_coming_windows:
-  other: "Windows — coming soon"
+  other: "Windows, coming soon"
 cta_coming_linux:
-  other: "Linux — coming soon"
+  other: "Linux, coming soon"
 cta_see_all_platforms:
   other: "See all platforms"
 cta_trial_note:
-  other: "Free 30-day trial — no account required"
+  other: "Free 30-day trial, no account required"
 cta_docs:
   other: "Documentation"
 
@@ -48,9 +48,9 @@ wycd_hotkeys:
 wycd_ratings:
   other: "Rate your tracks and rediscover your favorites"
 wycd_formats:
-  other: "Play MP3, FLAC, WAV, ALAC and more — natively"
+  other: "Play MP3, FLAC, WAV, ALAC and more, natively"
 wycd_tui:
-  other: "Use the free terminal version — even over SSH"
+  other: "Use the free terminal version, even over SSH"
 
 platforms_subtitle:
   other: "Choose your platform and explore its unique features"
@@ -58,7 +58,7 @@ platforms_subtitle:
 bottom_cta_title:
   other: "Your music is waiting."
 bottom_cta_subtitle:
-  other: "Download Tornade for macOS — free 30-day trial, no account required."
+  other: "Download Tornade for macOS. Free 30-day trial, no account required."
 features_title:
   other: "Everything you need. Nothing you don't."
 features_subtitle:
@@ -70,7 +70,7 @@ explore_platforms:
 free_trial:
   other: "{{ .days }}-day free trial"
 download_free_trial:
-  other: "Download — Free Trial"
+  other: "Download Free Trial"
 
 # Original home page features (kept for backwards compatibility)
 feat_formats_title:
