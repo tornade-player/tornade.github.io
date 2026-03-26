@@ -10,43 +10,66 @@ draft       = false
   ogType        = "website"
 +++
 
-## v0.5.0 (2026-03-12)
-
-### Ajouté
-- Améliorations de la lecture FLAC et ALAC lossless : transitions gapless et seek sample-accurate
-- Support audio hi-res jusqu'à 32 bits / 384 kHz pour les fichiers FLAC, WAV et AIFF
-- macOS : nouveau système de fond ambiant basé sur les couleurs dominantes de la pochette
-- TUI : overlay des raccourcis clavier (appuyer sur `?` pour afficher)
+## v1.5.0 (2026-03-25)
 
 ### Corrigé
-- Les fichiers OGG Vorbis avec des fréquences d'échantillonnage non standard ne causent plus de saccades
-- Le scan de bibliothèque ne saute plus les fichiers FLAC avec une pochette haute résolution (> 2 Mo)
+- Icône de l'application non affichée correctement dans certains contextes
+- Race condition sur la bannière NAS au chargement de la bibliothèque
+- État de navigation album réinitialisé incorrectement entre les vues
+- État de pause non rafraîchi après un changement de piste
+
+---
+
+## v1.4.0 (2026-03-24)
 
 ### Modifié
-- Moteur audio Rust mis à jour — usage mémoire réduit d'environ 15% sur les grandes bibliothèques
+- Le DMG macOS est désormais signé avec un Developer ID et notarisé par Apple — plus besoin de contourner Gatekeeper à l'installation
 
 ---
 
-## v0.4.2 (2026-02-10)
+## v1.3.0 (2026-03-23)
 
 ### Ajouté
-- Recherche globale parmi les pistes, albums, artistes et genres
-- macOS : binaire universel supportant Intel et Apple Silicon nativement
+- Réorganisation par glisser-déposer dans la file de lecture (trackpad et souris)
+
+---
+
+## v1.2.0 (2026-03-12)
+
+### Ajouté
+- Mise à jour automatique via Sparkle 2.x — Tornade vérifie et installe les mises à jour automatiquement
+- Système de licence : essai gratuit 30 jours, achat unique, activation en ligne avec limite d'appareils
+- Reconnexion automatique au NAS après veille macOS ou perte réseau
+- Recherche floue sur les pistes, albums, artistes et genres
+- Section artistes en featuring dans la vue détail album
+- Import de playlists M3U depuis la modale Bibliothèque
+- Genres affichés dans le panneau d'informations de l'album
+- Segments de chargement animés sur la barre de progression lors du chargement d'une piste NAS
+- Bouton "Nettoyer la bibliothèque" pour supprimer les albums et artistes orphelins
+- Effet de halo ambiant au niveau de l'application avec panneau de file arrondi
+- Localisation complète de l'application (254 chaînes via le catalogue xcstrings)
 
 ### Corrigé
-- Les fichiers WAV encodés avec des codecs non-PCM signalent maintenant correctement le format non supporté
-- Les métadonnées AIFF (titre, artiste, album) sont maintenant lues correctement sur macOS
+- Pistes dupliquées dans la file causant une boucle infinie
+- Le shuffle ignorait la sélection explicite d'une piste dans la file
+- Photos d'artistes absentes des résultats de recherche globale
+- Option+double-clic ajoute désormais la piste à la file et la joue immédiatement sans vider la file
 
 ---
 
-## v0.4.0 (2026-01-20)
+## v1.1.0 (2026-02-25)
 
 ### Ajouté
-- Lecture FLAC, OGG, MP3, WAV et AIFF sur toutes les plateformes
+- Pipeline de soumission App Store avec montage NAS compatible sandbox
+
+---
+
+## v1.0.0 (2026-02-25)
+
+### Ajouté
+- Lecture FLAC, OGG, MP3, WAV et AIFF sur macOS
+- Interface native macOS en SwiftUI
+- Bibliothèque musicale SQLite avec scan local et réseau
+- File de lecture en temps réel
 - Interface Terminal (TUI) construite avec ratatui — gratuite et open source, fonctionne via SSH
-- File de lecture en temps réel avec réorganisation par glisser-déposer (GUI macOS)
-- Scan de bibliothèque locale et réseau
-- macOS : essai gratuit 30 jours, puis achat unique 9,99 €
-
-### Modifié
-- Moteur audio core réécrit en Rust pour une latence réduite et la sécurité mémoire
+- Moteur audio core écrit en Rust
