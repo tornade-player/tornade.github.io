@@ -1,11 +1,11 @@
 +++
-title       = "Changelog — Tornade Audio Player"
-description = "Version history and release notes for Tornade — the native FLAC and lossless audio player for macOS, Windows, Linux and Terminal."
+title       = "Changelog - Tornade Audio Player"
+description = "Version history and release notes for Tornade, the native FLAC and lossless audio player for macOS, Windows, Linux and Terminal."
 date        = "2026-03-12"
 draft       = false
 
 [params]
-  ogTitle       = "Tornade Changelog — Release History"
+  ogTitle       = "Tornade Changelog - Release History"
   ogDescription = "Track every release of Tornade, the Rust-powered lossless audio player. New features, bug fixes and improvements."
   ogType        = "website"
 +++
@@ -23,7 +23,7 @@ draft       = false
 ## v1.4.0 (2026-03-24)
 
 ### Changed
-- macOS DMG now signed with Developer ID and notarized by Apple — no Gatekeeper bypass needed on install
+- macOS DMG now signed with Developer ID and notarized by Apple, no Gatekeeper bypass needed on install
 
 ---
 
@@ -37,7 +37,7 @@ draft       = false
 ## v1.2.0 (2026-03-12)
 
 ### Added
-- Auto-updater via Sparkle 2.x — Tornade now checks for and installs updates automatically
+- Auto-updater via Sparkle 2.x: Tornade now checks for and installs updates automatically
 - License system: 30-day free trial, one-time purchase, online activation with device limit
 - NAS auto-reconnect on macOS sleep/wake and network loss
 - Fuzzy search across tracks, albums, artists and genres
@@ -71,5 +71,5 @@ draft       = false
 - SwiftUI native macOS GUI
 - SQLite-backed music library with local and network scanning
 - Real-time playback queue
-- Terminal UI (TUI) built with ratatui — free and open source, works over SSH
+- Terminal UI (TUI) built with ratatui, free and open source, works over SSH
 - Core audio engine written in Rust

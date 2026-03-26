@@ -1,11 +1,11 @@
 +++
-title       = "Changelog — Tornade Audio Player"
-description = "Historique des versions et notes de mise à jour de Tornade — le lecteur audio natif FLAC et lossless pour macOS, Windows, Linux et Terminal."
+title       = "Changelog - Tornade Audio Player"
+description = "Historique des versions et notes de mise à jour de Tornade, le lecteur audio natif FLAC et lossless pour macOS, Windows, Linux et Terminal."
 date        = "2026-03-12"
 draft       = false
 
 [params]
-  ogTitle       = "Tornade Changelog — Historique des versions"
+  ogTitle       = "Tornade Changelog - Historique des versions"
   ogDescription = "Suivez chaque version de Tornade, le lecteur audio lossless propulsé par Rust. Nouvelles fonctionnalités, corrections et améliorations."
   ogType        = "website"
 +++
@@ -23,7 +23,7 @@ draft       = false
 ## v1.4.0 (2026-03-24)
 
 ### Modifié
-- Le DMG macOS est désormais signé avec un Developer ID et notarisé par Apple — plus besoin de contourner Gatekeeper à l'installation
+- Le DMG macOS est désormais signé avec un Developer ID et notarisé par Apple, plus besoin de contourner Gatekeeper à l'installation
 
 ---
 
@@ -37,7 +37,7 @@ draft       = false
 ## v1.2.0 (2026-03-12)
 
 ### Ajouté
-- Mise à jour automatique via Sparkle 2.x — Tornade vérifie et installe les mises à jour automatiquement
+- Mise à jour automatique via Sparkle 2.x: Tornade vérifie et installe les mises à jour automatiquement
 - Système de licence : essai gratuit 30 jours, achat unique, activation en ligne avec limite d'appareils
 - Reconnexion automatique au NAS après veille macOS ou perte réseau
 - Recherche floue sur les pistes, albums, artistes et genres
@@ -71,5 +71,5 @@ draft       = false
 - Interface native macOS en SwiftUI
 - Bibliothèque musicale SQLite avec scan local et réseau
 - File de lecture en temps réel
-- Interface Terminal (TUI) construite avec ratatui — gratuite et open source, fonctionne via SSH
+- Interface Terminal (TUI) construite avec ratatui, gratuite et open source, fonctionne via SSH
 - Moteur audio core écrit en Rust

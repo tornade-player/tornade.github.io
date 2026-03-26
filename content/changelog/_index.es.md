@@ -1,11 +1,11 @@
 +++
-title       = "Changelog — Tornade Audio Player"
-description = "Historial de versiones y notas de lanzamiento de Tornade — el reproductor de audio nativo FLAC y lossless para macOS, Windows, Linux y Terminal."
+title       = "Changelog - Tornade Audio Player"
+description = "Historial de versiones y notas de lanzamiento de Tornade, el reproductor de audio nativo FLAC y lossless para macOS, Windows, Linux y Terminal."
 date        = "2026-03-12"
 draft       = false
 
 [params]
-  ogTitle       = "Tornade Changelog — Historial de versiones"
+  ogTitle       = "Tornade Changelog - Historial de versiones"
   ogDescription = "Sigue cada versión de Tornade, el reproductor de audio lossless impulsado por Rust. Nuevas funciones, correcciones y mejoras."
   ogType        = "website"
 +++
@@ -23,7 +23,7 @@ draft       = false
 ## v1.4.0 (2026-03-24)
 
 ### Cambiado
-- El DMG de macOS ahora está firmado con Developer ID y notarizado por Apple — no se necesita eludir Gatekeeper al instalar
+- El DMG de macOS ahora está firmado con Developer ID y notarizado por Apple, no se necesita eludir Gatekeeper al instalar
 
 ---
 
@@ -37,7 +37,7 @@ draft       = false
 ## v1.2.0 (2026-03-12)
 
 ### Añadido
-- Actualizaciones automáticas vía Sparkle 2.x — Tornade comprueba e instala actualizaciones automáticamente
+- Actualizaciones automáticas vía Sparkle 2.x: Tornade comprueba e instala actualizaciones automáticamente
 - Sistema de licencia: prueba gratuita de 30 días, compra única, activación en línea con límite de dispositivos
 - Reconexión automática al NAS tras suspensión de macOS o pérdida de red
 - Búsqueda difusa en pistas, álbumes, artistas y géneros
@@ -71,5 +71,5 @@ draft       = false
 - Interfaz nativa macOS en SwiftUI
 - Biblioteca musical SQLite con escaneo local y en red
 - Cola de reproducción en tiempo real
-- Interfaz Terminal (TUI) construida con ratatui — gratuita y de código abierto, funciona por SSH
+- Interfaz Terminal (TUI) construida con ratatui, gratuita y de código abierto, funciona por SSH
 - Motor de audio core escrito en Rust
