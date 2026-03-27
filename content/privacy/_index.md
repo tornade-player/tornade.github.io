@@ -19,7 +19,7 @@ Tornade is a cross-platform local music player. We are committed to protecting y
 
 ## Data Collection
 
-**Tornade does not collect any personal data.**
+**Tornade does not collect any personal data, on any platform.**
 
 - No analytics or tracking
 - No usage data sent to external servers
@@ -37,20 +37,31 @@ All operations performed by Tornade happen entirely on your device:
 
 No music files, metadata, or listening history ever leave your device.
 
-## Network Access
+## Per-Platform Details
 
-Tornade uses network access solely for:
+### macOS — App Store
 
-- **License verification** (direct download version): connecting to our license server to validate your license key
-- **App Store purchases** (App Store version): handled entirely by Apple's StoreKit framework
-- **Software updates** (direct download version): checking for new versions via Sparkle
+- **Purchases**: handled entirely by Apple's StoreKit 2 framework. No payment data is processed by Tornade. Refer to [Apple's Privacy Policy](https://www.apple.com/legal/privacy/) for details.
+- **Updates**: delivered through the Mac App Store — no external update service used.
+- **Network**: used only for StoreKit purchase verification.
 
-## Third-Party Services
+### macOS — Direct Download
 
-### App Store Version
-Purchases are processed by Apple. Please refer to [Apple's Privacy Policy](https://www.apple.com/legal/privacy/) for information on how Apple handles purchase data.
+- **License verification**: your license key is validated against our server to confirm its validity. No personal information is transmitted — only the key itself.
+- **Updates**: checked automatically via [Sparkle](https://sparkle-project.org), an open-source update framework. Only your macOS version and app version are sent to our update feed.
+- **Network**: used only for license checks and update checks.
+
+### Windows & Linux
+
+- **License verification**: same as macOS direct download — only the license key is transmitted.
+- **Updates**: checked via our update feed. Only your OS version and app version are sent.
+- **Network**: used only for license checks and update checks.
+
+### Terminal UI (TUI)
+
+- **No network access**: the TUI version does not connect to any external service.
+- **No license system**: the TUI is open-source and free to use.
 
 ## Data Retention
 
 Since no personal data is collected, there is nothing to retain or delete.
-

@@ -19,7 +19,7 @@ Tornade est un lecteur de musique local multi-plateforme. Nous nous engageons à
 
 ## Collecte de données
 
-**Tornade ne collecte aucune donnée personnelle.**
+**Tornade ne collecte aucune donnée personnelle, sur aucune plateforme.**
 
 - Pas d'analyse ni de suivi
 - Aucune donnée d'utilisation envoyée à des serveurs externes
@@ -37,20 +37,31 @@ Toutes les opérations effectuées par Tornade se déroulent entièrement sur vo
 
 Aucun fichier musical, métadonnée ou historique d'écoute ne quitte jamais votre appareil.
 
-## Accès réseau
+## Détails par plateforme
 
-Tornade utilise l'accès réseau uniquement pour :
+### macOS — App Store
 
-- **Vérification de licence** (version téléchargement direct) : connexion à notre serveur de licence pour valider votre clé
-- **Achats App Store** (version App Store) : entièrement géré par le framework StoreKit d'Apple
-- **Mises à jour logicielles** (version téléchargement direct) : vérification des nouvelles versions via Sparkle
+- **Achats** : entièrement gérés par le framework StoreKit 2 d'Apple. Aucune donnée de paiement n'est traitée par Tornade. Consultez la [politique de confidentialité d'Apple](https://www.apple.com/fr/legal/privacy/) pour plus de détails.
+- **Mises à jour** : distribuées via le Mac App Store — aucun service de mise à jour externe n'est utilisé.
+- **Réseau** : utilisé uniquement pour la vérification des achats StoreKit.
 
-## Services tiers
+### macOS — Téléchargement direct
 
-### Version App Store
-Les achats sont traités par Apple. Veuillez consulter la [politique de confidentialité d'Apple](https://www.apple.com/fr/legal/privacy/) pour savoir comment Apple gère les données d'achat.
+- **Vérification de licence** : votre clé de licence est validée auprès de notre serveur. Aucune information personnelle n'est transmise — uniquement la clé elle-même.
+- **Mises à jour** : vérifiées automatiquement via [Sparkle](https://sparkle-project.org), un framework open-source. Seules votre version macOS et la version de l'app sont envoyées à notre flux de mise à jour.
+- **Réseau** : utilisé uniquement pour les vérifications de licence et de mise à jour.
+
+### Windows & Linux
+
+- **Vérification de licence** : identique à macOS téléchargement direct — seule la clé de licence est transmise.
+- **Mises à jour** : vérifiées via notre flux de mise à jour. Seules votre version d'OS et la version de l'app sont envoyées.
+- **Réseau** : utilisé uniquement pour les vérifications de licence et de mise à jour.
+
+### Interface Terminal (TUI)
+
+- **Aucun accès réseau** : la version TUI ne se connecte à aucun service externe.
+- **Aucun système de licence** : la TUI est open-source et gratuite.
 
 ## Conservation des données
 
 Aucune donnée personnelle n'étant collectée, il n'y a rien à conserver ni à supprimer.
-
