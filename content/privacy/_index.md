@@ -54,6 +54,3 @@ Purchases are processed by Apple. Please refer to [Apple's Privacy Policy](https
 
 Since no personal data is collected, there is nothing to retain or delete.
 
-## Contact
-
-If you have any questions about this privacy policy, contact us at: privacy@tornade.tf

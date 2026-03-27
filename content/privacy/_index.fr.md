@@ -54,6 +54,3 @@ Les achats sont traités par Apple. Veuillez consulter la [politique de confiden
 
 Aucune donnée personnelle n'étant collectée, il n'y a rien à conserver ni à supprimer.
 
-## Contact
-
-Pour toute question concernant cette politique de confidentialité : privacy@tornade.tf

@@ -54,6 +54,3 @@ Las compras son procesadas por Apple. Consulta la [política de privacidad de Ap
 
 Dado que no se recopilan datos personales, no hay nada que retener ni eliminar.
 
-## Contacto
-
-Para cualquier pregunta sobre esta política de privacidad: privacy@tornade.tf
