@@ -1,5 +1,13 @@
 <footer class="footer footer-center p-6 bg-base-200 text-base-content">
   <aside>
     <p>© {{ now.Year }} – Tornade Audio Player</p>
+    <p>
+      <a href="{{ relLangURL "privacy/" }}" class="link link-hover opacity-60 text-sm">
+        {{- if eq site.Language.Lang "fr" }}Politique de confidentialité
+        {{- else if eq site.Language.Lang "es" }}Política de privacidad
+        {{- else }}Privacy Policy
+        {{- end -}}
+      </a>
+    </p>
   </aside>
 </footer>
