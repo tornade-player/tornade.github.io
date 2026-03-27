@@ -15,7 +15,7 @@ draft       = false
 
 ## Vue d'ensemble
 
-Tornade est un lecteur de musique local pour macOS. Nous nous engageons à protéger votre vie privée.
+Tornade est un lecteur de musique local multi-plateforme. Nous nous engageons à protéger votre vie privée.
 
 ## Collecte de données
 

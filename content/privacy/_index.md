@@ -15,7 +15,7 @@ draft       = false
 
 ## Overview
 
-Tornade is a local music player for macOS. We are committed to protecting your privacy.
+Tornade is a cross-platform local music player. We are committed to protecting your privacy.
 
 ## Data Collection
 

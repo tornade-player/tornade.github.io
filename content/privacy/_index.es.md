@@ -15,7 +15,7 @@ draft       = false
 
 ## Resumen
 
-Tornade es un reproductor de música local para macOS. Estamos comprometidos con la protección de tu privacidad.
+Tornade es un reproductor de música local multiplataforma. Estamos comprometidos con la protección de tu privacidad.
 
 ## Recopilación de datos
 
