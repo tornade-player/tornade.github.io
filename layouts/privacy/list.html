@@ -1,7 +1,80 @@
 {{ define "main" }}
-<div class="container mx-auto px-6 py-16 md:py-24">
-  <div class="max-w-2xl mx-auto prose prose-sm md:prose-base">
-    {{ .Content }}
-  </div>
+<div class="min-h-screen bg-base-100">
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-base-200 to-base-100 py-16 md:py-24">
+    <div class="container mx-auto px-6 text-center max-w-3xl">
+      <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary mb-6">
+        <i class="fa-solid fa-shield-halved text-2xl"></i>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ .Title }}</h1>
+      <p class="text-lg opacity-70">
+        {{- if eq site.Language.Lang "fr" -}}
+          Tornade ne collecte aucune donnée personnelle. Tout reste sur votre appareil.
+        {{- else if eq site.Language.Lang "es" -}}
+          Tornade no recopila datos personales. Todo permanece en tu dispositivo.
+        {{- else -}}
+          Tornade collects no personal data. Everything stays on your device.
+        {{- end -}}
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="py-16 md:py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto space-y-4">
+
+        <!-- Key points cards -->
+        <div class="grid sm:grid-cols-3 gap-4 mb-12">
+          <div class="card bg-base-200 border border-base-300">
+            <div class="card-body items-center text-center gap-2 py-6">
+              <i class="fa-solid fa-ban text-2xl text-success"></i>
+              <p class="font-semibold text-sm">
+                {{- if eq site.Language.Lang "fr" -}}Aucune collecte
+                {{- else if eq site.Language.Lang "es" -}}Sin recopilación
+                {{- else -}}No collection{{- end -}}
+              </p>
+            </div>
+          </div>
+          <div class="card bg-base-200 border border-base-300">
+            <div class="card-body items-center text-center gap-2 py-6">
+              <i class="fa-solid fa-computer text-2xl text-success"></i>
+              <p class="font-semibold text-sm">
+                {{- if eq site.Language.Lang "fr" -}}100% local
+                {{- else if eq site.Language.Lang "es" -}}100% local
+                {{- else -}}100% local{{- end -}}
+              </p>
+            </div>
+          </div>
+          <div class="card bg-base-200 border border-base-300">
+            <div class="card-body items-center text-center gap-2 py-6">
+              <i class="fa-solid fa-eye-slash text-2xl text-success"></i>
+              <p class="font-semibold text-sm">
+                {{- if eq site.Language.Lang "fr" -}}Aucun tracking
+                {{- else if eq site.Language.Lang "es" -}}Sin rastreo
+                {{- else -}}No tracking{{- end -}}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Markdown content -->
+        <div class="card bg-base-200 border border-base-300">
+          <div class="card-body prose prose-sm md:prose-base max-w-none
+            prose-headings:font-bold prose-headings:text-base-content
+            prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-3
+            prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-2
+            prose-p:opacity-80 prose-li:opacity-80
+            prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+            prose-strong:text-base-content">
+            {{ .Content }}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </div>
 {{ end }}
