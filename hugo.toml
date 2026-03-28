@@ -28,7 +28,7 @@ disableKinds    = ['taxonomy', 'term']
   weight       = 1
 
   [languages.en.params]
-    description = "Tornade — High-performance native audio player for macOS, Windows, Linux and Terminal. FLAC, OGG, MP3, WAV, AIFF. Built in Rust."
+    description = "Tornade - A fast, lightweight audio player that stays out of your way. Native on macOS, Windows, Linux and Terminal."
     locale      = "en_US"
 
   [[languages.en.menus.main]]
@@ -52,7 +52,7 @@ disableKinds    = ['taxonomy', 'term']
   weight       = 2
 
   [languages.fr.params]
-    description = "Tornade — Lecteur audio natif haute performance pour macOS, Windows, Linux et Terminal. FLAC, OGG, MP3, WAV, AIFF. Développé en Rust."
+    description = "Tornade - Un lecteur audio rapide et léger qui se fait oublier. Natif sur macOS, Windows, Linux et Terminal."
     locale      = "fr_FR"
 
   [[languages.fr.menus.main]]
@@ -76,7 +76,7 @@ disableKinds    = ['taxonomy', 'term']
   weight       = 3
 
   [languages.es.params]
-    description = "Tornade — Reproductor de audio nativo de alto rendimiento para macOS, Windows, Linux y Terminal. FLAC, OGG, MP3, WAV, AIFF. Desarrollado en Rust."
+    description = "Tornade - Un reproductor de audio rápido y ligero que no se interpone. Nativo en macOS, Windows, Linux y Terminal."
     locale      = "es_ES"
 
   [[languages.es.menus.main]]
