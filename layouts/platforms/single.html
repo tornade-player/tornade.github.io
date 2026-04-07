@@ -62,12 +62,12 @@
 
           <!-- Dots -->
           <div class="flex justify-center items-center gap-2 mt-3" id="pslide-dots" role="tablist" aria-label="Slideshow navigation">
-            <button role="tab" class="pdot h-2 rounded-full bg-primary    transition-all duration-300 w-8" data-i="0" aria-label="Slide 1" aria-selected="true"></button>
-            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="1" aria-label="Slide 2" aria-selected="false"></button>
-            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="2" aria-label="Slide 3" aria-selected="false"></button>
-            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="3" aria-label="Slide 4" aria-selected="false"></button>
-            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="4" aria-label="Slide 5" aria-selected="false"></button>
-            <button role="tab" class="pdot h-2 rounded-full bg-gray-500   transition-all duration-300 w-2" data-i="5" aria-label="Slide 6" aria-selected="false"></button>
+            <button role="tab" class="pdot flex items-center justify-center py-2 px-1" data-i="0" aria-label="Slide 1" aria-selected="true"><span class="h-2 rounded-full bg-primary transition-all duration-300 w-8 pointer-events-none"></span></button>
+            <button role="tab" class="pdot flex items-center justify-center p-2"       data-i="1" aria-label="Slide 2" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
+            <button role="tab" class="pdot flex items-center justify-center p-2"       data-i="2" aria-label="Slide 3" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
+            <button role="tab" class="pdot flex items-center justify-center p-2"       data-i="3" aria-label="Slide 4" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
+            <button role="tab" class="pdot flex items-center justify-center p-2"       data-i="4" aria-label="Slide 5" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
+            <button role="tab" class="pdot flex items-center justify-center p-2"       data-i="5" aria-label="Slide 6" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
           </div>
         </div>
 
@@ -80,16 +80,18 @@
           var timer;
           var busy   = false;
 
+          function dotSpan(i) { return dots[i].querySelector('span'); }
+
           function goTo(n) {
             if (busy) return;
             busy = true;
             slides[cur].classList.replace('opacity-100', 'opacity-0');
-            dots[cur].classList.remove('bg-primary', 'w-8');
-            dots[cur].classList.add('bg-gray-500', 'w-2');
+            dotSpan(cur).classList.remove('bg-primary', 'w-8');
+            dotSpan(cur).classList.add('bg-gray-500', 'w-2');
             cur = (n + slides.length) % slides.length;
             slides[cur].classList.replace('opacity-0', 'opacity-100');
-            dots[cur].classList.remove('bg-gray-500', 'w-2');
-            dots[cur].classList.add('bg-primary', 'w-8');
+            dotSpan(cur).classList.remove('bg-gray-500', 'w-2');
+            dotSpan(cur).classList.add('bg-primary', 'w-8');
             setTimeout(function () { busy = false; }, 700);
           }
 

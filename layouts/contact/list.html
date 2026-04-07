@@ -11,20 +11,20 @@
       class="flex flex-col gap-4 bg-base-200 rounded-2xl p-8 border border-base-300">
 
       <div class="flex flex-col gap-1.5">
-        <label class="text-sm font-medium opacity-70">{{ i18n "contact_fullname" }}</label>
-        <input type="text" name="name" required
+        <label for="contact-name" class="text-sm font-medium opacity-70">{{ i18n "contact_fullname" }}</label>
+        <input id="contact-name" type="text" name="name" required
           class="input input-bordered w-full bg-base-100" />
       </div>
 
       <div class="flex flex-col gap-1.5">
-        <label class="text-sm font-medium opacity-70">{{ i18n "contact_email" }}</label>
-        <input type="email" name="email" required
+        <label for="contact-email" class="text-sm font-medium opacity-70">{{ i18n "contact_email" }}</label>
+        <input id="contact-email" type="email" name="email" required
           class="input input-bordered w-full bg-base-100" />
       </div>
 
       <div class="flex flex-col gap-1.5">
-        <label class="text-sm font-medium opacity-70">{{ i18n "contact_message" }}</label>
-        <textarea name="message" required rows="5"
+        <label for="contact-message" class="text-sm font-medium opacity-70">{{ i18n "contact_message" }}</label>
+        <textarea id="contact-message" name="message" required rows="5"
           class="textarea textarea-bordered w-full bg-base-100 resize-none"></textarea>
       </div>
 

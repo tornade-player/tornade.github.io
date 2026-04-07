@@ -81,7 +81,7 @@
           {{ i18n "cta_see_all_platforms" }}
         </a>
       </div>
-      <p id="cta-trial-note" class="text-xs opacity-40 mt-2">{{ i18n "cta_trial_note" }}</p>
+      <p id="cta-trial-note" class="text-xs opacity-60 mt-2">{{ i18n "cta_trial_note" }}</p>
 
       <!-- PLATFORM BADGES -->
       <div class="flex flex-wrap gap-2 mt-6">
@@ -123,12 +123,12 @@
 
   <!-- Slideshow dot indicators -->
   <div class="flex justify-center items-center gap-2 mt-3" id="hero-dots" role="tablist" aria-label="Slideshow navigation">
-    <button role="tab" class="dot h-2 rounded-full bg-primary          transition-all duration-300 w-8"   data-i="0" aria-label="Slide 1" aria-selected="true"></button>
-    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="1" aria-label="Slide 2" aria-selected="false"></button>
-    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="2" aria-label="Slide 3" aria-selected="false"></button>
-    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="3" aria-label="Slide 4" aria-selected="false"></button>
-    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="4" aria-label="Slide 5" aria-selected="false"></button>
-    <button role="tab" class="dot h-2 rounded-full bg-gray-500  transition-all duration-300 w-2"   data-i="5" aria-label="Slide 6" aria-selected="false"></button>
+    <button role="tab" class="dot flex items-center justify-center py-2 px-1" data-i="0" aria-label="Slide 1" aria-selected="true"><span class="h-2 rounded-full bg-primary transition-all duration-300 w-8 pointer-events-none"></span></button>
+    <button role="tab" class="dot flex items-center justify-center p-2"       data-i="1" aria-label="Slide 2" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
+    <button role="tab" class="dot flex items-center justify-center p-2"       data-i="2" aria-label="Slide 3" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
+    <button role="tab" class="dot flex items-center justify-center p-2"       data-i="3" aria-label="Slide 4" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
+    <button role="tab" class="dot flex items-center justify-center p-2"       data-i="4" aria-label="Slide 5" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
+    <button role="tab" class="dot flex items-center justify-center p-2"       data-i="5" aria-label="Slide 6" aria-selected="false"><span class="h-2 rounded-full bg-gray-500 transition-all duration-300 w-2 pointer-events-none"></span></button>
   </div>
 
   <script>
@@ -140,16 +140,18 @@
     var timer;
     var busy  = false;
 
+    function dotSpan(i) { return dots[i].querySelector('span'); }
+
     function goTo(n) {
       if (busy) return;
       busy = true;
       slides[cur].classList.replace('opacity-100', 'opacity-0');
-      dots[cur].classList.remove('bg-primary', 'w-8');
-      dots[cur].classList.add('bg-gray-500', 'w-2');
+      dotSpan(cur).classList.remove('bg-primary', 'w-8');
+      dotSpan(cur).classList.add('bg-gray-500', 'w-2');
       cur = (n + slides.length) % slides.length;
       slides[cur].classList.replace('opacity-0', 'opacity-100');
-      dots[cur].classList.remove('bg-gray-500', 'w-2');
-      dots[cur].classList.add('bg-primary', 'w-8');
+      dotSpan(cur).classList.remove('bg-gray-500', 'w-2');
+      dotSpan(cur).classList.add('bg-primary', 'w-8');
       setTimeout(function () { busy = false; }, 700);
     }
 
@@ -198,7 +200,7 @@
 
   <!-- WHAT YOU CAN DO -->
   <section class="mt-10 mb-2 px-1">
-    <h2 class="text-xs font-semibold uppercase tracking-widest opacity-40 mb-5">{{ i18n "whatyoucando_title" }}</h2>
+    <h2 class="text-xs font-semibold uppercase tracking-widest opacity-70 mb-5">{{ i18n "whatyoucando_title" }}</h2>
     <ul class="grid sm:grid-cols-2 gap-x-12 gap-y-3">
       <li class="flex items-start gap-3 text-sm opacity-75">
         <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
@@ -236,7 +238,7 @@
           <i class="fa-solid fa-list-ul"></i>
         </div>
         <h3 class="text-xl font-bold mb-2">{{ i18n "highlight_queue_title" }}</h3>
-        <p class="text-sm opacity-70 leading-relaxed">{{ i18n "highlight_queue_desc" }}</p>
+        <p class="text-sm opacity-80 leading-relaxed">{{ i18n "highlight_queue_desc" }}</p>
       </div>
 
       <div class="relative overflow-hidden rounded-2xl border border-secondary/20 bg-secondary/5 p-7">
@@ -244,7 +246,7 @@
           <i class="fa-solid fa-bolt"></i>
         </div>
         <h3 class="text-xl font-bold mb-2">{{ i18n "highlight_performance_title" }}</h3>
-        <p class="text-sm opacity-70 leading-relaxed">{{ i18n "highlight_performance_desc" }}</p>
+        <p class="text-sm opacity-80 leading-relaxed">{{ i18n "highlight_performance_desc" }}</p>
       </div>
 
       <div class="relative overflow-hidden rounded-2xl border border-base-300 bg-base-200 p-7">
@@ -252,7 +254,7 @@
           <i class="fa-solid fa-display"></i>
         </div>
         <h3 class="text-xl font-bold mb-2">{{ i18n "highlight_crossplatform_title" }}</h3>
-        <p class="text-sm opacity-70 leading-relaxed">{{ i18n "highlight_crossplatform_desc" }}</p>
+        <p class="text-sm opacity-80 leading-relaxed">{{ i18n "highlight_crossplatform_desc" }}</p>
       </div>
 
     </div>
@@ -342,7 +344,7 @@
   <!-- BOTTOM CTA -->
   <section class="mt-16 mb-4 rounded-2xl border border-primary/20 bg-primary/5 p-10 text-center">
     <h2 class="text-2xl font-bold mb-2">{{ i18n "bottom_cta_title" }}</h2>
-    <p class="opacity-60 mb-6 text-sm max-w-md mx-auto">{{ i18n "bottom_cta_subtitle" }}</p>
+    <p class="opacity-80 mb-6 text-sm max-w-md mx-auto">{{ i18n "bottom_cta_subtitle" }}</p>
     <div class="flex items-center justify-center gap-4">
       <a href="{{ $macosDownloadURL }}" class="btn btn-primary btn-lg font-semibold px-8">
         <i class="fa-brands fa-apple mr-2"></i>
@@ -352,7 +354,7 @@
         {{ i18n "cta_see_all_platforms" }}
       </a>
     </div>
-    <p class="text-xs opacity-30 mt-3">{{ i18n "cta_trial_note" }}</p>
+    <p class="text-xs opacity-75 mt-3">{{ i18n "cta_trial_note" }}</p>
   </section>
 
 </div>
