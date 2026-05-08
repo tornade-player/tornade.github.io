@@ -66,7 +66,7 @@
       <p class="opacity-70 mt-5 text-lg max-w-md">{{ i18n "hero_subtitle" }}</p>
 
       <!-- CTA BLOCK -->
-      <div class="flex items-center gap-4 mt-8">
+      <div class="flex flex-wrap items-center gap-4 mt-8">
         <a id="cta-primary-btn"
            href="{{ $macosDownloadURL }}"
            data-label-windows="{{ i18n "cta_coming_windows" }}"
@@ -75,6 +75,13 @@
            class="btn btn-primary btn-lg font-semibold px-8 shadow-lg">
           <i id="cta-os-icon" class="fa-brands fa-apple mr-2"></i>
           <span id="cta-primary-label">{{ i18n "cta_download_macos" }}</span>
+        </a>
+        <a id="cta-appstore-btn"
+           href="https://apps.apple.com/fr/app/tornade/id6761053996?l=en-GB&amp;mt=12"
+           target="_blank" rel="noopener"
+           class="btn btn-outline btn-lg font-semibold px-8">
+          <i class="fa-brands fa-apple mr-2"></i>
+          App Store
         </a>
         <a href="{{ site.BaseURL }}platforms/"
            class="btn btn-ghost btn-lg text-sm opacity-70 hover:opacity-100">
@@ -177,6 +184,7 @@
     var icon = document.getElementById('cta-os-icon');
     var label = document.getElementById('cta-primary-label');
     var note = document.getElementById('cta-trial-note');
+    var appstoreBtn = document.getElementById('cta-appstore-btn');
     if (/Macintosh|Mac OS X/.test(ua)) {
       // default — macOS already configured in HTML
     } else if (/Windows/.test(ua)) {
@@ -184,16 +192,19 @@
       icon.className = 'fa-brands fa-windows mr-2';
       label.textContent = btn.dataset.labelWindows;
       note.style.display = 'none';
+      appstoreBtn.style.display = 'none';
     } else if (/Linux/.test(ua)) {
       btn.href = '{{ site.BaseURL }}platforms/';
       icon.className = 'fa-brands fa-linux mr-2';
       label.textContent = btn.dataset.labelLinux;
       note.style.display = 'none';
+      appstoreBtn.style.display = 'none';
     } else {
       btn.href = '{{ site.BaseURL }}platforms/';
       icon.className = 'fa-solid fa-download mr-2';
       label.textContent = btn.dataset.labelGeneric;
       note.style.display = 'none';
+      appstoreBtn.style.display = 'none';
     }
   })();
   </script>
@@ -345,10 +356,16 @@
   <section class="mt-16 mb-4 rounded-2xl border border-primary/20 bg-primary/5 p-10 text-center">
     <h2 class="text-2xl font-bold mb-2">{{ i18n "bottom_cta_title" }}</h2>
     <p class="opacity-80 mb-6 text-sm max-w-md mx-auto">{{ i18n "bottom_cta_subtitle" }}</p>
-    <div class="flex items-center justify-center gap-4">
+    <div class="flex flex-wrap items-center justify-center gap-4">
       <a href="{{ $macosDownloadURL }}" class="btn btn-primary btn-lg font-semibold px-8">
         <i class="fa-brands fa-apple mr-2"></i>
         {{ i18n "cta_download_macos" }}
+      </a>
+      <a href="https://apps.apple.com/fr/app/tornade/id6761053996?l=en-GB&amp;mt=12"
+         target="_blank" rel="noopener"
+         class="btn btn-outline btn-lg font-semibold px-8">
+        <i class="fa-brands fa-apple mr-2"></i>
+        App Store
       </a>
       <a href="{{ site.BaseURL }}platforms/" class="btn btn-ghost text-sm opacity-60 hover:opacity-100">
         {{ i18n "cta_see_all_platforms" }}

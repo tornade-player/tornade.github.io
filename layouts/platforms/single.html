@@ -128,6 +128,14 @@
             <i class="fa-brands fa-apple"></i>
             {{ i18n "download_free_trial" }}
           </a>
+          {{ if eq .Params.platform_id "macos" }}
+          <a href="https://apps.apple.com/fr/app/tornade/id6761053996?l=en-GB&amp;mt=12"
+             target="_blank" rel="noopener"
+             class="btn btn-outline gap-2">
+            <i class="fa-brands fa-apple"></i>
+            App Store
+          </a>
+          {{ end }}
         </div>
         {{ end }}
       </div>
