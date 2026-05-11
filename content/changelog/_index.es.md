@@ -10,6 +10,42 @@ draft       = false
   ogType        = "website"
 +++
 
+## v1.7.0 (2026-05-10)
+
+### Añadido
+- Reproductor en la barra de menú: controla la reproducción desde la barra de menú de macOS sin abrir la ventana de la app (título, artista, reproducir/pausar, siguiente pista)
+- Selección múltiple en listas de reproducción: selecciona varias pistas a la vez para moverlas, eliminarlas o reordenarlas
+- Editor de etiquetas: edita los metadatos FLAC (título, artista, álbum, año, géneros, número de disco) directamente en la app, con carga de carátula y scraping de MusicBrainz
+- Edición masiva de metadatos para selecciones de múltiples pistas
+- "Editar metadatos" al hacer clic derecho en las carátulas de álbum
+- Panel de preferencias (barra de menú, actualización automática, calidad de reproducción)
+- Modal de bienvenida en el primer inicio
+
+### Corregido
+- Invalidación de la caché de carátulas tras editar etiquetas
+- Ordenación por fecha de adición, actualización automática de biblioteca tras scraping masivo
+- Corrección de firma Developer ID para macOS 26.4.1
+
+---
+
+## v1.6.0 (2026-05-01)
+
+### Añadido
+- Apertura automática del modal "Escanear biblioteca" con biblioteca vacía
+- Botón de cancelar en el banner de reconexión NAS
+- Navegar a la lista "Importada" tras importar un archivo M3U
+- Las listas importadas conservan la fecha de adición de las pistas
+
+### Corregido
+- Prevención de múltiples instancias de la app al abrir archivos
+- Acumulación del volumen con la rueda del ratón
+- Actualización del panel de listas tras arrastrar y soltar
+- Conformidad sandbox App Store (eliminada API privada NetFS, Sparkle en weak-link)
+- Almacenamiento de activación de licencia migrado a UserDefaults
+- La búsqueda de géneros usa ahora el motor tornade-core
+
+---
+
 ## v1.5.0 (2026-03-25)
 
 ### Corregido

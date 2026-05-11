@@ -10,6 +10,42 @@ draft       = false
   ogType        = "website"
 +++
 
+## v1.7.0 (2026-05-10)
+
+### Added
+- Status bar player: control playback from the macOS menu bar without opening the app window (title, artist, play/pause, skip)
+- Playlist multi-select: select multiple tracks at once to move, remove, or reorder them
+- Tag editor: edit FLAC metadata (title, artist, album, year, genres, disc number) directly in the app, with artwork upload and MusicBrainz scraping
+- Bulk metadata editing for multi-track selections
+- Right-click "Edit Metadata" on artwork images
+- Preferences panel (status bar, auto-update, playback quality settings)
+- Welcome modal on first launch
+
+### Fixed
+- Artwork cache invalidation after tag edits
+- Sort by added_at, library auto-refresh after bulk scrape
+- Developer ID signing fix for macOS 26.4.1 launch rejection
+
+---
+
+## v1.6.0 (2026-05-01)
+
+### Added
+- Auto-open Scan Library modal on empty library
+- Cancel button on NAS reconnection banner
+- Navigate to "Imported" playlist after M3U file import
+- Imported playlists preserve track added_at date
+
+### Fixed
+- Prevent multiple app instances on file open
+- Volume scroll accumulation across ticks
+- Playlist sidebar update on file drop
+- App Store sandbox compliance (removed NetFS private API, weak-linked Sparkle)
+- License activation storage migrated to UserDefaults
+- Genre search now uses tornade-core engine
+
+---
+
 ## v1.5.0 (2026-03-25)
 
 ### Fixed

@@ -119,17 +119,35 @@
   title_i18n_key: "feat_macos_indicators_title"
   description_i18n_key: "feat_macos_indicators_desc"
 
+- id: statusbar_player
+  category: playback_controls
+  icon: menu
+  title_i18n_key: "feat_macos_statusbar_title"
+  description_i18n_key: "feat_macos_statusbar_desc"
+
 - id: visual_playlists
   category: playlists
   icon: list
   title_i18n_key: "feat_macos_visual_playlists_title"
   description_i18n_key: "feat_macos_visual_playlists_desc"
 
+- id: playlist_multiselect
+  category: playlists
+  icon: check
+  title_i18n_key: "feat_macos_playlist_multiselect_title"
+  description_i18n_key: "feat_macos_playlist_multiselect_desc"
+
 - id: inline_editing
   category: playlists
   icon: edit
   title_i18n_key: "feat_macos_inline_title"
   description_i18n_key: "feat_macos_inline_desc"
+
+- id: tag_editor
+  category: playlists
+  icon: edit
+  title_i18n_key: "feat_macos_tag_editor_title"
+  description_i18n_key: "feat_macos_tag_editor_desc"
 
 - id: playlist_import_export
   category: playlists

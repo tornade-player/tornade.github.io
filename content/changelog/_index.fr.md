@@ -10,6 +10,42 @@ draft       = false
   ogType        = "website"
 +++
 
+## v1.7.0 (2026-05-10)
+
+### Ajouté
+- Lecteur dans la barre de menu : contrôlez la lecture depuis la barre de menu macOS sans ouvrir la fenêtre de l'app (titre, artiste, lecture/pause, piste suivante)
+- Sélection multiple dans les playlists : sélectionnez plusieurs pistes à la fois pour les déplacer, supprimer ou réordonner
+- Éditeur de tags : modifiez les métadonnées FLAC (titre, artiste, album, année, genres, numéro de disque) directement dans l'app, avec upload de pochette et scraping MusicBrainz
+- Édition de métadonnées en lot pour les sélections multi-pistes
+- "Modifier les métadonnées" au clic droit sur les pochettes d'album
+- Panneau de préférences (barre de menu, mise à jour auto, qualité de lecture)
+- Modal de bienvenue au premier lancement
+
+### Corrigé
+- Invalidation du cache de pochettes après modification des tags
+- Tri par date d'ajout, rafraîchissement auto de la bibliothèque après scraping en lot
+- Correction de la signature Developer ID pour macOS 26.4.1
+
+---
+
+## v1.6.0 (2026-05-01)
+
+### Ajouté
+- Ouverture automatique de la modale "Scanner la bibliothèque" sur bibliothèque vide
+- Bouton d'annulation sur la bannière de reconnexion NAS
+- Navigation vers la playlist "Importée" après import de fichier M3U
+- Les playlists importées conservent la date d'ajout des pistes
+
+### Corrigé
+- Prévention de l'ouverture de plusieurs instances de l'app
+- Accumulation du volume à la molette
+- Mise à jour du panneau de playlists après glisser-déposer
+- Conformité sandbox App Store (suppression API privée NetFS, Sparkle en weak-link)
+- Stockage de l'activation de licence migré vers UserDefaults
+- La recherche de genres utilise désormais le moteur tornade-core
+
+---
+
 ## v1.5.0 (2026-03-25)
 
 ### Corrigé

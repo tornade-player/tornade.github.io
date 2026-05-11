@@ -423,6 +423,18 @@ feat_macos_scanner_title:
   other: "Scanner de Bibliothèque"
 feat_macos_scanner_desc:
   other: "Interface de scan avec barre de progression"
+feat_macos_statusbar_title:
+  other: "Lecteur Barre de Menu"
+feat_macos_statusbar_desc:
+  other: "Contrôlez la lecture depuis la barre de menu macOS sans ouvrir l'app"
+feat_macos_playlist_multiselect_title:
+  other: "Sélection Multiple Playlist"
+feat_macos_playlist_multiselect_desc:
+  other: "Sélectionnez plusieurs pistes pour les déplacer, supprimer ou réordonner"
+feat_macos_tag_editor_title:
+  other: "Éditeur de Tags"
+feat_macos_tag_editor_desc:
+  other: "Modifiez les métadonnées FLAC (titre, artiste, album, année) dans l'app"
 feat_macos_nas_title:
   other: "Auto-Détection NAS"
 feat_macos_nas_desc:
