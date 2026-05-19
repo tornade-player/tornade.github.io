@@ -51,6 +51,10 @@ wycd_formats:
   other: "Reproduce MP3, FLAC, WAV, ALAC y más, de forma nativa"
 wycd_tui:
   other: "Usa la versión terminal gratuita, incluso vía SSH"
+wycd_tagedit:
+  other: "Edita etiquetas FLAC y carátulas directamente en la app"
+wycd_statusbar:
+  other: "Controla la reproducción desde la barra de menú sin abrir la app"
 
 platforms_subtitle:
   other: "Elige tu plataforma y explora sus características únicas"
@@ -122,7 +126,7 @@ platform_specific_features:
 ready_to_download:
   other: "¿Listo para Comenzar?"
 macos_exclusive:
-  other: "Características exclusivamente optimizadas para macOS con SwiftUI"
+  other: "Características exclusivas de macOS: reproductor en barra de menú, editor de etiquetas, selección múltiple en playlists y más, todo construido nativamente con SwiftUI"
 windows_exclusive:
   other: "Características planeadas para Windows (en desarrollo)"
 linux_exclusive:
