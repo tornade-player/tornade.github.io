@@ -10,6 +10,21 @@ draft       = false
   ogType        = "website"
 +++
 
+## v1.8.0 (2026-05-16)
+
+### Ajouté
+- Barre de menu : menu clic droit pour afficher/masquer les infos de piste et cacher le lecteur
+- Double-clic joue immédiatement par défaut
+
+### Corrigé
+- Sélection de piste, double-clic, sélection par plage (shift) et réordonnancement par glisser fiabilisés
+- Gestion des clics cassée par le comportement de sélection de texte sous macOS 26
+- Poignée de drag déplacée en colonne de tête, isolée des taps de ligne
+- Reconnexion NAS réduite à une seule tentative pour éviter les empilements
+- Description du comportement double-clic dans la modal de bienvenue corrigée
+
+---
+
 ## v1.7.0 (2026-05-10)
 
 ### Ajouté

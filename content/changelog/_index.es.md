@@ -10,6 +10,21 @@ draft       = false
   ogType        = "website"
 +++
 
+## v1.8.0 (2026-05-16)
+
+### Añadido
+- Barra de menú: menú clic derecho para mostrar/ocultar información de pista y ocultar el reproductor
+- Doble clic reproduce inmediatamente por defecto
+
+### Corregido
+- Selección de pistas, doble clic, selección por rango (shift) y reordenación por arrastre mejorados
+- Gestión de clics rota por el comportamiento de selección de texto en macOS 26
+- Asa de arrastre movida a la columna inicial, completamente aislada de los taps de fila
+- Reconexión NAS reducida a un solo intento para evitar acumulación de reintentos
+- Descripción del comportamiento de doble clic en el modal de bienvenida corregida
+
+---
+
 ## v1.7.0 (2026-05-10)
 
 ### Añadido

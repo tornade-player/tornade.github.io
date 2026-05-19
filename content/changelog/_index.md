@@ -10,6 +10,21 @@ draft       = false
   ogType        = "website"
 +++
 
+## v1.8.0 (2026-05-16)
+
+### Added
+- Status bar: right-click menu to toggle track info display and hide the player
+- Double-click now plays immediately by default
+
+### Fixed
+- Reliable track selection, double-click, shift-range selection, and drag reordering
+- Click handling broken by macOS 26 text selection behavior
+- Drag handle moved to leading column, fully isolated from row taps
+- NAS reconnection reduced to a single attempt to avoid stacking retries
+- Welcome modal double-click behavior description corrected
+
+---
+
 ## v1.7.0 (2026-05-10)
 
 ### Added
